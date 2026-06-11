@@ -43,9 +43,9 @@
             "ink-mute": "#8a918d",
             line: "#e4e7df",
             "line-dark": "#262a28",
-            lime: "#c6f53a",
-            "lime-deep": "#a7d800",
-            "lime-soft": "#eefbc6"
+            azure: "#2f6bff",
+            "azure-deep": "#1e50d6",
+            "azure-soft": "#e8effe"
           },
           fontFamily: {
             display: ["Space Grotesk", "sans-serif"],
@@ -72,29 +72,29 @@
     }
     .font-display { font-family: "Space Grotesk", sans-serif; letter-spacing: -0.02em; }
 
-    /* Lime highlight on key words (light sections) */
+    /* Blue highlight on key words (light sections) */
     .mark {
-      background: linear-gradient(180deg, transparent 58%, #c6f53a 58%);
+      background: linear-gradient(180deg, transparent 58%, #93b4ff 58%);
       padding: 0 .12em;
       box-decoration-break: clone;
       -webkit-box-decoration-break: clone;
     }
-    /* Lime word on dark sections */
-    .lime-word { color: #c6f53a; }
+    /* Blue word on dark sections */
+    .azure-word { color: #7da7ff; }
 
     /* Buttons */
     .btn { transition: transform .15s ease, box-shadow .15s ease, background-color .15s ease; }
-    .btn-lime {
-      background: #c6f53a; color: #0d0f0e;
-      box-shadow: 0 8px 22px rgba(167,216,0,.30);
+    .btn-azure {
+      background: #2f6bff; color: #ffffff;
+      box-shadow: 0 8px 22px rgba(47,107,255,.30);
     }
-    .btn-lime:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(167,216,0,.40); }
+    .btn-azure:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(47,107,255,.42); }
     .btn-ink { background: #0d0f0e; color: #ffffff; }
     .btn-ink:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(13,15,14,.22); }
     .btn-outline { background: transparent; color: #0d0f0e; border: 1.5px solid #d4d8cf; }
     .btn-outline:hover { border-color: #0d0f0e; transform: translateY(-2px); }
     .btn-outline-light { background: transparent; color: #ffffff; border: 1.5px solid rgba(255,255,255,.28); }
-    .btn-outline-light:hover { border-color: #c6f53a; color: #c6f53a; transform: translateY(-2px); }
+    .btn-outline-light:hover { border-color: #2f6bff; color: #7da7ff; transform: translateY(-2px); }
 
     .pill {
       border: 1px solid #e4e7df; background: #ffffff;
@@ -117,14 +117,14 @@
       background: radial-gradient(38% 38% at 32% 28%, #ffffff 0%, rgba(255,255,255,.9) 16%, #eef1ea 56%, #dfe3d8 100%);
       box-shadow: 0 30px 70px rgba(13,15,14,.10), inset -12px -16px 36px rgba(13,15,14,.06), inset 10px 12px 28px rgba(255,255,255,.9);
     }
-    .sphere-lime {
-      background: radial-gradient(38% 38% at 32% 28%, #f6ffda 0%, #e8fca6 28%, #c6f53a 68%, #a7d800 100%);
-      box-shadow: 0 30px 70px rgba(167,216,0,.28), inset -12px -16px 36px rgba(120,150,0,.18), inset 10px 12px 28px rgba(255,255,255,.7);
+    .sphere-azure {
+      background: radial-gradient(38% 38% at 32% 28%, #eaf1ff 0%, #b9d0ff 28%, #2f6bff 68%, #1e50d6 100%);
+      box-shadow: 0 30px 70px rgba(47,107,255,.30), inset -12px -16px 36px rgba(20,50,150,.22), inset 10px 12px 28px rgba(255,255,255,.6);
     }
-    .glow-lime { position: absolute; border-radius: 9999px; pointer-events: none;
-      background: radial-gradient(circle, rgba(198,245,58,.5), transparent 66%); filter: blur(18px); }
+    .glow-azure { position: absolute; border-radius: 9999px; pointer-events: none;
+      background: radial-gradient(circle, rgba(47,107,255,.5), transparent 66%); filter: blur(18px); }
     @media (prefers-reduced-motion: no-preference) {
-      .sphere, .sphere-lime, .glow-lime { animation: float 9s ease-in-out infinite; }
+      .sphere, .sphere-azure, .glow-azure { animation: float 9s ease-in-out infinite; }
       .sphere:nth-of-type(even) { animation-duration: 11s; animation-direction: reverse; }
     }
     @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-16px); } }
@@ -148,8 +148,8 @@
 
   <!-- Announcement Bar -->
   <div class="bg-ink px-6 py-2.5 text-center text-white">
-    <a href="#contact" class="inline-flex items-center justify-center gap-2 text-xs font-medium tracking-wide transition hover:text-lime sm:text-sm">
-      <span class="inline-block h-1.5 w-1.5 rounded-full bg-lime"></span>
+    <a href="#contact" class="inline-flex items-center justify-center gap-2 text-xs font-medium tracking-wide transition hover:text-azure sm:text-sm">
+      <span class="inline-block h-1.5 w-1.5 rounded-full bg-azure"></span>
       <span>Performance-based engagements — pay only for qualified leads and booked appointments</span>
       <span aria-hidden="true">&rarr;</span>
     </a>
@@ -171,7 +171,7 @@
       </nav>
       <div class="flex items-center gap-3">
         <a href="#contact" class="hidden text-sm font-semibold text-ink transition hover:text-ink-soft sm:inline-flex">Sign in client portal</a>
-        <a href="#contact" class="btn btn-lime inline-flex items-center justify-center rounded-full px-5 py-2.5 text-sm font-semibold">Book a call</a>
+        <a href="#contact" class="btn btn-azure inline-flex items-center justify-center rounded-full px-5 py-2.5 text-sm font-semibold">Book a call</a>
       </div>
     </div>
   </header>
@@ -183,16 +183,16 @@
       <!-- floating vector art -->
       <div class="pointer-events-none absolute inset-0 -z-10" aria-hidden="true">
         <div class="absolute inset-0 bg-grid-light opacity-60 [mask-image:radial-gradient(circle_at_center,black,transparent_70%)]"></div>
-        <div class="sphere-lime sphere absolute -left-20 -top-10 h-64 w-64 opacity-90 md:h-80 md:w-80"></div>
-        <div class="glow-lime absolute left-16 top-28 h-36 w-36"></div>
+        <div class="sphere-azure sphere absolute -left-20 -top-10 h-64 w-64 opacity-90 md:h-80 md:w-80"></div>
+        <div class="glow-azure absolute left-16 top-28 h-36 w-36"></div>
         <div class="sphere absolute -right-16 top-6 h-56 w-56 opacity-80 md:h-72 md:w-72"></div>
         <div class="sphere absolute right-28 bottom-4 hidden h-36 w-36 opacity-70 md:block"></div>
         <div class="sphere absolute left-1/4 -bottom-20 hidden h-48 w-48 opacity-50 lg:block"></div>
       </div>
 
       <div class="relative mx-auto max-w-3xl">
-        <div class="mb-7 inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs font-bold uppercase tracking-[0.16em] text-lime-deep pill">
-          <span class="inline-block h-2 w-2 rounded-full bg-lime-deep"></span>
+        <div class="mb-7 inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs font-bold uppercase tracking-[0.16em] text-azure-deep pill">
+          <span class="inline-block h-2 w-2 rounded-full bg-azure-deep"></span>
           B2B Lead Generation Agency
         </div>
         <h1 class="font-display text-5xl font-bold leading-[1.03] text-ink md:text-[5.25rem]">
@@ -203,10 +203,10 @@
           straight onto your calendar — on a model where you only pay for results.
         </p>
         <p class="mt-6 text-sm font-semibold uppercase tracking-[0.14em] text-ink-mute">
-          Fuel up your <span id="audience-rotator" class="text-lime-deep transition-opacity duration-300">agency</span>
+          Fuel up your <span id="audience-rotator" class="text-azure-deep transition-opacity duration-300">agency</span>
         </p>
         <div class="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
-          <a href="#contact" class="btn btn-lime inline-flex items-center justify-center rounded-full px-9 py-4 text-sm font-semibold">Book a discovery call</a>
+          <a href="#contact" class="btn btn-azure inline-flex items-center justify-center rounded-full px-9 py-4 text-sm font-semibold">Book a discovery call</a>
           <a href="#process" class="btn btn-outline inline-flex items-center justify-center rounded-full px-9 py-4 text-sm font-semibold">See how it works</a>
         </div>
 
@@ -262,15 +262,15 @@
           <article class="relative overflow-hidden rounded-[2rem] bg-ink p-8 text-white md:p-10">
             <div class="pointer-events-none absolute inset-0 bg-dots opacity-30"></div>
             <div class="relative">
-              <span class="inline-flex rounded-full bg-lime px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-ink">It's time to shift gears</span>
-              <h2 class="mt-6 font-display text-3xl font-bold md:text-4xl">Switch from manual to <span class="lime-word">automatic</span>.</h2>
+              <span class="inline-flex rounded-full bg-azure px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-white">It's time to shift gears</span>
+              <h2 class="mt-6 font-display text-3xl font-bold md:text-4xl">Switch from manual to <span class="azure-word">automatic</span>.</h2>
               <p class="mt-4 text-sm leading-7 text-white/70">We handle the hard work end-to-end — compelling messaging, your ideal prospects, and cold emails that earn interested replies — then book the calls onto your calendar. You only pay for qualified leads.</p>
               <ul class="mt-7 divide-y divide-line-dark text-sm leading-6 text-white/85">
-                <li class="flex items-center gap-3 py-4"><svg class="h-5 w-5 flex-none text-lime" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg>First meetings within ~2 weeks of starting</li>
-                <li class="flex items-center gap-3 py-4"><svg class="h-5 w-5 flex-none text-lime" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg>High-ROI qualified leads delivered directly to you</li>
-                <li class="flex items-center gap-3 py-4"><svg class="h-5 w-5 flex-none text-lime" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg>An entirely done-for-you system — you focus on closing</li>
+                <li class="flex items-center gap-3 py-4"><svg class="h-5 w-5 flex-none text-azure" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg>First meetings within ~2 weeks of starting</li>
+                <li class="flex items-center gap-3 py-4"><svg class="h-5 w-5 flex-none text-azure" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg>High-ROI qualified leads delivered directly to you</li>
+                <li class="flex items-center gap-3 py-4"><svg class="h-5 w-5 flex-none text-azure" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg>An entirely done-for-you system — you focus on closing</li>
               </ul>
-              <a href="#contact" class="btn btn-lime mt-8 inline-flex items-center justify-center rounded-full px-7 py-3.5 text-sm font-semibold">Get qualified leads</a>
+              <a href="#contact" class="btn btn-azure mt-8 inline-flex items-center justify-center rounded-full px-7 py-3.5 text-sm font-semibold">Get qualified leads</a>
             </div>
           </article>
         </div>
@@ -283,38 +283,38 @@
         <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div>
             <span class="inline-flex rounded-full border border-white/15 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-white/70">Those who took the journey</span>
-            <h2 class="mt-5 font-display text-4xl font-bold leading-tight md:text-5xl">Real outcomes, real <span class="lime-word">clients</span>.</h2>
+            <h2 class="mt-5 font-display text-4xl font-bold leading-tight md:text-5xl">Real outcomes, real <span class="azure-word">clients</span>.</h2>
           </div>
           <p class="max-w-sm text-sm leading-7 text-white/60">A sample of results from B2B Drive engagements across agencies, SaaS, and specialised services.</p>
         </div>
         <div class="mt-12 grid grid-cols-2 gap-px overflow-hidden rounded-3xl border border-line-dark bg-line-dark lg:grid-cols-3">
           <div class="bg-ink-2 p-6 md:p-7">
-            <div class="font-display text-4xl font-bold lime-word md:text-5xl">15+</div>
+            <div class="font-display text-4xl font-bold azure-word md:text-5xl">15+</div>
             <p class="mt-3 text-sm font-medium text-white/85">Qualified meetings set</p>
             <p class="mt-1 text-xs text-white/45">Green Mo Digital · Ad Agency</p>
           </div>
           <div class="bg-ink-2 p-6 md:p-7">
-            <div class="font-display text-4xl font-bold lime-word md:text-5xl">75+</div>
+            <div class="font-display text-4xl font-bold azure-word md:text-5xl">75+</div>
             <p class="mt-3 text-sm font-medium text-white/85">Qualified leads</p>
             <p class="mt-1 text-xs text-white/45">Revive Ratings · Marketing SaaS</p>
           </div>
           <div class="bg-ink-2 p-6 md:p-7">
-            <div class="font-display text-4xl font-bold lime-word md:text-5xl">+$25k</div>
+            <div class="font-display text-4xl font-bold azure-word md:text-5xl">+$25k</div>
             <p class="mt-3 text-sm font-medium text-white/85">ARR added</p>
             <p class="mt-1 text-xs text-white/45">Win At Ecommerce · Marketing Agency</p>
           </div>
           <div class="bg-ink-2 p-6 md:p-7">
-            <div class="font-display text-4xl font-bold lime-word md:text-5xl">50+</div>
+            <div class="font-display text-4xl font-bold azure-word md:text-5xl">50+</div>
             <p class="mt-3 text-sm font-medium text-white/85">Qualified leads</p>
             <p class="mt-1 text-xs text-white/45">Cephas Life Sciences · Pharma</p>
           </div>
           <div class="bg-ink-2 p-6 md:p-7">
-            <div class="font-display text-4xl font-bold lime-word md:text-5xl">1<span class="text-2xl">/day</span></div>
+            <div class="font-display text-4xl font-bold azure-word md:text-5xl">1<span class="text-2xl">/day</span></div>
             <p class="mt-3 text-sm font-medium text-white/85">Scheduled appointment a day</p>
             <p class="mt-1 text-xs text-white/45">Email On Performance · Ecommerce</p>
           </div>
           <div class="bg-ink-2 p-6 md:p-7">
-            <div class="font-display text-4xl font-bold lime-word md:text-5xl">10+</div>
+            <div class="font-display text-4xl font-bold azure-word md:text-5xl">10+</div>
             <p class="mt-3 text-sm font-medium text-white/85">Qualified leads</p>
             <p class="mt-1 text-xs text-white/45">Progressive AI Solutions · HR SaaS</p>
           </div>
@@ -339,9 +339,9 @@
             <h3 class="mt-5 font-display text-2xl font-bold text-ink">Find ready-to-buy companies with ease.</h3>
             <p class="mt-3 text-sm leading-7 text-ink-soft">We identify the companies in your target market that need what you sell, so prospecting stops being guesswork and starts being a built-in part of your pipeline.</p>
             <ul class="mt-6 space-y-2.5 text-sm leading-6 text-ink-soft">
-              <li class="flex gap-2.5"><span class="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-lime-deep"></span>ICP-matched company and contact lists</li>
-              <li class="flex gap-2.5"><span class="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-lime-deep"></span>Validated email addresses for every prospect</li>
-              <li class="flex gap-2.5"><span class="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-lime-deep"></span>Markets and segments built around your offer</li>
+              <li class="flex gap-2.5"><span class="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-azure-deep"></span>ICP-matched company and contact lists</li>
+              <li class="flex gap-2.5"><span class="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-azure-deep"></span>Validated email addresses for every prospect</li>
+              <li class="flex gap-2.5"><span class="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-azure-deep"></span>Markets and segments built around your offer</li>
             </ul>
           </article>
           <article class="group rounded-[1.75rem] border border-line bg-white p-8 shadow-card transition hover:-translate-y-1 hover:shadow-lift">
@@ -352,9 +352,9 @@
             <h3 class="mt-5 font-display text-2xl font-bold text-ink">Connect with key decision makers, fast.</h3>
             <p class="mt-3 text-sm leading-7 text-ink-soft">We handle the conversations and follow-up needed to turn interested replies into meetings that go straight onto your calendar — so you spend your time selling, not chasing.</p>
             <ul class="mt-6 space-y-2.5 text-sm leading-6 text-ink-soft">
-              <li class="flex gap-2.5"><span class="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-lime-deep"></span>Replies handled and qualified before handoff</li>
-              <li class="flex gap-2.5"><span class="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-lime-deep"></span>Meetings booked directly onto your calendar</li>
-              <li class="flex gap-2.5"><span class="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-lime-deep"></span>Follow-up sequences that keep conversations moving</li>
+              <li class="flex gap-2.5"><span class="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-azure-deep"></span>Replies handled and qualified before handoff</li>
+              <li class="flex gap-2.5"><span class="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-azure-deep"></span>Meetings booked directly onto your calendar</li>
+              <li class="flex gap-2.5"><span class="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-azure-deep"></span>Follow-up sequences that keep conversations moving</li>
             </ul>
           </article>
           <article class="group rounded-[1.75rem] border border-line bg-white p-8 shadow-card transition hover:-translate-y-1 hover:shadow-lift">
@@ -365,9 +365,9 @@
             <h3 class="mt-5 font-display text-2xl font-bold text-ink">Only pay for results.</h3>
             <p class="mt-3 text-sm leading-7 text-ink-soft">Say goodbye to unpredictable ad spend. B2B Drive runs on a fully performance-based model with complete accountability — you only pay for qualified leads or booked appointments.</p>
             <ul class="mt-6 space-y-2.5 text-sm leading-6 text-ink-soft">
-              <li class="flex gap-2.5"><span class="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-lime-deep"></span>No charge for no-shows on booked meetings</li>
-              <li class="flex gap-2.5"><span class="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-lime-deep"></span>Pricing structured against your sales goals</li>
-              <li class="flex gap-2.5"><span class="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-lime-deep"></span>Monthly retainer options also available</li>
+              <li class="flex gap-2.5"><span class="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-azure-deep"></span>No charge for no-shows on booked meetings</li>
+              <li class="flex gap-2.5"><span class="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-azure-deep"></span>Pricing structured against your sales goals</li>
+              <li class="flex gap-2.5"><span class="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-azure-deep"></span>Monthly retainer options also available</li>
             </ul>
           </article>
           <article class="group rounded-[1.75rem] border border-line bg-white p-8 shadow-card transition hover:-translate-y-1 hover:shadow-lift">
@@ -378,9 +378,9 @@
             <h3 class="mt-5 font-display text-2xl font-bold text-ink">Focus on what matters.</h3>
             <p class="mt-3 text-sm leading-7 text-ink-soft">With lead generation and appointment setting fully handled, your team can focus on keeping clients happy and closing the deals already on the calendar — instead of worrying about where the next one comes from.</p>
             <ul class="mt-6 space-y-2.5 text-sm leading-6 text-ink-soft">
-              <li class="flex gap-2.5"><span class="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-lime-deep"></span>One team handling research through booking</li>
-              <li class="flex gap-2.5"><span class="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-lime-deep"></span>Steady flow of meetings to support proposals</li>
-              <li class="flex gap-2.5"><span class="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-lime-deep"></span>Less time spent on outreach, more on closing</li>
+              <li class="flex gap-2.5"><span class="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-azure-deep"></span>One team handling research through booking</li>
+              <li class="flex gap-2.5"><span class="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-azure-deep"></span>Steady flow of meetings to support proposals</li>
+              <li class="flex gap-2.5"><span class="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-azure-deep"></span>Less time spent on outreach, more on closing</li>
             </ul>
           </article>
         </div>
@@ -402,7 +402,7 @@
               <div class="flex items-center gap-4">
                 <span class="font-display text-3xl font-bold text-ink-mute">01</span>
                 <div class="h-px flex-1 bg-line"></div>
-                <span class="rounded-full bg-lime-soft px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-lime-deep">Strategy &amp; setup</span>
+                <span class="rounded-full bg-azure-soft px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-azure-deep">Strategy &amp; setup</span>
               </div>
               <h3 class="mt-5 font-display text-2xl font-bold text-ink">Define your audience and prepare the infrastructure.</h3>
               <p class="mt-3 text-sm leading-7 text-ink-soft">We define your ideal customer profile and align messaging with what's currently relevant in your market, segment your audience with a differentiated value proposition for each, and set up the sending infrastructure that supports it.</p>
@@ -416,7 +416,7 @@
               <div class="flex items-center gap-4">
                 <span class="font-display text-3xl font-bold text-ink-mute">02</span>
                 <div class="h-px flex-1 bg-line"></div>
-                <span class="rounded-full bg-lime-soft px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-lime-deep">Build the outreach</span>
+                <span class="rounded-full bg-azure-soft px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-azure-deep">Build the outreach</span>
               </div>
               <h3 class="mt-5 font-display text-2xl font-bold text-ink">Build the list, the message, and the personal touch.</h3>
               <p class="mt-3 text-sm leading-7 text-ink-soft">We warm up your inboxes to maximize deliverability and protect sender reputation, build a validated list of contacts at your target companies, and craft cold email scripts that are split-tested with the right psychological triggers for your industry — then personalise key parts of each message to maximize response rates.</p>
@@ -431,7 +431,7 @@
               <div class="flex items-center gap-4">
                 <span class="font-display text-3xl font-bold text-ink-mute">03</span>
                 <div class="h-px flex-1 bg-line"></div>
-                <span class="rounded-full bg-lime-soft px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-lime-deep">Launch &amp; book</span>
+                <span class="rounded-full bg-azure-soft px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-azure-deep">Launch &amp; book</span>
               </div>
               <h3 class="mt-5 font-display text-2xl font-bold text-ink">Run the campaigns and fill your calendar.</h3>
               <p class="mt-3 text-sm leading-7 text-ink-soft">A sophisticated multi-inbox, multi-campaign operation runs continuously to reach your entire target market — and as replies come in, we converse and follow up with your leads to book sales calls directly onto your calendar.</p>
@@ -457,7 +457,7 @@
         </div>
         <div class="mt-14 grid gap-5 lg:grid-cols-3">
           <article class="flex flex-col rounded-[1.75rem] border border-line bg-white p-8 shadow-card">
-            <div class="font-display text-5xl font-bold text-ink">8&ndash;10<span class="text-lime-deep">.</span></div>
+            <div class="font-display text-5xl font-bold text-ink">8&ndash;10<span class="text-azure-deep">.</span></div>
             <p class="mt-2 text-sm font-semibold uppercase tracking-[0.12em] text-ink-mute">Qualified calls booked / month</p>
             <p class="mt-5 flex-1 text-sm leading-7 text-ink-soft">"We've been scheduling 8&ndash;10 sales calls a month, the prospects show up, and they're actually qualified. We cannot be happier."</p>
             <div class="mt-6 flex items-center gap-3 border-t border-line pt-5">
@@ -469,7 +469,7 @@
             </div>
           </article>
           <article class="flex flex-col rounded-[1.75rem] border border-line bg-white p-8 shadow-card">
-            <div class="font-display text-5xl font-bold text-ink">US · EU<span class="text-lime-deep">.</span></div>
+            <div class="font-display text-5xl font-bold text-ink">US · EU<span class="text-azure-deep">.</span></div>
             <p class="mt-2 text-sm font-semibold uppercase tracking-[0.12em] text-ink-mute">New markets entered profitably</p>
             <p class="mt-5 flex-1 text-sm leading-7 text-ink-soft">"B2B Drive helped us scale profitably into the US and European markets — something that would have been very difficult and expensive without them."</p>
             <div class="mt-6 flex items-center gap-3 border-t border-line pt-5">
@@ -481,7 +481,7 @@
             </div>
           </article>
           <article class="flex flex-col rounded-[1.75rem] border border-line bg-ink p-8 text-white shadow-card">
-            <div class="font-display text-5xl font-bold text-white">0 &rarr; 1<span class="lime-word">.</span></div>
+            <div class="font-display text-5xl font-bold text-white">0 &rarr; 1<span class="azure-word">.</span></div>
             <p class="mt-2 text-sm font-semibold uppercase tracking-[0.12em] text-white/55">From no pipeline to a reliable one</p>
             <p class="mt-5 flex-1 text-sm leading-7 text-white/75">"I tried several methods to bring in leads for my ecommerce email agency, but none worked until B2B Drive came in. I've recommended them to several B2B businesses myself."</p>
             <div class="mt-6 flex items-center gap-3 border-t border-line-dark pt-5">
@@ -575,13 +575,13 @@
             </ul>
           </article>
           <article class="rounded-[1.75rem] border border-ink bg-ink p-8 text-white">
-            <div class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.16em] text-lime"><span>✓</span> With B2B Drive</div>
+            <div class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.16em] text-azure"><span>✓</span> With B2B Drive</div>
             <ul class="mt-6 space-y-4 text-sm leading-7 text-white/85">
-              <li class="flex gap-3"><span class="mt-1.5 h-1.5 w-1.5 flex-none rounded-full bg-lime"></span>Meetings booked within weeks of starting</li>
-              <li class="flex gap-3"><span class="mt-1.5 h-1.5 w-1.5 flex-none rounded-full bg-lime"></span>Outreach matched to your ICP and split-tested for response</li>
-              <li class="flex gap-3"><span class="mt-1.5 h-1.5 w-1.5 flex-none rounded-full bg-lime"></span>Performance-based pricing — pay for qualified leads or booked appointments</li>
-              <li class="flex gap-3"><span class="mt-1.5 h-1.5 w-1.5 flex-none rounded-full bg-lime"></span>Personalised, tested outreach that gets replies</li>
-              <li class="flex gap-3"><span class="mt-1.5 h-1.5 w-1.5 flex-none rounded-full bg-lime"></span>A done-for-you system so your team can focus on clients and closing</li>
+              <li class="flex gap-3"><span class="mt-1.5 h-1.5 w-1.5 flex-none rounded-full bg-azure"></span>Meetings booked within weeks of starting</li>
+              <li class="flex gap-3"><span class="mt-1.5 h-1.5 w-1.5 flex-none rounded-full bg-azure"></span>Outreach matched to your ICP and split-tested for response</li>
+              <li class="flex gap-3"><span class="mt-1.5 h-1.5 w-1.5 flex-none rounded-full bg-azure"></span>Performance-based pricing — pay for qualified leads or booked appointments</li>
+              <li class="flex gap-3"><span class="mt-1.5 h-1.5 w-1.5 flex-none rounded-full bg-azure"></span>Personalised, tested outreach that gets replies</li>
+              <li class="flex gap-3"><span class="mt-1.5 h-1.5 w-1.5 flex-none rounded-full bg-azure"></span>A done-for-you system so your team can focus on clients and closing</li>
             </ul>
           </article>
         </div>
@@ -595,7 +595,7 @@
           <div class="lg:sticky lg:top-28 lg:self-start">
             <span class="pill inline-flex rounded-full px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-ink-soft">FAQ</span>
             <h2 class="mt-6 font-display text-4xl font-bold text-ink md:text-5xl">Frequently asked <span class="mark">questions</span>.</h2>
-            <p class="mt-5 text-base leading-7 text-ink-soft">Still unsure? <a href="#contact" class="font-semibold text-ink underline decoration-lime decoration-2 underline-offset-4">Book a call</a> and we'll answer everything for your specific market.</p>
+            <p class="mt-5 text-base leading-7 text-ink-soft">Still unsure? <a href="#contact" class="font-semibold text-ink underline decoration-azure decoration-2 underline-offset-4">Book a call</a> and we'll answer everything for your specific market.</p>
           </div>
           <div class="space-y-3">
             <details class="faq-item rounded-2xl border border-line bg-white px-6 py-5 shadow-soft" open>
@@ -662,12 +662,12 @@
           <div class="pointer-events-none absolute -inset-6 -z-0 bg-dots opacity-40"></div>
           <div class="relative">
             <span class="inline-flex rounded-full border border-white/15 px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.16em] text-white/70">Get started</span>
-            <h2 class="mt-6 max-w-xl font-display text-4xl font-bold leading-tight md:text-6xl">Ready to <span class="lime-word">step on the pedal</span>?</h2>
+            <h2 class="mt-6 max-w-xl font-display text-4xl font-bold leading-tight md:text-6xl">Ready to <span class="azure-word">step on the pedal</span>?</h2>
             <p class="mt-5 max-w-lg text-base leading-8 text-white/70">Let's schedule a discovery call and find out if we're a fit. Most B2B businesses don't have the time, energy, or expertise to build a predictable pipeline of ready-to-buy prospects on their own — and even if we're not the right fit, you'll walk away with actionable steps.</p>
             <ul class="mt-8 space-y-3 text-sm leading-6 text-white/80">
-              <li class="flex items-start gap-3"><span class="mt-0.5 text-lime">✓</span>Qualified meetings booked directly onto your calendar</li>
-              <li class="flex items-start gap-3"><span class="mt-0.5 text-lime">✓</span>No charge for no-shows on booked appointments</li>
-              <li class="flex items-start gap-3"><span class="mt-0.5 text-lime">✓</span>Performance-based pricing, structured around your goals</li>
+              <li class="flex items-start gap-3"><span class="mt-0.5 text-azure">✓</span>Qualified meetings booked directly onto your calendar</li>
+              <li class="flex items-start gap-3"><span class="mt-0.5 text-azure">✓</span>No charge for no-shows on booked appointments</li>
+              <li class="flex items-start gap-3"><span class="mt-0.5 text-azure">✓</span>Performance-based pricing, structured around your goals</li>
             </ul>
           </div>
         </div>
@@ -680,20 +680,20 @@
             <div class="grid gap-4 sm:grid-cols-2">
               <div>
                 <label for="name" class="text-xs font-semibold uppercase tracking-[0.12em] text-ink-soft">Name</label>
-                <input type="text" id="name" name="name" required autocomplete="name" class="mt-2 block w-full rounded-xl border-line bg-mist text-sm text-ink focus:border-lime-deep focus:ring-lime-deep">
+                <input type="text" id="name" name="name" required autocomplete="name" class="mt-2 block w-full rounded-xl border-line bg-mist text-sm text-ink focus:border-azure-deep focus:ring-azure-deep">
               </div>
               <div>
                 <label for="email" class="text-xs font-semibold uppercase tracking-[0.12em] text-ink-soft">Work email</label>
-                <input type="email" id="email" name="email" required autocomplete="email" class="mt-2 block w-full rounded-xl border-line bg-mist text-sm text-ink focus:border-lime-deep focus:ring-lime-deep">
+                <input type="email" id="email" name="email" required autocomplete="email" class="mt-2 block w-full rounded-xl border-line bg-mist text-sm text-ink focus:border-azure-deep focus:ring-azure-deep">
               </div>
             </div>
             <div>
               <label for="company" class="text-xs font-semibold uppercase tracking-[0.12em] text-ink-soft">Company &amp; target market</label>
-              <input type="text" id="company" name="company" autocomplete="organization" class="mt-2 block w-full rounded-xl border-line bg-mist text-sm text-ink focus:border-lime-deep focus:ring-lime-deep">
+              <input type="text" id="company" name="company" autocomplete="organization" class="mt-2 block w-full rounded-xl border-line bg-mist text-sm text-ink focus:border-azure-deep focus:ring-azure-deep">
             </div>
             <div>
               <label for="goal" class="text-xs font-semibold uppercase tracking-[0.12em] text-ink-soft">Meetings you'd like per month</label>
-              <select id="goal" name="goal" class="mt-2 block w-full rounded-xl border-line bg-mist text-sm text-ink focus:border-lime-deep focus:ring-lime-deep">
+              <select id="goal" name="goal" class="mt-2 block w-full rounded-xl border-line bg-mist text-sm text-ink focus:border-azure-deep focus:ring-azure-deep">
                 <option>1–5</option>
                 <option>6–10</option>
                 <option>11–20</option>
@@ -702,9 +702,9 @@
             </div>
             <div>
               <label for="message" class="text-xs font-semibold uppercase tracking-[0.12em] text-ink-soft">What are you looking to achieve?</label>
-              <textarea id="message" name="message" rows="3" class="mt-2 block w-full rounded-xl border-line bg-mist text-sm text-ink focus:border-lime-deep focus:ring-lime-deep"></textarea>
+              <textarea id="message" name="message" rows="3" class="mt-2 block w-full rounded-xl border-line bg-mist text-sm text-ink focus:border-azure-deep focus:ring-azure-deep"></textarea>
             </div>
-            <button type="submit" class="btn btn-lime inline-flex w-full items-center justify-center rounded-full px-8 py-4 text-sm font-semibold">Book my discovery call</button>
+            <button type="submit" class="btn btn-azure inline-flex w-full items-center justify-center rounded-full px-8 py-4 text-sm font-semibold">Book my discovery call</button>
             <p class="text-center text-xs text-ink-mute">We'll only use your details to schedule your call. No spam.</p>
           </form>
         </div>
@@ -722,7 +722,7 @@
             <span class="font-display text-lg font-bold text-ink">B2B Drive</span>
           </a>
           <p class="mt-4 max-w-sm text-sm leading-7 text-ink-soft">Done-for-you B2B lead generation and appointment setting — qualified sales calls booked onto your calendar, on a pay-per-result model.</p>
-          <a href="#contact" class="btn btn-lime mt-6 inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold">Book a call</a>
+          <a href="#contact" class="btn btn-azure mt-6 inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold">Book a call</a>
         </div>
         <div>
           <div class="text-xs font-semibold uppercase tracking-[0.16em] text-ink-mute">Explore</div>
