@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>B2B Drive — Unlock Your Ideal B2B Partnerships</title>
+  <meta name="description" content="Done-for-you B2B lead generation and appointment setting. We connect you with the decision makers in your target market and book qualified sales calls directly onto your calendar — on a performance-based model.">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@700;800&family=Playfair+Display:ital,wght@1,400;1,600&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            mist: "#fcf8fb",
+            "mist-alt": "#f6f3f5",
+            ink: "#1b1b1d",
+            "ink-soft": "#5c5f60",
+            panel: "#ffffff",
+            "panel-soft": "#f6f3f5",
+            line: "#e5e2e4",
+            "navy-deep": "#141a32",
+            cobalt: "#3858e9",
+            "cobalt-soft": "#e8ebfe",
+            crimson: "#cc1818",
+            "crimson-soft": "#fbe8e8",
+            sage: "#2e7d32",
+            "sage-soft": "#e8f5e9",
+            amber: "#e65100",
+            "amber-soft": "#fff3e0",
+            plum: "#6a1b9a",
+            "plum-soft": "#f3e5f5"
+          },
+          fontFamily: {
+            display: ["Plus Jakarta Sans", "sans-serif"],
+            body: ["Inter", "sans-serif"],
+            editorial: ["Playfair Display", "serif"]
+          },
+          boxShadow: {
+            ambient: "0 18px 50px rgba(20, 26, 50, 0.08)",
+            soft: "0 10px 30px rgba(20, 26, 50, 0.06)",
+            pill: "inset 0 1px 0 rgba(255,255,255,.92), 0 4px 16px rgba(20,26,50,.06)"
+          },
+          maxWidth: {
+            shell: "1180px"
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "Inter", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(56,88,233,.06), transparent 28%),
+        radial-gradient(circle at top right, rgba(204,24,24,.05), transparent 30%),
+        #fcf8fb;
+      color: #1b1b1d;
+    }
+    .editorial-punch {
+      font-family: "Playfair Display", serif;
+      font-style: italic;
+      font-weight: 400;
+    }
+    .pill-gloss {
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.95) 0%, rgba(255,255,255,.62) 48%, rgba(218,214,219,.25) 100%);
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.96),
+        0 4px 16px rgba(20,26,50,.06);
+      border: 1px solid rgba(255,255,255,.9);
+    }
+    .btn-3d-dark {
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.18) 0%, rgba(255,255,255,.04) 48%, rgba(0,0,0,.16) 100%),
+        #15171c;
+      box-shadow:
+        inset 0 2px 0 rgba(255,255,255,.18),
+        inset 0 -2px 0 rgba(0,0,0,.45),
+        0 8px 0 #141a32,
+        0 16px 28px rgba(0,0,0,.12);
+      transition: transform .14s ease, box-shadow .14s ease;
+    }
+    .btn-3d-dark:hover {
+      transform: translateY(2px);
+      box-shadow:
+        inset 0 2px 0 rgba(255,255,255,.18),
+        inset 0 -2px 0 rgba(0,0,0,.45),
+        0 5px 0 #141a32,
+        0 10px 18px rgba(0,0,0,.12);
+    }
+    .btn-3d-light {
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.95) 0%, rgba(255,255,255,.6) 48%, rgba(213,209,214,.24) 100%),
+        #fff;
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,1),
+        0 6px 0 #ddd9de,
+        0 14px 24px rgba(20,26,50,.08);
+      transition: transform .14s ease, box-shadow .14s ease;
+    }
+    .btn-3d-light:hover {
+      transform: translateY(2px);
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,1),
+        0 4px 0 #ddd9de,
+        0 10px 18px rgba(20,26,50,.08);
+    }
+    .ambient-shadow { box-shadow: 0 8px 32px rgba(20,26,50,.06); }
+    .tag-3d {
+      background: linear-gradient(180deg, rgba(255,255,255,.95) 0%, rgba(255,255,255,.55) 100%);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.95), 0 2px 0 rgba(20,26,50,.08), 0 5px 12px rgba(20,26,50,.05);
+    }
+    .bg-grid {
+      background-image:
+        linear-gradient(to right, rgba(20,26,50,.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(20,26,50,.04) 1px, transparent 1px);
+      background-size: 30px 30px;
+    }
+    summary { list-style: none; cursor: pointer; }
+    summary::-webkit-details-marker { display: none; }
+    .faq-item[open] .faq-plus { display: none; }
+    .faq-item:not([open]) .faq-minus { display: none; }
+  </style>
+</head>
+<body class="antialiased">
+
+  <!-- Announcement Bar -->
+  <div class="bg-navy-deep px-6 py-2.5 text-center text-white">
+    <a href="#contact" class="inline-flex items-center justify-center gap-2 text-xs font-semibold tracking-wide transition hover:text-white/80 sm:text-sm">
+      <span>Performance-based engagements — pay only for qualified leads and booked appointments</span>
+      <span aria-hidden="true">&rarr;</span>
+    </a>
+  </div>
+
+  <!-- Sticky Header -->
+  <header class="sticky top-0 z-50 border-b border-line/70 bg-mist/85 backdrop-blur-xl">
+    <div class="mx-auto flex max-w-shell items-center justify-between gap-6 px-6 py-4">
+      <a href="#top" class="flex items-center gap-3">
+        <img src="assets/images/logo.png" alt="B2B Drive logo" class="h-10 w-auto">
+        <div>
+          <div class="font-display text-sm font-extrabold tracking-tight text-ink">B2B Drive</div>
+          <div class="text-xs text-ink-soft">Done-for-you B2B lead generation</div>
+        </div>
+      </a>
+      <nav class="hidden items-center gap-6 text-sm font-medium text-ink-soft md:flex">
+        <a href="#services" class="transition hover:text-ink">Services</a>
+        <a href="#process" class="transition hover:text-ink">Process</a>
+        <a href="#testimonials" class="transition hover:text-ink">Proof</a>
+        <a href="#comparison" class="transition hover:text-ink">Why B2B Drive</a>
+        <a href="#faq" class="transition hover:text-ink">FAQ</a>
+      </nav>
+      <a href="#contact" class="btn-3d-dark hidden rounded-2xl px-5 py-3 text-sm font-semibold text-white sm:inline-flex">Get Started</a>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- Hero Section -->
+    <section id="hero" class="px-6 pb-16 pt-16 md:pt-20">
+      <div class="mx-auto max-w-shell">
+        <div class="mb-8 inline-flex flex-wrap items-center gap-3 rounded-full px-5 py-3 text-sm text-ink-soft pill-gloss">
+          <span class="rounded-full bg-cobalt-soft px-3 py-1 font-semibold text-cobalt">Performance-based</span>
+          <span>Pay only for qualified leads &amp; booked appointments</span>
+        </div>
+        <div class="grid items-center gap-10 lg:grid-cols-[1.05fr_.95fr]">
+          <div>
+            <p class="text-xs font-bold uppercase tracking-[0.22em] text-ink-soft">Done-for-you B2B lead generation</p>
+            <h1 class="mt-6 max-w-4xl font-display text-5xl font-extrabold leading-[1.02] tracking-[-.04em] text-ink md:text-7xl">
+              Unlock your ideal <span class="editorial-punch">B2B partnerships</span>.
+            </h1>
+            <p class="mt-6 max-w-2xl text-lg leading-8 text-ink-soft">
+              We connect your business with the decision makers in your target market through a done-for-you cold
+              outreach system — built to turn cold prospects into booked sales calls, on a model where you only pay
+              for results.
+            </p>
+            <div class="mt-8 flex flex-col gap-4 sm:flex-row">
+              <a href="#contact" class="btn-3d-dark inline-flex items-center justify-center rounded-2xl px-8 py-4 text-sm font-semibold text-white">Get Started</a>
+              <a href="#process" class="btn-3d-light inline-flex items-center justify-center rounded-2xl px-8 py-4 text-sm font-semibold text-ink">See how it works</a>
+            </div>
+            <div class="mt-10 grid gap-4 sm:grid-cols-3">
+              <article class="rounded-[1.6rem] border border-white/80 bg-white/90 p-5 shadow-soft">
+                <div class="text-[11px] uppercase tracking-[0.18em] text-ink-soft">Outreach</div>
+                <div class="mt-3 font-display text-2xl font-extrabold text-ink">Always-on</div>
+                <p class="mt-2 text-sm leading-6 text-ink-soft">Multi-inbox, multi-campaign outreach keeps your pipeline moving without manual follow-up.</p>
+              </article>
+              <article class="rounded-[1.6rem] border border-white/80 bg-white/90 p-5 shadow-soft">
+                <div class="text-[11px] uppercase tracking-[0.18em] text-ink-soft">Meetings</div>
+                <div class="mt-3 font-display text-2xl font-extrabold text-ink">Pre-qualified</div>
+                <p class="mt-2 text-sm leading-6 text-ink-soft">Every booked call is screened against criteria you set, before it ever reaches your calendar.</p>
+              </article>
+              <article class="rounded-[1.6rem] border border-white/80 bg-white/90 p-5 shadow-soft">
+                <div class="text-[11px] uppercase tracking-[0.18em] text-ink-soft">Pricing</div>
+                <div class="mt-3 font-display text-2xl font-extrabold text-ink">Pay per result</div>
+                <p class="mt-2 text-sm leading-6 text-ink-soft">A fully performance-based model — pay for qualified leads or booked appointments, not activity.</p>
+              </article>
+            </div>
+          </div>
+
+          <div class="relative overflow-hidden rounded-[2rem] border border-white/80 bg-white p-6 shadow-ambient">
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(56,88,233,.10),transparent_32%),radial-gradient(circle_at_bottom_right,rgba(204,24,24,.08),transparent_34%)]"></div>
+            <div class="relative">
+              <div class="flex flex-wrap gap-3">
+                <span class="rounded-full bg-cobalt-soft px-4 py-2 text-[11px] font-bold uppercase tracking-[0.16em] text-cobalt">Prospecting</span>
+                <span class="rounded-full bg-sage-soft px-4 py-2 text-[11px] font-bold uppercase tracking-[0.16em] text-sage">Outreach</span>
+                <span class="rounded-full bg-crimson-soft px-4 py-2 text-[11px] font-bold uppercase tracking-[0.16em] text-crimson">Booked Calls</span>
+              </div>
+              <div class="mt-6 rounded-[1.75rem] border border-line/60 bg-panel-soft p-5 bg-grid">
+                <div class="flex items-start justify-between gap-6 rounded-[1.3rem] bg-white p-5 shadow-soft">
+                  <div>
+                    <div class="text-[11px] uppercase tracking-[0.18em] text-ink-soft">B2B Drive operating layer</div>
+                    <div class="mt-3 font-display text-2xl font-extrabold text-ink">Turn cold prospects into booked calls</div>
+                    <p class="mt-3 max-w-md text-sm leading-6 text-ink-soft">Research, outreach, and follow-up run as one connected system, so qualified meetings land on your calendar without manual chasing.</p>
+                  </div>
+                  <div class="rounded-[1.2rem] bg-navy-deep px-4 py-3 text-center text-white">
+                    <div class="text-[11px] uppercase tracking-[0.18em] text-white/60">Model</div>
+                    <div class="mt-2 font-display text-lg">Pay per result</div>
+                  </div>
+                </div>
+                <div class="mt-4 grid gap-4 md:grid-cols-3">
+                  <article class="rounded-[1.25rem] bg-white p-4 shadow-soft">
+                    <div class="text-[11px] uppercase tracking-[0.18em] text-ink-soft">Research</div>
+                    <p class="mt-3 text-sm leading-6 text-ink-soft">ICP definition, segmentation, and messaging built around your market.</p>
+                  </article>
+                  <article class="rounded-[1.25rem] bg-white p-4 shadow-soft">
+                    <div class="text-[11px] uppercase tracking-[0.18em] text-ink-soft">Outreach</div>
+                    <p class="mt-3 text-sm leading-6 text-ink-soft">Warmed inboxes, validated lists, and personalised, tested scripts.</p>
+                  </article>
+                  <article class="rounded-[1.25rem] bg-white p-4 shadow-soft">
+                    <div class="text-[11px] uppercase tracking-[0.18em] text-ink-soft">Calendar</div>
+                    <p class="mt-3 text-sm leading-6 text-ink-soft">Replies are followed up and booked directly onto your calendar.</p>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Logo Cloud -->
+    <section class="px-6 pb-16 md:pb-20">
+      <div class="mx-auto max-w-shell">
+        <p class="text-center text-xs font-bold uppercase tracking-[0.22em] text-ink-soft">Trusted by agencies, consultancies, and B2B service teams</p>
+        <div class="mt-8 grid grid-cols-2 items-center gap-5 sm:grid-cols-3 lg:grid-cols-6">
+          <img src="assets/images/Green-mo-color.jpg" alt="Green Mo" class="mx-auto h-14 w-auto rounded-xl bg-white object-contain p-2 shadow-soft">
+          <img src="assets/images/Cephas-color.jpg" alt="Cephas Medical" class="mx-auto h-14 w-auto rounded-xl bg-white object-contain p-2 shadow-soft">
+          <img src="assets/images/Cls-color.jpg" alt="CLS Private Limited" class="mx-auto h-14 w-auto rounded-xl bg-white object-contain p-2 shadow-soft">
+          <img src="assets/images/Win-color.jpg" alt="Win at Ecommerce" class="mx-auto h-14 w-auto rounded-xl bg-white object-contain p-2 shadow-soft">
+          <img src="assets/images/Revive-Color.jpg" alt="Revive Ratings" class="mx-auto h-14 w-auto rounded-xl bg-white object-contain p-2 shadow-soft">
+          <img src="assets/images/Inspire-color.jpg" alt="Inspire" class="mx-auto h-14 w-auto rounded-xl bg-white object-contain p-2 shadow-soft">
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="px-6 py-24">
+      <div class="mx-auto max-w-shell">
+        <div class="mx-auto max-w-3xl text-center">
+          <span class="pill-gloss inline-flex rounded-full px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-ink-soft">What we do</span>
+          <h2 class="mt-6 font-display text-4xl font-extrabold tracking-[-.03em] text-ink md:text-6xl">A done-for-you system for <span class="editorial-punch">qualified meetings</span>.</h2>
+          <p class="mt-5 text-lg leading-8 text-ink-soft">Fuel up your agency, coaching practice, consultancy, SaaS, or services business with outreach that's built, run, and continually optimized for you — from first message to booked call.</p>
+        </div>
+        <div class="mt-14 grid gap-6 lg:grid-cols-2">
+          <article class="rounded-[2rem] border border-white/80 bg-white p-8 shadow-ambient">
+            <div class="inline-flex rounded-full bg-cobalt-soft px-4 py-2 text-[11px] font-bold uppercase tracking-[0.18em] text-cobalt">Prospecting</div>
+            <h3 class="mt-5 font-display text-2xl font-extrabold tracking-[-.02em] text-ink">Find ready-to-buy companies with ease.</h3>
+            <p class="mt-4 text-sm leading-7 text-ink-soft">We identify the companies in your target market that need what you sell, so prospecting stops being guesswork and starts being a built-in part of your pipeline.</p>
+            <ul class="mt-6 space-y-3 text-sm leading-6 text-ink-soft">
+              <li>ICP-matched company and contact lists</li>
+              <li>Validated email addresses for every prospect</li>
+              <li>Markets and segments built around your offer</li>
+            </ul>
+          </article>
+          <article class="rounded-[2rem] border border-white/80 bg-white p-8 shadow-ambient">
+            <div class="inline-flex rounded-full bg-sage-soft px-4 py-2 text-[11px] font-bold uppercase tracking-[0.18em] text-sage">Appointment setting</div>
+            <h3 class="mt-5 font-display text-2xl font-extrabold tracking-[-.02em] text-ink">Connect with key decision makers, fast.</h3>
+            <p class="mt-4 text-sm leading-7 text-ink-soft">We handle the conversations and follow-up needed to turn interested replies into meetings that go straight onto your calendar — so you spend your time selling, not chasing.</p>
+            <ul class="mt-6 space-y-3 text-sm leading-6 text-ink-soft">
+              <li>Replies handled and qualified before handoff</li>
+              <li>Meetings booked directly onto your calendar</li>
+              <li>Follow-up sequences that keep conversations moving</li>
+            </ul>
+          </article>
+          <article class="rounded-[2rem] border border-white/80 bg-white p-8 shadow-ambient">
+            <div class="inline-flex rounded-full bg-crimson-soft px-4 py-2 text-[11px] font-bold uppercase tracking-[0.18em] text-crimson">Performance pricing</div>
+            <h3 class="mt-5 font-display text-2xl font-extrabold tracking-[-.02em] text-ink">Only pay for results.</h3>
+            <p class="mt-4 text-sm leading-7 text-ink-soft">Say goodbye to unpredictable ad spend. B2B Drive runs on a fully performance-based model with complete accountability — you only pay for qualified leads or booked appointments.</p>
+            <ul class="mt-6 space-y-3 text-sm leading-6 text-ink-soft">
+              <li>No charge for no-shows on booked meetings</li>
+              <li>Pricing structured against your sales goals</li>
+              <li>Monthly retainer options also available</li>
+            </ul>
+          </article>
+          <article class="rounded-[2rem] border border-white/80 bg-white p-8 shadow-ambient">
+            <div class="inline-flex rounded-full bg-amber-soft px-4 py-2 text-[11px] font-bold uppercase tracking-[0.18em] text-amber">Operations</div>
+            <h3 class="mt-5 font-display text-2xl font-extrabold tracking-[-.02em] text-ink">Focus on what matters.</h3>
+            <p class="mt-4 text-sm leading-7 text-ink-soft">With lead generation and appointment setting fully handled, your team can focus on keeping clients happy and closing the deals already on the calendar — instead of worrying about where the next one comes from.</p>
+            <ul class="mt-6 space-y-3 text-sm leading-6 text-ink-soft">
+              <li>One team handling research through booking</li>
+              <li>Steady flow of meetings to support proposals</li>
+              <li>Less time spent on outreach, more on closing</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="px-6 py-24">
+      <div class="mx-auto max-w-shell">
+        <div class="grid gap-10 lg:grid-cols-[.9fr_1.1fr]">
+          <div>
+            <span class="pill-gloss inline-flex rounded-full px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-ink-soft">Your roadmap</span>
+            <h2 class="mt-6 font-display text-4xl font-extrabold tracking-[-.03em] text-ink md:text-6xl">From first message to <span class="editorial-punch">booked call</span>.</h2>
+            <p class="mt-5 text-lg leading-8 text-ink-soft">Every engagement follows the same roadmap — built so each phase sets up the next, and the only thing that lands on your calendar is a meeting worth having.</p>
+            <a href="#contact" class="btn-3d-light mt-8 inline-flex items-center justify-center rounded-2xl px-8 py-4 text-sm font-semibold text-ink">Get Started</a>
+          </div>
+          <div class="space-y-5">
+            <article class="rounded-[1.8rem] border border-white/80 bg-white p-6 shadow-soft">
+              <div class="flex items-center justify-between gap-4">
+                <div class="inline-flex rounded-full bg-cobalt-soft px-4 py-2 text-[11px] font-bold uppercase tracking-[0.16em] text-cobalt">Phase 01</div>
+                <div class="text-xs uppercase tracking-[0.18em] text-ink-soft">Strategy &amp; setup</div>
+              </div>
+              <h3 class="mt-5 font-display text-2xl font-extrabold tracking-[-.02em] text-ink">Define your audience and prepare the infrastructure.</h3>
+              <p class="mt-3 text-sm leading-7 text-ink-soft">We define your ideal customer profile and align messaging with what's currently relevant in your market, segment your audience with a differentiated value proposition for each, and set up the sending infrastructure that supports it.</p>
+              <ul class="mt-4 flex flex-wrap gap-2 text-xs font-semibold text-ink-soft">
+                <li class="tag-3d rounded-full px-3 py-1.5">Market Research</li>
+                <li class="tag-3d rounded-full px-3 py-1.5">Campaign Strategy</li>
+                <li class="tag-3d rounded-full px-3 py-1.5">Domain Set Up</li>
+              </ul>
+            </article>
+            <article class="rounded-[1.8rem] border border-white/80 bg-white p-6 shadow-soft">
+              <div class="flex items-center justify-between gap-4">
+                <div class="inline-flex rounded-full bg-sage-soft px-4 py-2 text-[11px] font-bold uppercase tracking-[0.16em] text-sage">Phase 02</div>
+                <div class="text-xs uppercase tracking-[0.18em] text-ink-soft">Build the outreach</div>
+              </div>
+              <h3 class="mt-5 font-display text-2xl font-extrabold tracking-[-.02em] text-ink">Build the list, the message, and the personal touch.</h3>
+              <p class="mt-3 text-sm leading-7 text-ink-soft">We warm up your inboxes to maximize deliverability and protect sender reputation, build a validated list of contacts at your target companies, and craft cold email scripts that are split-tested with the right psychological triggers for your industry — then personalise key parts of each message to maximize response rates.</p>
+              <ul class="mt-4 flex flex-wrap gap-2 text-xs font-semibold text-ink-soft">
+                <li class="tag-3d rounded-full px-3 py-1.5">Email Warmup</li>
+                <li class="tag-3d rounded-full px-3 py-1.5">Prospect List Building</li>
+                <li class="tag-3d rounded-full px-3 py-1.5">Script Writing &amp; Testing</li>
+                <li class="tag-3d rounded-full px-3 py-1.5">Personalisation</li>
+              </ul>
+            </article>
+            <article class="rounded-[1.8rem] border border-white/80 bg-white p-6 shadow-soft">
+              <div class="flex items-center justify-between gap-4">
+                <div class="inline-flex rounded-full bg-crimson-soft px-4 py-2 text-[11px] font-bold uppercase tracking-[0.16em] text-crimson">Phase 03</div>
+                <div class="text-xs uppercase tracking-[0.18em] text-ink-soft">Launch &amp; book</div>
+              </div>
+              <h3 class="mt-5 font-display text-2xl font-extrabold tracking-[-.02em] text-ink">Run the campaigns and fill your calendar.</h3>
+              <p class="mt-3 text-sm leading-7 text-ink-soft">A sophisticated multi-inbox, multi-campaign operation runs continuously to reach your entire target market — and as replies come in, we converse and follow up with your leads to book sales calls directly onto your calendar.</p>
+              <ul class="mt-4 flex flex-wrap gap-2 text-xs font-semibold text-ink-soft">
+                <li class="tag-3d rounded-full px-3 py-1.5">Campaign Management</li>
+                <li class="tag-3d rounded-full px-3 py-1.5">Appointment Setting</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="px-6 py-24">
+      <div class="mx-auto max-w-shell">
+        <div class="mx-auto max-w-3xl text-center">
+          <span class="pill-gloss inline-flex rounded-full px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-ink-soft">What clients say</span>
+          <h2 class="mt-6 font-display text-4xl font-extrabold tracking-[-.03em] text-ink md:text-6xl">Don't take it from <span class="editorial-punch">us</span>.</h2>
+          <p class="mt-5 text-lg leading-8 text-ink-soft">Real feedback from agencies, consultancies, and B2B service teams who've used B2B Drive to fill their calendars with qualified calls.</p>
+        </div>
+        <div class="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <article class="rounded-[2rem] border border-white/80 bg-white p-7 shadow-soft">
+            <p class="text-base italic leading-8 text-ink">"We've been working with B2B Drive for about 3 months now and we cannot be happier. We've been scheduling 8-10 sales calls a month, the prospects show up, and they're actually qualified."</p>
+            <div class="mt-8 flex items-center gap-4">
+              <img src="assets/images/1-test.png" alt="Andres Bohorquez" class="h-12 w-12 rounded-full object-cover shadow-soft">
+              <div>
+                <div class="font-semibold text-ink">Andres Bohorquez</div>
+                <div class="text-sm text-ink-soft">Co-Founder, Green Mo Marketing</div>
+              </div>
+            </div>
+          </article>
+          <article class="rounded-[2rem] border border-white/80 bg-white p-7 shadow-soft">
+            <p class="text-base italic leading-8 text-ink">"We've worked with B2B Drive for about a year on marketing specialized medical devices globally. They've been prudent in identifying targeted contacts across countries and booking meetings that convert into real business opportunities."</p>
+            <div class="mt-8 flex items-center gap-4">
+              <img src="assets/images/2-test.png" alt="Thangiah Immanuel" class="h-12 w-12 rounded-full object-cover shadow-soft">
+              <div>
+                <div class="font-semibold text-ink">Thangiah Immanuel</div>
+                <div class="text-sm text-ink-soft">Managing Director, Cephas Medical</div>
+              </div>
+            </div>
+          </article>
+          <article class="rounded-[2rem] border border-white/80 bg-white p-7 shadow-soft">
+            <p class="text-base italic leading-8 text-ink">"Andrew is highly professional and sincere in his approach. Along with generating leads, he's provided valuable input on other aspects of our marketing — his business acumen has greatly benefited us."</p>
+            <div class="mt-8 flex items-center gap-4">
+              <img src="assets/images/3-test.png" alt="Dr. Philip Ashok" class="h-12 w-12 rounded-full object-cover shadow-soft">
+              <div>
+                <div class="font-semibold text-ink">Dr. Philip Ashok</div>
+                <div class="text-sm text-ink-soft">CEO, CLS Pvt. Ltd.</div>
+              </div>
+            </div>
+          </article>
+          <article class="rounded-[2rem] border border-white/80 bg-white p-7 shadow-soft">
+            <p class="text-base italic leading-8 text-ink">"I tried several methods to bring in leads for my ecommerce email agency, but none worked until B2B Drive came in. They're honest, responsive, and sincere — I've recommended them to several B2B businesses myself."</p>
+            <div class="mt-8 flex items-center gap-4">
+              <img src="assets/images/Ellipse-16.png" alt="Damon Didier" class="h-12 w-12 rounded-full object-cover shadow-soft">
+              <div>
+                <div class="font-semibold text-ink">Damon Didier</div>
+                <div class="text-sm text-ink-soft">Founder, Win At Ecommerce</div>
+              </div>
+            </div>
+          </article>
+          <article class="rounded-[2rem] border border-white/80 bg-white p-7 shadow-soft">
+            <p class="text-base italic leading-8 text-ink">"B2B Drive helped us scale profitably into the US and European markets — something that would have been very difficult and expensive without them."</p>
+            <div class="mt-8 flex items-center gap-4">
+              <img src="assets/images/Ellipse-17.png" alt="Dr. Titus Samuel" class="h-12 w-12 rounded-full object-cover shadow-soft">
+              <div>
+                <div class="font-semibold text-ink">Dr. Titus Samuel</div>
+                <div class="text-sm text-ink-soft">DGM Growth, Cephas Medical</div>
+              </div>
+            </div>
+          </article>
+          <article class="rounded-[2rem] border border-white/80 bg-white p-7 shadow-soft">
+            <p class="text-base italic leading-8 text-ink">"B2B Drive brings us booked appointments all the time and is our highest-performing cold email team. I'd recommend them without hesitation."</p>
+            <div class="mt-8 flex items-center gap-4">
+              <img src="assets/images/Ellipse-18.png" alt="Caroline Castille" class="h-12 w-12 rounded-full object-cover shadow-soft">
+              <div>
+                <div class="font-semibold text-ink">Caroline Castille</div>
+                <div class="text-sm text-ink-soft">CEO, Clickable Impact</div>
+              </div>
+            </div>
+          </article>
+          <article class="rounded-[2rem] border border-white/80 bg-white p-7 shadow-soft">
+            <p class="text-base italic leading-8 text-ink">"They handle absolutely everything, from sourcing the leads to running the outreach. Great to work with, and the results speak for themselves."</p>
+            <div class="mt-8 flex items-center gap-4">
+              <img src="assets/images/Ellipse-19.png" alt="William Smart" class="h-12 w-12 rounded-full object-cover shadow-soft">
+              <div>
+                <div class="font-semibold text-ink">William Smart</div>
+                <div class="text-sm text-ink-soft">CEO, Progressive AI Solutions</div>
+              </div>
+            </div>
+          </article>
+          <article class="rounded-[2rem] border border-white/80 bg-white p-7 shadow-soft">
+            <p class="text-base italic leading-8 text-ink">"B2B Drive provides tremendous value to our business. Their leads are consistently high quality, and they're able to produce them at volume."</p>
+            <div class="mt-8 flex items-center gap-4">
+              <img src="assets/images/Ellipse-20.png" alt="Luke Sheppard" class="h-12 w-12 rounded-full object-cover shadow-soft">
+              <div>
+                <div class="font-semibold text-ink">Luke Sheppard</div>
+                <div class="text-sm text-ink-soft">CEO, Revive Ratings</div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section id="comparison" class="px-6 py-24">
+      <div class="mx-auto max-w-shell overflow-hidden rounded-[2rem] border border-white/80 bg-white shadow-ambient">
+        <div class="grid gap-0 lg:grid-cols-[.88fr_1.12fr]">
+          <div class="border-b border-line p-8 lg:border-b-0 lg:border-r">
+            <span class="rounded-full bg-navy-deep px-4 py-2 text-[11px] font-bold uppercase tracking-[0.18em] text-white">Why B2B Drive</span>
+            <h2 class="mt-6 font-display text-4xl font-extrabold tracking-[-.03em] text-ink">More than another lead-list <span class="editorial-punch">vendor</span>.</h2>
+            <p class="mt-5 text-base leading-8 text-ink-soft">B2B drive runs prospecting, outreach, and appointment setting as one connected system — so the meetings that reach your calendar are ones your team can actually turn into proposals.</p>
+          </div>
+          <div class="grid md:grid-cols-2">
+            <article class="border-b border-line p-8 md:border-r">
+              <div class="text-xs font-bold uppercase tracking-[0.18em] text-ink-soft">Going it alone</div>
+              <ul class="mt-5 space-y-3 text-sm leading-7 text-ink-soft">
+                <li>Long, unpredictable sales cycles</li>
+                <li>Saturated markets and generic outreach</li>
+                <li>High, unpredictable client-acquisition costs</li>
+              </ul>
+            </article>
+            <article class="border-b border-line bg-mist-alt/50 p-8">
+              <div class="text-xs font-bold uppercase tracking-[0.18em] text-ink-soft">With B2B Drive</div>
+              <ul class="mt-5 space-y-3 text-sm leading-7 text-ink">
+                <li>Meetings booked within weeks of starting</li>
+                <li>Outreach matched to your ICP and split-tested for response</li>
+                <li>Performance-based pricing — pay for qualified leads or booked appointments</li>
+              </ul>
+            </article>
+            <article class="p-8 md:border-r">
+              <div class="text-xs font-bold uppercase tracking-[0.18em] text-ink-soft">What gets in the way</div>
+              <ul class="mt-5 space-y-3 text-sm leading-7 text-ink-soft">
+                <li>Cold prospects that go nowhere</li>
+                <li>Time spent chasing leads instead of serving clients</li>
+              </ul>
+            </article>
+            <article class="bg-mist-alt/50 p-8">
+              <div class="text-xs font-bold uppercase tracking-[0.18em] text-ink-soft">What you get instead</div>
+              <ul class="mt-5 space-y-3 text-sm leading-7 text-ink">
+                <li>Personalised, tested outreach that gets replies</li>
+                <li>A done-for-you system so your team can focus on clients and closing</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="px-6 py-24">
+      <div class="mx-auto max-w-shell">
+        <div class="mx-auto max-w-2xl text-center">
+          <span class="pill-gloss inline-flex rounded-full px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-ink-soft">FAQ</span>
+          <h2 class="mt-6 font-display text-4xl font-extrabold tracking-[-.03em] text-ink md:text-6xl">Frequently asked <span class="editorial-punch">questions</span>.</h2>
+        </div>
+        <div class="mx-auto mt-12 max-w-4xl space-y-4">
+          <details class="faq-item rounded-[1.6rem] border border-white/80 bg-white px-6 py-5 shadow-soft" open>
+            <summary class="flex cursor-pointer items-center justify-between gap-6">
+              <span class="font-display text-xl font-extrabold tracking-[-.02em] text-ink">Will this work for my B2B business?</span>
+              <span class="faq-plus text-2xl text-ink-soft">+</span>
+              <span class="faq-minus text-2xl text-ink-soft">&minus;</span>
+            </summary>
+            <p class="mt-4 max-w-3xl text-sm leading-7 text-ink-soft">We don't take on clients unless we're reasonably confident we can deliver results. Since our pricing is performance-based, that confidence is built into the engagement from day one.</p>
+          </details>
+          <details class="faq-item rounded-[1.6rem] border border-white/80 bg-white px-6 py-5 shadow-soft">
+            <summary class="flex cursor-pointer items-center justify-between gap-6">
+              <span class="font-display text-xl font-extrabold tracking-[-.02em] text-ink">How many leads or booked meetings can I expect per month?</span>
+              <span class="faq-plus text-2xl text-ink-soft">+</span>
+              <span class="faq-minus text-2xl text-ink-soft">&minus;</span>
+            </summary>
+            <p class="mt-4 max-w-3xl text-sm leading-7 text-ink-soft">This depends on your sales goals and the nature of your target market. We structure campaigns around the number of leads or meetings you can realistically handle each week or month.</p>
+          </details>
+          <details class="faq-item rounded-[1.6rem] border border-white/80 bg-white px-6 py-5 shadow-soft">
+            <summary class="flex cursor-pointer items-center justify-between gap-6">
+              <span class="font-display text-xl font-extrabold tracking-[-.02em] text-ink">What's the price per lead or booked meeting, and when am I charged?</span>
+              <span class="faq-plus text-2xl text-ink-soft">+</span>
+              <span class="faq-minus text-2xl text-ink-soft">&minus;</span>
+            </summary>
+            <p class="mt-4 max-w-3xl text-sm leading-7 text-ink-soft">Pricing depends on your target market and how easily appointments can be set within it. We aim to structure pricing so it works in your favour — get on a call with us and we'll work through it together.</p>
+          </details>
+          <details class="faq-item rounded-[1.6rem] border border-white/80 bg-white px-6 py-5 shadow-soft">
+            <summary class="flex cursor-pointer items-center justify-between gap-6">
+              <span class="font-display text-xl font-extrabold tracking-[-.02em] text-ink">If I opt for booked meetings, am I charged for no-shows?</span>
+              <span class="faq-plus text-2xl text-ink-soft">+</span>
+              <span class="faq-minus text-2xl text-ink-soft">&minus;</span>
+            </summary>
+            <p class="mt-4 max-w-3xl text-sm leading-7 text-ink-soft">No. You are not charged for prospects who don't show up to a booked meeting.</p>
+          </details>
+          <details class="faq-item rounded-[1.6rem] border border-white/80 bg-white px-6 py-5 shadow-soft">
+            <summary class="flex cursor-pointer items-center justify-between gap-6">
+              <span class="font-display text-xl font-extrabold tracking-[-.02em] text-ink">Are there any time-bound contracts?</span>
+              <span class="faq-plus text-2xl text-ink-soft">+</span>
+              <span class="faq-minus text-2xl text-ink-soft">&minus;</span>
+            </summary>
+            <p class="mt-4 max-w-3xl text-sm leading-7 text-ink-soft">No fixed-term contract is required. There is a minimum number of appointments agreed in the initial scope before an engagement begins.</p>
+          </details>
+          <details class="faq-item rounded-[1.6rem] border border-white/80 bg-white px-6 py-5 shadow-soft">
+            <summary class="flex cursor-pointer items-center justify-between gap-6">
+              <span class="font-display text-xl font-extrabold tracking-[-.02em] text-ink">Are there alternate pricing options?</span>
+              <span class="faq-plus text-2xl text-ink-soft">+</span>
+              <span class="faq-minus text-2xl text-ink-soft">&minus;</span>
+            </summary>
+            <p class="mt-4 max-w-3xl text-sm leading-7 text-ink-soft">Yes. We also offer monthly retainer pricing, with a set number of prospects contacted each month and a reasonable expectation of results agreed up front.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer / Contact Section -->
+  <footer id="contact" class="px-6 pb-14 pt-10">
+    <div class="mx-auto max-w-shell rounded-[2.2rem] border border-white/80 bg-navy-deep px-8 py-10 text-white shadow-ambient md:px-12 md:py-12">
+      <div class="grid gap-10 lg:grid-cols-[1.05fr_.95fr] lg:items-start">
+        <div>
+          <span class="rounded-full bg-white/10 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.18em]">Get Started</span>
+          <h2 class="mt-6 max-w-xl font-display text-4xl font-extrabold tracking-[-.03em] md:text-6xl">Ready to <span class="editorial-punch">step on the pedal</span>?</h2>
+          <p class="mt-5 max-w-lg text-base leading-8 text-white/72">Let's schedule a discovery call and find out if we're a fit. Most B2B businesses don't have the time, energy, or expertise to build a predictable pipeline of ready-to-buy prospects on their own — and even if we're not the right fit, you'll walk away with actionable steps.</p>
+          <ul class="mt-8 space-y-3 text-sm leading-6 text-white/80">
+            <li class="flex items-start gap-3"><span class="mt-1 h-1.5 w-1.5 flex-none rounded-full bg-cobalt"></span>Qualified meetings booked directly onto your calendar</li>
+            <li class="flex items-start gap-3"><span class="mt-1 h-1.5 w-1.5 flex-none rounded-full bg-sage"></span>No charge for no-shows on booked appointments</li>
+            <li class="flex items-start gap-3"><span class="mt-1 h-1.5 w-1.5 flex-none rounded-full bg-crimson"></span>Performance-based pricing, structured around your goals</li>
+          </ul>
+        </div>
+        <div class="rounded-[1.75rem] bg-white p-6 text-ink shadow-ambient md:p-8">
+          <h3 class="font-display text-xl font-extrabold tracking-[-.02em] text-ink">Tell us about your business</h3>
+          <p class="mt-2 text-sm leading-6 text-ink-soft">Share a few details and we'll be in touch to schedule your discovery call.</p>
+          <form class="mt-6 space-y-4">
+            <div class="grid gap-4 sm:grid-cols-2">
+              <div>
+                <label for="name" class="text-xs font-semibold uppercase tracking-[0.14em] text-ink-soft">Name</label>
+                <input type="text" id="name" name="name" required class="mt-2 block w-full rounded-xl border-line bg-panel-soft text-sm text-ink shadow-soft focus:border-cobalt focus:ring-cobalt">
+              </div>
+              <div>
+                <label for="email" class="text-xs font-semibold uppercase tracking-[0.14em] text-ink-soft">Work email</label>
+                <input type="email" id="email" name="email" required class="mt-2 block w-full rounded-xl border-line bg-panel-soft text-sm text-ink shadow-soft focus:border-cobalt focus:ring-cobalt">
+              </div>
+            </div>
+            <div>
+              <label for="company" class="text-xs font-semibold uppercase tracking-[0.14em] text-ink-soft">Company &amp; target market</label>
+              <input type="text" id="company" name="company" class="mt-2 block w-full rounded-xl border-line bg-panel-soft text-sm text-ink shadow-soft focus:border-cobalt focus:ring-cobalt">
+            </div>
+            <div>
+              <label for="goal" class="text-xs font-semibold uppercase tracking-[0.14em] text-ink-soft">Meetings you'd like per month</label>
+              <select id="goal" name="goal" class="mt-2 block w-full rounded-xl border-line bg-panel-soft text-sm text-ink shadow-soft focus:border-cobalt focus:ring-cobalt">
+                <option>1–5</option>
+                <option>6–10</option>
+                <option>11–20</option>
+                <option>20+</option>
+              </select>
+            </div>
+            <div>
+              <label for="message" class="text-xs font-semibold uppercase tracking-[0.14em] text-ink-soft">What are you looking to achieve?</label>
+              <textarea id="message" name="message" rows="3" class="mt-2 block w-full rounded-xl border-line bg-panel-soft text-sm text-ink shadow-soft focus:border-cobalt focus:ring-cobalt"></textarea>
+            </div>
+            <button type="submit" class="btn-3d-dark inline-flex w-full items-center justify-center rounded-2xl px-8 py-4 text-sm font-semibold text-white">Get Started</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="mx-auto mt-8 flex max-w-shell flex-col gap-4 text-sm text-ink-soft md:flex-row md:items-center md:justify-between">
+      <div class="flex items-center gap-3">
+        <img src="assets/images/logo.png" alt="B2B Drive logo" class="h-8 w-auto">
+        <span class="font-display font-extrabold text-ink">B2B Drive</span>
+      </div>
+      <nav class="flex flex-wrap gap-x-6 gap-y-2">
+        <a href="#services" class="transition hover:text-ink">Services</a>
+        <a href="#process" class="transition hover:text-ink">Process</a>
+        <a href="#testimonials" class="transition hover:text-ink">Proof</a>
+        <a href="#comparison" class="transition hover:text-ink">Why B2B Drive</a>
+        <a href="#faq" class="transition hover:text-ink">FAQ</a>
+      </nav>
+      <p>&copy; 2026 B2B Drive. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
