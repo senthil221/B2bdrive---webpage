@@ -179,12 +179,8 @@
   <main id="top">
 
     <!-- Hero -->
-    <section id="hero" class="relative overflow-hidden px-6 pb-20 pt-16 text-center md:pt-24">
-      <!-- soft ambient wash -->
-      <div class="pointer-events-none absolute inset-0 -z-10" aria-hidden="true">
-        <div class="absolute inset-0 bg-grid-light opacity-50 [mask-image:radial-gradient(circle_at_top,black,transparent_72%)]"></div>
-        <div class="absolute left-1/2 top-0 h-[460px] w-[820px] -translate-x-1/2 rounded-full" style="background: radial-gradient(closest-side, rgba(47,107,255,.12), transparent 70%);"></div>
-      </div>
+    <section id="hero" class="relative overflow-hidden bg-gradient-to-b from-white via-white to-azure-soft px-6 pt-16 text-center md:pt-24">
+      <div class="pointer-events-none absolute inset-x-0 top-0 -z-10 h-80 bg-grid-light opacity-50 [mask-image:radial-gradient(circle_at_top,black,transparent_75%)]" aria-hidden="true"></div>
 
       <div class="relative mx-auto max-w-3xl">
         <div class="mb-7 inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs font-bold uppercase tracking-[0.16em] text-azure-deep pill">
@@ -205,34 +201,32 @@
           <a href="#contact" class="btn btn-azure inline-flex items-center justify-center rounded-full px-9 py-4 text-sm font-semibold">Book a discovery call</a>
           <a href="#process" class="btn btn-outline inline-flex items-center justify-center rounded-full px-9 py-4 text-sm font-semibold">See how it works</a>
         </div>
+
+        <!-- slim inline proof, no cards -->
+        <div class="mt-12 flex flex-wrap items-center justify-center gap-x-10 gap-y-5">
+          <div class="flex items-center gap-2.5 text-left">
+            <span class="font-display text-3xl font-bold text-ink">8&ndash;10</span>
+            <span class="max-w-[7.5rem] text-xs leading-5 text-ink-soft">qualified calls / mo per client</span>
+          </div>
+          <span class="hidden h-9 w-px bg-line sm:block"></span>
+          <div class="flex items-center gap-2.5 text-left">
+            <span class="font-display text-3xl font-bold text-ink">100%</span>
+            <span class="max-w-[7.5rem] text-xs leading-5 text-ink-soft">performance-based pricing</span>
+          </div>
+          <span class="hidden h-9 w-px bg-line sm:block"></span>
+          <div class="flex items-center gap-2.5 text-left">
+            <span class="font-display text-3xl font-bold text-ink">0</span>
+            <span class="max-w-[7.5rem] text-xs leading-5 text-ink-soft">charge for no-shows</span>
+          </div>
+        </div>
+        <p class="mt-6 text-xs font-semibold italic text-azure-deep">*A performance-based solution</p>
       </div>
 
-      <!-- Hero illustration (from the original B2B Drive site) -->
-      <div class="relative mx-auto mt-14 max-w-4xl">
-        <div class="overflow-hidden rounded-[2.5rem] border border-azure-soft bg-azure-soft px-6 pb-4 pt-10 sm:px-12">
-          <img src="assets/images/hero-key.png"
-               alt="A team of professionals carrying a giant golden key toward a door marked Business — unlocking new B2B partnerships"
-               class="mx-auto w-full max-w-2xl" width="768" height="390" fetchpriority="high">
-        </div>
-        <p class="mt-4 text-xs font-semibold italic text-azure-deep">*A performance-based solution</p>
-      </div>
-
-      <!-- slim inline proof, no cards -->
-      <div class="relative mx-auto mt-14 flex max-w-3xl flex-wrap items-center justify-center gap-x-10 gap-y-5">
-        <div class="flex items-center gap-2.5 text-left">
-          <span class="font-display text-3xl font-bold text-ink">8&ndash;10</span>
-          <span class="max-w-[7.5rem] text-xs leading-5 text-ink-soft">qualified calls / mo per client</span>
-        </div>
-        <span class="hidden h-9 w-px bg-line sm:block"></span>
-        <div class="flex items-center gap-2.5 text-left">
-          <span class="font-display text-3xl font-bold text-ink">100%</span>
-          <span class="max-w-[7.5rem] text-xs leading-5 text-ink-soft">performance-based pricing</span>
-        </div>
-        <span class="hidden h-9 w-px bg-line sm:block"></span>
-        <div class="flex items-center gap-2.5 text-left">
-          <span class="font-display text-3xl font-bold text-ink">0</span>
-          <span class="max-w-[7.5rem] text-xs leading-5 text-ink-soft">charge for no-shows</span>
-        </div>
+      <!-- Hero illustration sits flush at the bottom as part of the scene -->
+      <div class="relative mx-auto mt-2 max-w-4xl">
+        <img src="assets/images/hero-key.png"
+             alt="A team of professionals carrying a giant golden key toward a door marked Business — unlocking new B2B partnerships"
+             class="mx-auto block w-full max-w-3xl" width="768" height="390" fetchpriority="high">
       </div>
     </section>
 
