@@ -111,6 +111,10 @@
         linear-gradient(to bottom, rgba(13,15,14,.045) 1px, transparent 1px);
       background-size: 30px 30px;
     }
+    .bg-dot-grid {
+      background-image: radial-gradient(rgba(47,107,255,.13) 1.4px, transparent 1.4px);
+      background-size: 24px 24px;
+    }
 
     /* Floating 3D-sphere vector art */
     .sphere { position: absolute; border-radius: 9999px; pointer-events: none;
@@ -250,8 +254,10 @@
     </section>
 
     <!-- What to expect (Belkins-style illustrated cards) -->
-    <section class="px-6 pt-20 pb-8 md:pt-28">
-      <div class="mx-auto max-w-shell">
+    <section class="relative overflow-hidden px-6 pt-20 pb-8 md:pt-28">
+      <div class="pointer-events-none absolute -left-12 top-24 h-72 w-72 rounded-full bg-azure/10 blur-3xl" aria-hidden="true"></div>
+      <div class="pointer-events-none absolute right-0 bottom-0 h-64 w-64 translate-x-1/4 rounded-full bg-azure/[0.07] blur-3xl" aria-hidden="true"></div>
+      <div class="relative mx-auto max-w-shell">
         <div class="grid gap-12 lg:grid-cols-[.82fr_1.18fr]">
           <div class="text-center lg:sticky lg:top-28 lg:self-start lg:text-left">
             <span class="pill inline-flex rounded-full px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-ink-soft">What to expect</span>
@@ -398,9 +404,10 @@
     </section>
 
     <!-- Services -->
-    <section id="services" class="relative overflow-hidden px-6 py-20 md:py-28">
-      <div class="pointer-events-none absolute right-0 top-16 h-80 w-80 translate-x-1/3 rounded-full bg-azure/10 blur-3xl" aria-hidden="true"></div>
-      <div class="pointer-events-none absolute left-0 bottom-10 h-64 w-64 -translate-x-1/3 rounded-full bg-azure/5 blur-3xl" aria-hidden="true"></div>
+    <section id="services" class="relative overflow-hidden bg-gradient-to-b from-azure-soft via-white to-white px-6 py-20 md:py-28">
+      <div class="pointer-events-none absolute inset-0 bg-dot-grid opacity-70 [mask-image:linear-gradient(to_bottom,black,transparent_72%)]" aria-hidden="true"></div>
+      <div class="pointer-events-none absolute right-0 top-16 h-80 w-80 translate-x-1/3 rounded-full bg-azure/15 blur-3xl" aria-hidden="true"></div>
+      <div class="pointer-events-none absolute left-0 bottom-10 h-64 w-64 -translate-x-1/3 rounded-full bg-azure/10 blur-3xl" aria-hidden="true"></div>
       <div class="relative mx-auto max-w-shell">
         <div class="mx-auto mb-16 max-w-2xl text-center">
           <span class="pill inline-flex rounded-full px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-ink-soft">What we do</span>
@@ -409,42 +416,42 @@
         </div>
         <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           <article class="rounded-[1.5rem] border border-line bg-white p-7 shadow-soft transition hover:-translate-y-1 hover:shadow-card">
-            <div class="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-azure/10 text-azure-deep ring-1 ring-azure/15">
+            <div class="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-azure to-azure-deep text-white shadow-[0_6px_14px_rgba(47,107,255,.28)]">
               <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
             </div>
             <h3 class="mt-5 font-display text-lg font-bold text-ink">ICP &amp; prospect research</h3>
             <p class="mt-2 text-sm leading-7 text-ink-soft">We pinpoint the companies in your market that need what you sell, with validated contacts.</p>
           </article>
           <article class="rounded-[1.5rem] border border-line bg-white p-7 shadow-soft transition hover:-translate-y-1 hover:shadow-card">
-            <div class="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-azure/10 text-azure-deep ring-1 ring-azure/15">
+            <div class="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-azure to-azure-deep text-white shadow-[0_6px_14px_rgba(47,107,255,.28)]">
               <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5l8.5 6 8.5-6"/></svg>
             </div>
             <h3 class="mt-5 font-display text-lg font-bold text-ink">Cold email campaigns</h3>
             <p class="mt-2 text-sm leading-7 text-ink-soft">Split-tested, personalised cold emails that earn interested replies from decision makers.</p>
           </article>
           <article class="rounded-[1.5rem] border border-line bg-white p-7 shadow-soft transition hover:-translate-y-1 hover:shadow-card">
-            <div class="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-azure/10 text-azure-deep ring-1 ring-azure/15">
+            <div class="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-azure to-azure-deep text-white shadow-[0_6px_14px_rgba(47,107,255,.28)]">
               <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 7.6-7 9-4-1.4-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg>
             </div>
             <h3 class="mt-5 font-display text-lg font-bold text-ink">Inbox warm-up &amp; deliverability</h3>
             <p class="mt-2 text-sm leading-7 text-ink-soft">Warmed inboxes and a protected sender reputation, so your emails actually land.</p>
           </article>
           <article class="rounded-[1.5rem] border border-line bg-white p-7 shadow-soft transition hover:-translate-y-1 hover:shadow-card">
-            <div class="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-azure/10 text-azure-deep ring-1 ring-azure/15">
+            <div class="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-azure to-azure-deep text-white shadow-[0_6px_14px_rgba(47,107,255,.28)]">
               <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16.5" rx="2"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4M8.5 15l2.2 2.2L15.5 12.5"/></svg>
             </div>
             <h3 class="mt-5 font-display text-lg font-bold text-ink">Appointment setting</h3>
             <p class="mt-2 text-sm leading-7 text-ink-soft">We handle every reply and follow-up, then book qualified meetings onto your calendar.</p>
           </article>
           <article class="rounded-[1.5rem] border border-line bg-white p-7 shadow-soft transition hover:-translate-y-1 hover:shadow-card">
-            <div class="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-azure/10 text-azure-deep ring-1 ring-azure/15">
+            <div class="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-azure to-azure-deep text-white shadow-[0_6px_14px_rgba(47,107,255,.28)]">
               <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 13.4l-7.2 7.2a2 2 0 01-2.8 0l-7-7A2 2 0 013 12.2V5a2 2 0 012-2h7.2a2 2 0 011.4.6l7 7a2 2 0 010 2.8z"/><circle cx="7.5" cy="7.5" r="1.2"/></svg>
             </div>
             <h3 class="mt-5 font-display text-lg font-bold text-ink">Performance-based pricing</h3>
             <p class="mt-2 text-sm leading-7 text-ink-soft">Pay per qualified lead or booked meeting, billed monthly — no bloated retainers.</p>
           </article>
           <article class="rounded-[1.5rem] border border-line bg-white p-7 shadow-soft transition hover:-translate-y-1 hover:shadow-card">
-            <div class="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-azure/10 text-azure-deep ring-1 ring-azure/15">
+            <div class="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-azure to-azure-deep text-white shadow-[0_6px_14px_rgba(47,107,255,.28)]">
               <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V4M4 20h16M8 16v-4M13 16V8M18 16v-6"/></svg>
             </div>
             <h3 class="mt-5 font-display text-lg font-bold text-ink">Reporting &amp; optimisation</h3>
@@ -455,8 +462,9 @@
     </section>
 
     <!-- Process -->
-    <section id="process" class="bg-mist px-6 py-20 md:py-28">
-      <div class="mx-auto max-w-shell">
+    <section id="process" class="relative overflow-hidden bg-gradient-to-b from-mist to-azure-soft px-6 py-20 md:py-28">
+      <div class="pointer-events-none absolute left-0 top-20 h-72 w-72 -translate-x-1/3 rounded-full bg-azure/10 blur-3xl" aria-hidden="true"></div>
+      <div class="relative mx-auto max-w-shell">
         <div class="grid gap-12 lg:grid-cols-[.85fr_1.15fr]">
           <div class="lg:sticky lg:top-28 lg:self-start">
             <span class="pill inline-flex rounded-full px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-ink-soft">Your roadmap</span>
@@ -513,8 +521,9 @@
     </section>
 
     <!-- Results -->
-    <section id="results" class="px-6 py-20 md:py-28">
-      <div class="mx-auto max-w-shell">
+    <section id="results" class="relative overflow-hidden bg-gradient-to-b from-white to-azure-soft px-6 py-20 md:py-28">
+      <div class="pointer-events-none absolute right-0 top-10 h-72 w-72 translate-x-1/3 rounded-full bg-azure/10 blur-3xl" aria-hidden="true"></div>
+      <div class="relative mx-auto max-w-shell">
         <div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div class="max-w-2xl">
             <span class="pill inline-flex rounded-full px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-ink-soft">Results</span>
@@ -658,8 +667,9 @@
     </section>
 
     <!-- FAQ -->
-    <section id="faq" class="bg-mist px-6 py-20 md:py-28">
-      <div class="mx-auto max-w-shell">
+    <section id="faq" class="relative overflow-hidden bg-mist px-6 py-20 md:py-28">
+      <div class="pointer-events-none absolute right-0 top-10 h-72 w-72 translate-x-1/3 rounded-full bg-azure/10 blur-3xl" aria-hidden="true"></div>
+      <div class="relative mx-auto max-w-shell">
         <div class="grid gap-12 lg:grid-cols-[.8fr_1.2fr]">
           <div class="lg:sticky lg:top-28 lg:self-start">
             <span class="pill inline-flex rounded-full px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-ink-soft">FAQ</span>
