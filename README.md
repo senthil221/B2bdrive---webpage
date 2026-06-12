@@ -1,18 +1,35 @@
 # B2B Drive — Landing Page
 
-Done-for-you B2B lead generation & appointment-setting landing page. Single-page static site (HTML + Tailwind via CDN), styled with a bold, high-contrast, results-forward design.
+Done-for-you B2B lead generation & appointment-setting landing page. Static site (HTML + a compiled Tailwind CSS build), styled with a bold, high-contrast, results-forward design.
 
 ## Structure
 
 ```
 .
-├── index.html        # The landing page
-├── 404.html          # Custom not-found page
-├── vercel.json       # Vercel config (clean URLs, security headers, asset caching)
-├── robots.txt        # Crawl directives
-├── sitemap.xml       # Sitemap (update lastmod when content changes)
-└── assets/images/    # Logo, client logos, testimonial avatars
+├── index.html          # The landing page
+├── 404.html            # Custom not-found page (standalone CSS)
+├── src/input.css       # Tailwind entry + custom CSS (edit this, then build)
+├── tailwind.config.js  # Tailwind theme (colors, fonts, shadows)
+├── package.json        # Build scripts + dev deps
+├── vercel.json         # Vercel config (clean URLs, security headers, caching)
+├── robots.txt          # Crawl directives
+├── sitemap.xml         # Sitemap (update lastmod when content changes)
+└── assets/
+    ├── css/styles.css  # Compiled, minified CSS (generated — committed)
+    └── images/         # Logo, client logos, testimonial avatars, OG cover
 ```
+
+## Build the CSS
+
+The page links one compiled stylesheet (`assets/css/styles.css`). Rebuild it whenever you change classes in `index.html` or edit `src/input.css`:
+
+```bash
+npm install        # once
+npm run build      # one-off minified build
+npm run watch      # rebuild on every change while developing
+```
+
+The compiled CSS is committed, so deploys don't require a build step.
 
 ## Before you go live
 
@@ -28,9 +45,9 @@ Done-for-you B2B lead generation & appointment-setting landing page. Single-page
 
 ## Deploy to Vercel
 
-No build step — it's a static site.
+The compiled CSS is committed, so no build step is needed on Vercel — it serves the static files directly.
 
-- **Dashboard:** import the GitHub repo at <https://vercel.com/new>. Framework preset: **Other**. Build command: none. Output dir: `./`. Deploy.
+- **Dashboard:** import the GitHub repo at <https://vercel.com/new>. Framework preset: **Other**. Build command: none (or `npm run build`). Output dir: `./`. Deploy.
 - **CLI:**
   ```bash
   npm i -g vercel
@@ -52,5 +69,5 @@ python -m http.server 8000
 
 ## Notes
 
-- Tailwind is loaded from the CDN, so there's nothing to compile. For a production build with no CDN runtime (smaller, no console notice), you can later add a Tailwind build step — not required for hosting.
+- Tailwind is compiled ahead of time via the CLI (~34 KB minified) — no CDN runtime, no console notice, fast first paint. Run `npm run build` after editing classes.
 - Stats shown ("8–10 calls/month", "US · EU · APAC") are drawn from real client testimonials and footnoted as representative, not guarantees.
