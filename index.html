@@ -177,17 +177,44 @@
     <!-- Hero -->
     <section id="hero" class="relative overflow-hidden bg-gradient-to-b from-white to-[#f5f7fb] px-6 pb-20 pt-14 text-center md:pb-28 md:pt-20">
       <!-- subtle floating orbs -->
-      <div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden" aria-hidden="true">
+      <div class="pointer-events-none absolute inset-0 z-0 overflow-hidden" aria-hidden="true">
         <div class="absolute left-1/2 top-8 h-80 w-[720px] max-w-full -translate-x-1/2 rounded-full" style="background: radial-gradient(closest-side, rgba(47,107,255,.20), transparent 72%);"></div>
-        <div class="sphere absolute -left-28 -top-24 h-80 w-80 opacity-70"></div>
-        <div class="glow-azure absolute left-10 top-20 h-44 w-44 opacity-70"></div>
-        <div class="sphere absolute -right-24 top-10 h-96 w-96 opacity-55"></div>
-        <div class="glow-azure absolute right-24 top-28 h-40 w-40 opacity-60"></div>
-        <div class="sphere absolute right-32 -bottom-28 h-72 w-72 opacity-45"></div>
-        <div class="sphere absolute left-1/4 bottom-0 hidden h-40 w-40 opacity-40 lg:block"></div>
+
+        <!-- soft orbs (behind) -->
+        <div class="sphere absolute -left-28 -top-24 h-72 w-72 opacity-55"></div>
+        <div class="glow-azure absolute left-10 top-20 h-44 w-44 opacity-60"></div>
+        <div class="sphere absolute -right-24 top-10 h-80 w-80 opacity-40"></div>
+        <div class="glow-azure absolute right-24 top-28 h-40 w-40 opacity-50"></div>
+        <div class="sphere absolute right-32 -bottom-28 h-72 w-72 opacity-40"></div>
+
+        <!-- background line-art (on top of orbs) -->
+        <svg class="absolute -left-10 top-4 h-64 w-64 text-azure/70 md:h-72 md:w-72" viewBox="0 0 200 200" fill="none" stroke="currentColor">
+          <circle cx="100" cy="100" r="42" stroke-width="2.2" stroke-dasharray="3 8"/>
+          <circle cx="100" cy="100" r="72" stroke-width="2.2" stroke-dasharray="3 8"/>
+          <circle cx="100" cy="100" r="98" stroke-width="2.2" stroke-dasharray="3 8"/>
+          <circle cx="100" cy="28" r="5" fill="currentColor" stroke="none"/>
+          <circle cx="172" cy="100" r="4" fill="currentColor" stroke="none"/>
+        </svg>
+        <svg class="absolute right-0 top-6 hidden h-52 w-72 text-azure/80 sm:block" viewBox="0 0 260 200" fill="none" stroke="currentColor">
+          <line x1="42" y1="44" x2="140" y2="82" stroke-width="2"/>
+          <line x1="140" y1="82" x2="222" y2="40" stroke-width="2"/>
+          <line x1="140" y1="82" x2="182" y2="160" stroke-width="2"/>
+          <line x1="42" y1="44" x2="72" y2="142" stroke-width="2"/>
+          <circle cx="42" cy="44" r="6" fill="currentColor" stroke="none"/>
+          <circle cx="140" cy="82" r="8" fill="currentColor" stroke="none"/>
+          <circle cx="222" cy="40" r="6" fill="currentColor" stroke="none"/>
+          <circle cx="182" cy="160" r="5" fill="currentColor" stroke="none"/>
+          <circle cx="72" cy="142" r="5" fill="currentColor" stroke="none"/>
+        </svg>
+        <svg class="absolute inset-x-0 bottom-2 mx-auto hidden h-28 w-full max-w-5xl text-azure/60 md:block" viewBox="0 0 1000 120" fill="none" stroke="currentColor" preserveAspectRatio="none">
+          <path d="M0 88 C 200 18, 360 110, 520 60 S 840 6, 1000 72" stroke-width="3" stroke-dasharray="3 13" stroke-linecap="round"/>
+        </svg>
+        <svg class="absolute left-12 bottom-14 h-6 w-6 text-azure/80" viewBox="0 0 20 20" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M10 3v14M3 10h14"/></svg>
+        <svg class="absolute right-16 bottom-24 hidden h-6 w-6 text-azure/80 sm:block" viewBox="0 0 20 20" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M10 3v14M3 10h14"/></svg>
+        <svg class="absolute left-[22%] top-10 hidden h-5 w-5 text-azure/70 lg:block" viewBox="0 0 20 20" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M10 3v14M3 10h14"/></svg>
       </div>
 
-      <div class="relative mx-auto max-w-2xl">
+      <div class="relative z-10 mx-auto max-w-2xl">
         <p class="text-xs font-bold uppercase tracking-[0.18em] text-azure-deep">B2B Lead Generation Agency</p>
         <h1 class="mt-6 font-display text-4xl font-bold leading-[1.08] text-ink sm:text-5xl lg:text-[3.4rem]">
           Unlock your ideal <span class="mark">B2B partnerships</span>
