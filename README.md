@@ -45,9 +45,9 @@ The compiled CSS is committed, so deploys don't require a build step.
 
 ## Deploy to Vercel
 
-The compiled CSS is committed, so no build step is needed on Vercel — it serves the static files directly.
+`vercel.json` already sets `buildCommand` (`npm run build`) and `outputDirectory` (`.` — the repo root, where `index.html` lives), so the import just works.
 
-- **Dashboard:** import the GitHub repo at <https://vercel.com/new>. Framework preset: **Other**. Build command: none (or `npm run build`). Output dir: `./`. Deploy.
+- **Dashboard:** import the GitHub repo at <https://vercel.com/new>. Framework preset: **Other** → Deploy. (Build command and output directory come from `vercel.json`; don't override them with `public`.)
 - **CLI:**
   ```bash
   npm i -g vercel
