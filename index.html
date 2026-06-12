@@ -117,14 +117,10 @@
       background: radial-gradient(38% 38% at 32% 28%, #ffffff 0%, rgba(255,255,255,.9) 16%, #eef1ea 56%, #dfe3d8 100%);
       box-shadow: 0 30px 70px rgba(13,15,14,.10), inset -12px -16px 36px rgba(13,15,14,.06), inset 10px 12px 28px rgba(255,255,255,.9);
     }
-    .sphere-azure {
-      background: radial-gradient(38% 38% at 32% 28%, #eaf1ff 0%, #b9d0ff 28%, #2f6bff 68%, #1e50d6 100%);
-      box-shadow: 0 30px 70px rgba(47,107,255,.30), inset -12px -16px 36px rgba(20,50,150,.22), inset 10px 12px 28px rgba(255,255,255,.6);
-    }
     .glow-azure { position: absolute; border-radius: 9999px; pointer-events: none;
       background: radial-gradient(circle, rgba(47,107,255,.5), transparent 66%); filter: blur(18px); }
     @media (prefers-reduced-motion: no-preference) {
-      .sphere, .sphere-azure, .glow-azure { animation: float 9s ease-in-out infinite; }
+      .sphere, .glow-azure { animation: float 9s ease-in-out infinite; }
       .sphere:nth-of-type(even) { animation-duration: 11s; animation-direction: reverse; }
     }
     @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-16px); } }
@@ -179,7 +175,7 @@
   <main id="top">
 
     <!-- Hero -->
-    <section id="hero" class="relative overflow-hidden bg-gradient-to-b from-white to-[#f5f7fb] px-6 pb-24 pt-20 text-center md:pb-32 md:pt-28">
+    <section id="hero" class="relative overflow-hidden bg-gradient-to-b from-white to-[#f5f7fb] px-6 pb-20 pt-14 text-center md:pb-28 md:pt-20">
       <!-- subtle floating orbs -->
       <div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden" aria-hidden="true">
         <div class="sphere absolute -left-28 -top-24 h-80 w-80 opacity-70"></div>
@@ -189,20 +185,20 @@
         <div class="sphere absolute left-1/4 bottom-0 hidden h-40 w-40 opacity-40 lg:block"></div>
       </div>
 
-      <div class="relative mx-auto max-w-3xl">
+      <div class="relative mx-auto max-w-2xl">
         <p class="text-xs font-bold uppercase tracking-[0.18em] text-azure-deep">B2B Lead Generation Agency</p>
-        <h1 class="mt-7 font-display text-5xl font-bold leading-[1.04] text-ink md:text-7xl">
+        <h1 class="mt-6 font-display text-4xl font-bold leading-[1.08] text-ink sm:text-5xl lg:text-[3.4rem]">
           Unlock your ideal <span class="mark">B2B partnerships</span>
         </h1>
-        <p class="mx-auto mt-7 max-w-xl text-lg leading-8 text-ink-soft">
+        <p class="mx-auto mt-6 max-w-xl text-base leading-7 text-ink-soft">
           We run targeted cold email campaigns that book qualified sales calls onto your calendar —
           and you only pay per lead or meeting, billed monthly.
         </p>
-        <div class="mt-10 flex flex-col items-center justify-center gap-5 sm:flex-row">
-          <a href="#contact" class="btn btn-azure inline-flex items-center justify-center rounded-full px-10 py-4 text-sm font-semibold">Book a discovery call</a>
+        <div class="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <a href="#contact" class="btn btn-azure inline-flex items-center justify-center rounded-full px-7 py-3.5 text-sm font-semibold">Book a discovery call</a>
           <a href="#process" class="text-sm font-semibold text-ink underline decoration-azure decoration-2 underline-offset-4 transition hover:text-azure-deep">See how it works &rarr;</a>
         </div>
-        <div class="mt-10 flex items-center justify-center gap-2.5 text-sm">
+        <div class="mt-8 flex items-center justify-center gap-2.5 text-sm">
           <span class="text-base text-azure-deep">★★★★★</span>
           <span class="text-ink-soft">Trusted by B2B teams across the US, EU &amp; APAC</span>
         </div>
@@ -225,14 +221,14 @@
     </section>
 
     <!-- What to expect (Belkins-style illustrated cards) -->
-    <section class="px-6 pt-28 pb-8 md:pt-36">
+    <section class="px-6 pt-20 pb-8 md:pt-28">
       <div class="mx-auto max-w-shell">
         <div class="grid gap-12 lg:grid-cols-[.82fr_1.18fr]">
           <div class="text-center lg:sticky lg:top-28 lg:self-start lg:text-left">
             <span class="pill inline-flex rounded-full px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-ink-soft">What to expect</span>
-            <h2 class="mt-6 font-display text-4xl font-bold text-ink md:text-5xl">More than leads — a <span class="mark">system that books meetings</span></h2>
-            <p class="mt-5 text-lg leading-8 text-ink-soft">From day-one setup to booked calls — here's what working with B2B Drive actually looks like.</p>
-            <a href="#contact" class="btn btn-azure mt-8 inline-flex items-center justify-center rounded-full px-8 py-4 text-sm font-semibold">Book a discovery call</a>
+            <h2 class="mt-6 font-display text-3xl font-bold text-ink md:text-4xl">More than leads — a <span class="mark">system that books meetings</span></h2>
+            <p class="mt-5 text-base leading-7 text-ink-soft">From day-one setup to booked calls — here's what working with B2B Drive actually looks like.</p>
+            <a href="#contact" class="btn btn-azure mt-8 inline-flex items-center justify-center rounded-full px-7 py-3.5 text-sm font-semibold">Book a discovery call</a>
           </div>
           <div class="space-y-6">
           <!-- Card A: calendar / appointments -->
@@ -294,7 +290,7 @@
     </section>
 
     <!-- Problem → Shift gears (driving metaphor) -->
-    <section class="px-6 py-28 md:py-36">
+    <section class="px-6 py-20 md:py-28">
       <div class="mx-auto max-w-shell">
         <div class="grid items-stretch gap-5 lg:grid-cols-2">
           <article class="rounded-[2rem] border border-line bg-mist p-8 md:p-10">
@@ -331,7 +327,7 @@
         <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div>
             <span class="inline-flex rounded-full border border-white/15 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-white/70">Those who took the journey</span>
-            <h2 class="mt-5 font-display text-4xl font-bold leading-tight md:text-5xl">Real outcomes, real <span class="azure-word">clients</span>.</h2>
+            <h2 class="mt-5 font-display text-3xl font-bold leading-tight md:text-4xl">Real outcomes, real <span class="azure-word">clients</span>.</h2>
           </div>
           <p class="max-w-sm text-sm leading-7 text-white/60">A sample of results from B2B Drive engagements across agencies, SaaS, and specialised services.</p>
         </div>
@@ -371,12 +367,12 @@
     </section>
 
     <!-- Services -->
-    <section id="services" class="px-6 py-28 md:py-36">
+    <section id="services" class="px-6 py-20 md:py-28">
       <div class="mx-auto max-w-shell">
         <div class="mx-auto mb-16 max-w-2xl text-center">
           <span class="pill inline-flex rounded-full px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-ink-soft">What we do</span>
-          <h2 class="mt-6 font-display text-4xl font-bold text-ink md:text-5xl">A done-for-you system for <span class="mark">qualified meetings</span></h2>
-          <p class="mt-5 text-lg leading-8 text-ink-soft">Everything from finding your ideal prospects to booking the call — built, run, and optimised for you.</p>
+          <h2 class="mt-6 font-display text-3xl font-bold text-ink md:text-4xl">A done-for-you system for <span class="mark">qualified meetings</span></h2>
+          <p class="mt-5 text-base leading-7 text-ink-soft">Everything from finding your ideal prospects to booking the call — built, run, and optimised for you.</p>
         </div>
         <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           <article class="rounded-[1.5rem] border border-line bg-white p-7 shadow-soft transition hover:-translate-y-1 hover:shadow-card">
@@ -426,14 +422,14 @@
     </section>
 
     <!-- Process -->
-    <section id="process" class="bg-mist px-6 py-28 md:py-36">
+    <section id="process" class="bg-mist px-6 py-20 md:py-28">
       <div class="mx-auto max-w-shell">
         <div class="grid gap-12 lg:grid-cols-[.85fr_1.15fr]">
           <div class="lg:sticky lg:top-28 lg:self-start">
             <span class="pill inline-flex rounded-full px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-ink-soft">Your roadmap</span>
-            <h2 class="mt-6 font-display text-4xl font-bold text-ink md:text-6xl">From first message to <span class="mark">booked call</span>.</h2>
-            <p class="mt-5 text-lg leading-8 text-ink-soft">Every engagement follows the same roadmap — built so each phase sets up the next, and the only thing that lands on your calendar is a meeting worth having.</p>
-            <a href="#contact" class="btn btn-ink mt-8 inline-flex items-center justify-center rounded-full px-8 py-4 text-sm font-semibold">Book a discovery call</a>
+            <h2 class="mt-6 font-display text-3xl font-bold text-ink md:text-4xl">From first message to <span class="mark">booked call</span>.</h2>
+            <p class="mt-5 text-base leading-7 text-ink-soft">Every engagement follows the same roadmap — built so each phase sets up the next, and the only thing that lands on your calendar is a meeting worth having.</p>
+            <a href="#contact" class="btn btn-ink mt-8 inline-flex items-center justify-center rounded-full px-7 py-3.5 text-sm font-semibold">Book a discovery call</a>
           </div>
           <div class="space-y-5">
             <article class="rounded-[1.75rem] border border-line bg-white p-7 shadow-soft">
@@ -484,18 +480,18 @@
     </section>
 
     <!-- Results -->
-    <section id="results" class="px-6 py-28 md:py-36">
+    <section id="results" class="px-6 py-20 md:py-28">
       <div class="mx-auto max-w-shell">
         <div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div class="max-w-2xl">
             <span class="pill inline-flex rounded-full px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-ink-soft">Results</span>
-            <h2 class="mt-6 font-display text-4xl font-bold text-ink md:text-6xl">Outcomes our clients <span class="mark">actually feel</span>.</h2>
+            <h2 class="mt-6 font-display text-3xl font-bold text-ink md:text-4xl">Outcomes our clients <span class="mark">actually feel</span>.</h2>
           </div>
           <p class="max-w-md text-base leading-7 text-ink-soft">Short stories from the teams who handed their pipeline to B2B Drive — and got booked calls back.</p>
         </div>
         <div class="mt-14 grid gap-5 lg:grid-cols-3">
           <article class="flex flex-col rounded-[1.75rem] border border-line bg-white p-8 shadow-card">
-            <div class="font-display text-5xl font-bold text-ink">8&ndash;10<span class="text-azure-deep">.</span></div>
+            <div class="font-display text-4xl font-bold text-ink">8&ndash;10<span class="text-azure-deep">.</span></div>
             <p class="mt-2 text-sm font-semibold uppercase tracking-[0.12em] text-ink-mute">Qualified calls booked / month</p>
             <p class="mt-5 flex-1 text-sm leading-7 text-ink-soft">"We've been scheduling 8&ndash;10 sales calls a month, the prospects show up, and they're actually qualified. We cannot be happier."</p>
             <div class="mt-6 flex items-center gap-3 border-t border-line pt-5">
@@ -507,7 +503,7 @@
             </div>
           </article>
           <article class="flex flex-col rounded-[1.75rem] border border-line bg-white p-8 shadow-card">
-            <div class="font-display text-5xl font-bold text-ink">US · EU<span class="text-azure-deep">.</span></div>
+            <div class="font-display text-4xl font-bold text-ink">US · EU<span class="text-azure-deep">.</span></div>
             <p class="mt-2 text-sm font-semibold uppercase tracking-[0.12em] text-ink-mute">New markets entered profitably</p>
             <p class="mt-5 flex-1 text-sm leading-7 text-ink-soft">"B2B Drive helped us scale profitably into the US and European markets — something that would have been very difficult and expensive without them."</p>
             <div class="mt-6 flex items-center gap-3 border-t border-line pt-5">
@@ -519,7 +515,7 @@
             </div>
           </article>
           <article class="flex flex-col rounded-[1.75rem] border border-line bg-ink p-8 text-white shadow-card">
-            <div class="font-display text-5xl font-bold text-white">0 &rarr; 1<span class="azure-word">.</span></div>
+            <div class="font-display text-4xl font-bold text-white">0 &rarr; 1<span class="azure-word">.</span></div>
             <p class="mt-2 text-sm font-semibold uppercase tracking-[0.12em] text-white/55">From no pipeline to a reliable one</p>
             <p class="mt-5 flex-1 text-sm leading-7 text-white/75">"I tried several methods to bring in leads for my ecommerce email agency, but none worked until B2B Drive came in. I've recommended them to several B2B businesses myself."</p>
             <div class="mt-6 flex items-center gap-3 border-t border-line-dark pt-5">
@@ -535,12 +531,12 @@
     </section>
 
     <!-- Testimonials marquee -->
-    <section id="testimonials" class="overflow-hidden bg-mist px-0 py-28 md:py-36">
+    <section id="testimonials" class="overflow-hidden bg-mist px-0 py-20 md:py-28">
       <div class="mx-auto mb-12 max-w-shell px-6">
         <div class="mx-auto max-w-2xl text-center">
           <span class="pill inline-flex rounded-full px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-ink-soft">What clients say</span>
-          <h2 class="mt-6 font-display text-4xl font-bold text-ink md:text-6xl">Don't take it from <span class="mark">us</span>.</h2>
-          <p class="mt-5 text-lg leading-8 text-ink-soft">Real feedback from agencies, consultancies, and B2B service teams who've used B2B Drive to fill their calendars with qualified calls.</p>
+          <h2 class="mt-6 font-display text-3xl font-bold text-ink md:text-4xl">Don't take it from <span class="mark">us</span>.</h2>
+          <p class="mt-5 text-base leading-7 text-ink-soft">Real feedback from agencies, consultancies, and B2B service teams who've used B2B Drive to fill their calendars with qualified calls.</p>
         </div>
       </div>
       <div class="relative">
@@ -594,12 +590,12 @@
     </section>
 
     <!-- Comparison -->
-    <section id="comparison" class="px-6 py-28 md:py-36">
+    <section id="comparison" class="px-6 py-20 md:py-28">
       <div class="mx-auto max-w-shell">
         <div class="mx-auto mb-12 max-w-2xl text-center">
           <span class="pill inline-flex rounded-full px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-ink-soft">Why B2B Drive</span>
-          <h2 class="mt-6 font-display text-4xl font-bold text-ink md:text-6xl">More than another lead-list <span class="mark">vendor</span>.</h2>
-          <p class="mt-5 text-lg leading-8 text-ink-soft">B2B Drive runs prospecting, outreach, and appointment setting as one connected system — so the meetings that reach your calendar are ones your team can actually turn into proposals.</p>
+          <h2 class="mt-6 font-display text-3xl font-bold text-ink md:text-4xl">More than another lead-list <span class="mark">vendor</span>.</h2>
+          <p class="mt-5 text-base leading-7 text-ink-soft">B2B Drive runs prospecting, outreach, and appointment setting as one connected system — so the meetings that reach your calendar are ones your team can actually turn into proposals.</p>
         </div>
         <div class="grid gap-5 md:grid-cols-2">
           <article class="rounded-[1.75rem] border border-line bg-mist p-8">
@@ -627,12 +623,12 @@
     </section>
 
     <!-- FAQ -->
-    <section id="faq" class="bg-mist px-6 py-28 md:py-36">
+    <section id="faq" class="bg-mist px-6 py-20 md:py-28">
       <div class="mx-auto max-w-shell">
         <div class="grid gap-12 lg:grid-cols-[.8fr_1.2fr]">
           <div class="lg:sticky lg:top-28 lg:self-start">
             <span class="pill inline-flex rounded-full px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-ink-soft">FAQ</span>
-            <h2 class="mt-6 font-display text-4xl font-bold text-ink md:text-5xl">Frequently asked <span class="mark">questions</span>.</h2>
+            <h2 class="mt-6 font-display text-3xl font-bold text-ink md:text-4xl">Frequently asked <span class="mark">questions</span>.</h2>
             <p class="mt-5 text-base leading-7 text-ink-soft">Still unsure? <a href="#contact" class="font-semibold text-ink underline decoration-azure decoration-2 underline-offset-4">Book a call</a> and we'll answer everything for your specific market.</p>
           </div>
           <div class="space-y-3">
@@ -700,7 +696,7 @@
           <div class="pointer-events-none absolute -inset-6 -z-0 bg-dots opacity-40"></div>
           <div class="relative">
             <span class="inline-flex rounded-full border border-white/15 px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.16em] text-white/70">Get started</span>
-            <h2 class="mt-6 max-w-xl font-display text-4xl font-bold leading-tight md:text-6xl">Ready to <span class="azure-word">step on the pedal</span>?</h2>
+            <h2 class="mt-6 max-w-xl font-display text-3xl font-bold leading-tight md:text-5xl">Ready to <span class="azure-word">step on the pedal</span>?</h2>
             <p class="mt-5 max-w-lg text-base leading-8 text-white/70">Let's schedule a discovery call and find out if we're a fit. Most B2B businesses don't have the time, energy, or expertise to build a predictable pipeline of ready-to-buy prospects on their own — and even if we're not the right fit, you'll walk away with actionable steps.</p>
             <ul class="mt-8 space-y-3 text-sm leading-6 text-white/80">
               <li class="flex items-start gap-3"><span class="mt-0.5 text-azure">✓</span>Qualified meetings booked directly onto your calendar</li>
@@ -742,7 +738,7 @@
               <label for="message" class="text-xs font-semibold uppercase tracking-[0.12em] text-ink-soft">What are you looking to achieve?</label>
               <textarea id="message" name="message" rows="3" class="mt-2 block w-full rounded-xl border-line bg-mist text-sm text-ink focus:border-azure-deep focus:ring-azure-deep"></textarea>
             </div>
-            <button type="submit" class="btn btn-azure inline-flex w-full items-center justify-center rounded-full px-8 py-4 text-sm font-semibold">Book my discovery call</button>
+            <button type="submit" class="btn btn-azure inline-flex w-full items-center justify-center rounded-full px-7 py-3.5 text-sm font-semibold">Book my discovery call</button>
             <p class="text-center text-xs text-ink-mute">We'll only use your details to schedule your call. No spam.</p>
           </form>
         </div>
@@ -786,26 +782,6 @@
       </div>
     </div>
   </footer>
-
-  <script>
-    // Rotating audience word (from the original B2B Drive site)
-    (function () {
-      var el = document.getElementById('audience-rotator');
-      if (!el) return;
-      var words = ['agency', 'coaching practice', 'consultancy', 'SaaS', 'services business'];
-      var i = 0;
-      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      if (reduce) return;
-      setInterval(function () {
-        el.style.opacity = '0';
-        setTimeout(function () {
-          i = (i + 1) % words.length;
-          el.textContent = words[i];
-          el.style.opacity = '1';
-        }, 300);
-      }, 2200);
-    })();
-  </script>
 
 </body>
 </html>
