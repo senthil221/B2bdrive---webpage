@@ -24,7 +24,7 @@ Done-for-you B2B lead generation & appointment-setting landing page. Single-page
 
 2. **Domain** — meta tags, canonical, Open Graph, `robots.txt`, and `sitemap.xml` all assume `https://b2bdrive.net/`. Change them if you deploy elsewhere.
 
-3. **Social share image** — add `assets/images/og-cover.png` (recommended 1200×630) for link previews, or update the `og:image` / `twitter:image` URLs in `index.html`.
+3. **Social share image** — `assets/images/og-cover.png` (1200×630) is included for link previews. To regenerate it, recreate a 1200×630 `og.html` and render with headless Edge/Chrome: `msedge --headless --window-size=1200,630 --screenshot=assets/images/og-cover.png file:///…/og.html`.
 
 ## Deploy to Vercel
 
