@@ -28,6 +28,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <script>document.documentElement.classList.add("js");</script>
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body class="antialiased">
@@ -42,18 +43,17 @@
   </div>
 
   <!-- Sticky Header -->
-  <header class="sticky top-0 z-50 border-b border-line/80 bg-white/90 backdrop-blur-xl">
-    <div class="mx-auto flex max-w-shell items-center justify-between gap-6 px-6 py-4">
+  <header data-site-header class="site-header sticky top-0 z-50 border-b border-line/80 bg-white/90 backdrop-blur-xl">
+    <div class="site-header-inner mx-auto flex max-w-shell items-center justify-between gap-6 px-6 py-4">
       <a href="#top" class="flex items-center gap-3">
         <img src="assets/images/logo.png" alt="B2B Drive logo" class="h-9 w-auto">
         <span class="font-display text-lg font-bold tracking-tight text-ink">B2B Drive</span>
       </a>
-      <nav class="hidden items-center gap-6 text-sm font-medium text-ink-soft lg:flex">
+      <nav class="hidden items-center gap-8 text-sm font-medium text-ink-soft lg:flex">
         <a href="#services" class="transition hover:text-ink">Services</a>
         <a href="#process" class="transition hover:text-ink">Process</a>
         <a href="#results" class="transition hover:text-ink">Results</a>
         <a href="#comparison" class="transition hover:text-ink">Why us</a>
-        <a href="#fit" class="transition hover:text-ink">Good fit</a>
         <a href="#faq" class="transition hover:text-ink">FAQ</a>
       </nav>
       <div class="flex items-center gap-3">
@@ -73,7 +73,7 @@
         <div class="aurora aurora-3 absolute right-[16%] top-20 h-80 w-80"></div>
       </div>
 
-      <div class="relative z-10 mx-auto max-w-2xl">
+      <div class="relative z-10 mx-auto max-w-2xl" data-reveal>
         <p class="text-xs font-bold uppercase tracking-[0.18em] text-azure-deep">B2B Lead Generation Agency</p>
         <h1 class="mt-6 font-display text-4xl font-bold leading-[1.08] text-ink sm:text-5xl lg:text-[3.4rem]">
           Unlock your ideal <span class="text-grad">B2B partnerships</span>
@@ -83,7 +83,7 @@
           and you only pay per lead or meeting, billed monthly.
         </p>
         <div class="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <a href="#contact" class="btn btn-azure inline-flex items-center justify-center rounded-full px-7 py-3.5 text-sm font-semibold">Book a discovery call</a>
+          <a href="#contact" class="btn btn-azure inline-flex items-center justify-center rounded-full px-7 py-3.5 text-sm font-semibold">Book a discovery call <span class="btn-arrow" aria-hidden="true">&rarr;</span></a>
           <a href="#process" class="text-sm font-semibold text-ink underline decoration-azure decoration-2 underline-offset-4 transition hover:text-azure-deep">See how it works &rarr;</a>
         </div>
         <div class="mt-8 flex items-center justify-center gap-2.5 text-sm">
@@ -101,7 +101,7 @@
         <div class="relative mt-6 overflow-hidden">
           <div class="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-mist to-transparent"></div>
           <div class="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-mist to-transparent"></div>
-          <div class="flex w-max marquee-track items-center">
+          <div class="logo-marquee marquee-track flex w-max items-center">
             <!-- set 1 -->
             <img src="assets/images/Green-mo-color.jpg" alt="Green Mo Marketing" class="h-10 w-auto flex-none rounded-xl bg-white object-contain p-2 shadow-soft mr-5 sm:mr-8">
             <img src="assets/images/Cephas-color.jpg" alt="Cephas Medical" class="h-10 w-auto flex-none rounded-xl bg-white object-contain p-2 shadow-soft mr-5 sm:mr-8">
@@ -127,15 +127,15 @@
       <div class="pointer-events-none absolute right-0 bottom-0 h-64 w-64 translate-x-1/4 rounded-full bg-azure/[0.07] blur-3xl" aria-hidden="true"></div>
       <div class="relative mx-auto max-w-shell">
         <div class="grid gap-12 lg:grid-cols-[.82fr_1.18fr]">
-          <div class="text-center lg:self-center lg:text-left">
+          <div class="text-center lg:self-center lg:text-left" data-reveal>
             <span class="pill inline-flex rounded-full px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-ink-soft">What to expect</span>
             <h2 class="mt-6 font-display text-3xl font-bold text-ink md:text-4xl">More than leads: a <span class="mark">system that books meetings</span></h2>
             <p class="mt-5 text-base leading-7 text-ink-soft">From day-one setup to booked calls, here's what working with B2B Drive actually looks like.</p>
-            <a href="#contact" class="btn btn-azure mt-8 inline-flex items-center justify-center rounded-full px-7 py-3.5 text-sm font-semibold">Book a discovery call</a>
+            <a href="#contact" class="btn btn-azure mt-8 inline-flex items-center justify-center rounded-full px-7 py-3.5 text-sm font-semibold">Book a discovery call <span class="btn-arrow" aria-hidden="true">&rarr;</span></a>
           </div>
           <div class="space-y-6">
           <!-- Card A: calendar / appointments -->
-          <article class="rounded-[2rem] border border-line bg-white p-3 shadow-card transition hover:-translate-y-1 hover:shadow-lift">
+          <article class="interactive-card rounded-[2rem] border border-line bg-white p-3 shadow-card" data-calendar-animation data-reveal>
             <div class="rounded-[1.65rem] bg-ink p-6 md:p-8">
               <div class="flex items-stretch gap-5">
                 <div class="flex flex-col items-center">
@@ -144,11 +144,11 @@
                   <img src="assets/images/1-test.png" alt="" class="mt-4 h-14 w-14 rounded-full object-cover ring-2 ring-azure">
                 </div>
                 <div class="flex-1 space-y-2">
-                  <div class="flex items-center gap-2 rounded-xl bg-white/5 px-3 py-2 text-sm text-white/45"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5l3 2"/></svg>9:30 am</div>
-                  <div class="flex items-center gap-2 rounded-xl bg-white/5 px-3 py-2 text-sm text-white/55"><svg class="h-4 w-4 text-azure" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5l3 2"/></svg>10:30 am</div>
-                  <div class="flex items-center gap-2 rounded-xl bg-white/5 px-3 py-2 text-sm text-white/55"><svg class="h-4 w-4 text-azure" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5l3 2"/></svg>12:10 pm</div>
-                  <div class="flex items-center gap-2 rounded-xl bg-white/5 px-3 py-2 text-sm text-white/55"><svg class="h-4 w-4 text-azure" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5l3 2"/></svg>2:50 pm</div>
-                  <div class="relative overflow-hidden rounded-xl bg-white/10 px-3 py-2.5 ring-1 ring-azure/60">
+                  <div class="calendar-slot flex items-center gap-2 rounded-xl bg-white/5 px-3 py-2 text-sm text-white/45"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5l3 2"/></svg>9:30 am</div>
+                  <div class="calendar-slot flex items-center gap-2 rounded-xl bg-white/5 px-3 py-2 text-sm text-white/55"><svg class="h-4 w-4 text-azure" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5l3 2"/></svg>10:30 am</div>
+                  <div class="calendar-slot flex items-center gap-2 rounded-xl bg-white/5 px-3 py-2 text-sm text-white/55"><svg class="h-4 w-4 text-azure" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5l3 2"/></svg>12:10 pm</div>
+                  <div class="calendar-slot flex items-center gap-2 rounded-xl bg-white/5 px-3 py-2 text-sm text-white/55"><svg class="h-4 w-4 text-azure" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5l3 2"/></svg>2:50 pm</div>
+                  <div class="calendar-booking relative overflow-hidden rounded-xl bg-white/10 px-3 py-2.5 ring-1 ring-azure/60">
                     <span class="absolute left-0 top-0 h-full w-1.5 bg-azure"></span>
                     <div class="flex items-center gap-2 pl-1.5 text-sm font-semibold text-white"><svg class="h-4 w-4 text-azure" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5l3 2"/></svg>4:15 pm</div>
                     <div class="mt-1 pl-8 text-xs text-white/50">Discovery call &middot; qualified lead</div>
@@ -163,7 +163,7 @@
           </article>
 
           <!-- Card B: cross-functional circular system -->
-          <article class="rounded-[2rem] border border-line bg-white p-3 shadow-card transition hover:-translate-y-1 hover:shadow-lift">
+          <article class="interactive-card rounded-[2rem] border border-line bg-white p-3 shadow-card" data-reveal style="--reveal-delay: 100ms">
             <div class="rounded-[1.65rem] bg-ink p-6 md:p-8">
               <div class="relative mx-auto h-[260px] w-full max-w-sm">
                 <svg viewBox="0 0 200 200" class="absolute inset-0 m-auto h-full w-full" fill="none" aria-hidden="true">
@@ -197,7 +197,7 @@
       <div class="pointer-events-none absolute inset-0 bg-dot-grid opacity-50 [mask-image:radial-gradient(ellipse_at_center,black,transparent_70%)]" aria-hidden="true"></div>
       <div class="relative mx-auto max-w-shell">
         <div class="grid items-stretch gap-5 lg:grid-cols-2">
-          <article class="rounded-[2rem] border border-line bg-mist p-8 md:p-10">
+          <article class="interactive-card rounded-[2rem] border border-line bg-mist p-8 md:p-10" data-reveal>
             <span class="inline-flex rounded-full bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-ink-soft shadow-soft">Putting the brakes on?</span>
             <h2 class="mt-6 font-display text-3xl font-bold text-ink md:text-4xl">The roadblocks every B2B business hits.</h2>
             <p class="mt-4 text-sm leading-7 text-ink-soft">Most teams don't have the time, knowledge, or expertise to turn cold prospects into sales-qualified conversations, so growth stalls.</p>
@@ -207,7 +207,7 @@
               <li class="flex items-center gap-3 py-4"><svg class="h-5 w-5 flex-none text-ink-mute" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M15 9l-6 6M9 9l6 6"/></svg>High, unpredictable client-acquisition costs</li>
             </ul>
           </article>
-          <article class="relative overflow-hidden rounded-[2rem] bg-ink p-8 text-white md:p-10">
+          <article class="interactive-card relative overflow-hidden rounded-[2rem] bg-ink p-8 text-white md:p-10" data-reveal style="--reveal-delay: 100ms">
             <div class="pointer-events-none absolute inset-0 bg-dots opacity-30"></div>
             <div class="relative">
               <span class="inline-flex rounded-full bg-azure px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-white">It's time to shift gears</span>
@@ -230,129 +230,218 @@
       <div class="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-azure/40 blur-3xl" aria-hidden="true"></div>
       <div class="pointer-events-none absolute -left-20 bottom-0 h-56 w-56 rounded-full bg-white/10 blur-2xl" aria-hidden="true"></div>
       <div class="relative mx-auto max-w-shell">
-        <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+        <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between" data-reveal>
           <div>
             <span class="inline-flex rounded-full border border-white/15 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-white/70">Those who took the journey</span>
             <h2 class="mt-5 font-display text-3xl font-bold leading-tight md:text-4xl">Real outcomes, real <span class="azure-word">clients</span>.</h2>
           </div>
           <p class="max-w-sm text-sm leading-7 text-white/60">A sample of results from B2B Drive engagements across agencies, SaaS, and specialised services.</p>
         </div>
-        <div class="mt-12 grid grid-cols-2 gap-px overflow-hidden rounded-3xl border border-white/10 bg-white/10 lg:grid-cols-3">
-          <div class="bg-white/[0.06] p-6 md:p-7">
-            <div class="font-display text-4xl font-bold text-grad-light md:text-5xl">15+</div>
-            <p class="mt-3 text-sm font-medium text-white/85">Qualified meetings set</p>
-            <p class="mt-1 text-xs text-white/45">Green Mo Digital · Ad Agency</p>
+        <div class="mt-10" data-carousel data-reveal>
+          <div class="mb-5 flex items-center justify-between gap-4">
+            <p class="text-xs font-semibold uppercase tracking-[0.16em] text-white/45">Swipe or use the controls</p>
+            <div class="flex gap-2">
+              <button type="button" class="carousel-button carousel-button-dark" data-carousel-prev aria-label="Show previous client outcome">&larr;</button>
+              <button type="button" class="carousel-button carousel-button-dark" data-carousel-next aria-label="Show next client outcome">&rarr;</button>
+            </div>
           </div>
-          <div class="bg-white/[0.06] p-6 md:p-7">
-            <div class="font-display text-4xl font-bold text-grad-light md:text-5xl">75+</div>
-            <p class="mt-3 text-sm font-medium text-white/85">Qualified leads</p>
-            <p class="mt-1 text-xs text-white/45">Revive Ratings · Marketing SaaS</p>
-          </div>
-          <div class="bg-white/[0.06] p-6 md:p-7">
-            <div class="font-display text-4xl font-bold text-grad-light md:text-5xl">+$25k</div>
-            <p class="mt-3 text-sm font-medium text-white/85">ARR added</p>
-            <p class="mt-1 text-xs text-white/45">Win At Ecommerce · Marketing Agency</p>
-          </div>
-          <div class="bg-white/[0.06] p-6 md:p-7">
-            <div class="font-display text-4xl font-bold text-grad-light md:text-5xl">50+</div>
-            <p class="mt-3 text-sm font-medium text-white/85">Qualified leads</p>
-            <p class="mt-1 text-xs text-white/45">Cephas Life Sciences · Pharma</p>
-          </div>
-          <div class="bg-white/[0.06] p-6 md:p-7">
-            <div class="font-display text-4xl font-bold text-grad-light md:text-5xl">1<span class="text-2xl">/day</span></div>
-            <p class="mt-3 text-sm font-medium text-white/85">Scheduled appointment a day</p>
-            <p class="mt-1 text-xs text-white/45">Email On Performance · Ecommerce</p>
-          </div>
-          <div class="bg-white/[0.06] p-6 md:p-7">
-            <div class="font-display text-4xl font-bold text-grad-light md:text-5xl">10+</div>
-            <p class="mt-3 text-sm font-medium text-white/85">Qualified leads</p>
-            <p class="mt-1 text-xs text-white/45">Progressive AI Solutions · HR SaaS</p>
+          <div class="outcome-track" data-carousel-track tabindex="0" aria-label="Client outcomes">
+            <article class="outcome-card">
+              <div class="font-display text-4xl font-bold text-grad-light md:text-5xl">15+</div>
+              <p class="mt-3 text-sm font-medium text-white/85">Qualified meetings set</p>
+              <p class="mt-1 text-xs text-white/45">Green Mo Digital · Ad Agency</p>
+            </article>
+            <article class="outcome-card">
+              <div class="font-display text-4xl font-bold text-grad-light md:text-5xl">75+</div>
+              <p class="mt-3 text-sm font-medium text-white/85">Qualified leads</p>
+              <p class="mt-1 text-xs text-white/45">Revive Ratings · Marketing SaaS</p>
+            </article>
+            <article class="outcome-card">
+              <div class="font-display text-4xl font-bold text-grad-light md:text-5xl">+$25k</div>
+              <p class="mt-3 text-sm font-medium text-white/85">ARR added</p>
+              <p class="mt-1 text-xs text-white/45">Win At Ecommerce · Marketing Agency</p>
+            </article>
+            <article class="outcome-card">
+              <div class="font-display text-4xl font-bold text-grad-light md:text-5xl">50+</div>
+              <p class="mt-3 text-sm font-medium text-white/85">Qualified leads</p>
+              <p class="mt-1 text-xs text-white/45">Cephas Life Sciences · Pharma</p>
+            </article>
+            <article class="outcome-card">
+              <div class="font-display text-4xl font-bold text-grad-light md:text-5xl">1<span class="text-2xl">/day</span></div>
+              <p class="mt-3 text-sm font-medium text-white/85">Scheduled appointment a day</p>
+              <p class="mt-1 text-xs text-white/45">Email On Performance · Ecommerce</p>
+            </article>
+            <article class="outcome-card">
+              <div class="font-display text-4xl font-bold text-grad-light md:text-5xl">10+</div>
+              <p class="mt-3 text-sm font-medium text-white/85">Qualified leads</p>
+              <p class="mt-1 text-xs text-white/45">Progressive AI Solutions · HR SaaS</p>
+            </article>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Services -->
-    <section id="services" class="relative overflow-hidden bg-mist-alt px-6 py-16 md:py-24">
+    <section id="services" class="relative overflow-hidden bg-gradient-to-b from-azure-soft via-white to-white px-6 py-16 md:py-24">
+      <div class="pointer-events-none absolute inset-0 bg-dot-grid opacity-70 [mask-image:linear-gradient(to_bottom,black,transparent_72%)]" aria-hidden="true"></div>
+      <div class="pointer-events-none absolute right-0 top-16 h-80 w-80 translate-x-1/3 rounded-full bg-azure/15 blur-3xl" aria-hidden="true"></div>
+      <div class="pointer-events-none absolute left-0 bottom-10 h-64 w-64 -translate-x-1/3 rounded-full bg-azure/10 blur-3xl" aria-hidden="true"></div>
       <div class="relative mx-auto max-w-shell">
-        <div class="mx-auto mb-12 max-w-2xl text-center">
+        <div class="mx-auto mb-16 max-w-2xl text-center" data-reveal>
           <span class="pill inline-flex rounded-full px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-ink-soft">Challenges you can entrust to us</span>
           <h2 class="mt-6 font-display text-3xl font-bold text-ink md:text-4xl">The hard parts of pipeline, <span class="mark">handled for you</span></h2>
           <p class="mt-5 text-base leading-7 text-ink-soft">From finding the right prospects to booking the call, here's the heavy lifting you hand off — built, run, and optimised by us.</p>
         </div>
-        <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          <article class="group rounded-3xl bg-mist p-7 ring-1 ring-line transition duration-200 hover:bg-white hover:-translate-y-1 hover:shadow-card">
-            <span class="inline-flex text-azure transition group-hover:text-azure-deep"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span>
-            <h3 class="mt-5 font-display text-lg font-bold text-ink">ICP &amp; prospect research</h3>
-            <p class="mt-2.5 text-sm leading-7 text-ink-soft">We pinpoint the companies in your market that need what you sell, with validated contacts.</p>
-          </article>
-          <article class="group rounded-3xl bg-mist p-7 ring-1 ring-line transition duration-200 hover:bg-white hover:-translate-y-1 hover:shadow-card">
-            <span class="inline-flex text-azure transition group-hover:text-azure-deep"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5l8.5 6 8.5-6"/></svg></span>
-            <h3 class="mt-5 font-display text-lg font-bold text-ink">Cold email campaigns</h3>
-            <p class="mt-2.5 text-sm leading-7 text-ink-soft">Split-tested, personalised cold emails that earn interested replies from decision makers.</p>
-          </article>
-          <article class="group rounded-3xl bg-mist p-7 ring-1 ring-line transition duration-200 hover:bg-white hover:-translate-y-1 hover:shadow-card">
-            <span class="inline-flex text-azure transition group-hover:text-azure-deep"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 7.6-7 9-4-1.4-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span>
-            <h3 class="mt-5 font-display text-lg font-bold text-ink">Inbox warm-up &amp; deliverability</h3>
-            <p class="mt-2.5 text-sm leading-7 text-ink-soft">Warmed inboxes and a protected sender reputation, so your emails actually land.</p>
-          </article>
-          <article class="group rounded-3xl bg-mist p-7 ring-1 ring-line transition duration-200 hover:bg-white hover:-translate-y-1 hover:shadow-card">
-            <span class="inline-flex text-azure transition group-hover:text-azure-deep"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16.5" rx="2"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4M8.5 15l2.2 2.2L15.5 12.5"/></svg></span>
-            <h3 class="mt-5 font-display text-lg font-bold text-ink">Appointment setting</h3>
-            <p class="mt-2.5 text-sm leading-7 text-ink-soft">We handle every reply and follow-up, then book qualified meetings onto your calendar.</p>
-          </article>
-          <article class="group rounded-3xl bg-mist p-7 ring-1 ring-line transition duration-200 hover:bg-white hover:-translate-y-1 hover:shadow-card">
-            <span class="inline-flex text-azure transition group-hover:text-azure-deep"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 13.4l-7.2 7.2a2 2 0 01-2.8 0l-7-7A2 2 0 013 12.2V5a2 2 0 012-2h7.2a2 2 0 011.4.6l7 7a2 2 0 010 2.8z"/><circle cx="7.5" cy="7.5" r="1.2"/></svg></span>
-            <h3 class="mt-5 font-display text-lg font-bold text-ink">Performance-based pricing</h3>
-            <p class="mt-2.5 text-sm leading-7 text-ink-soft">Pay per qualified lead or booked meeting, billed monthly, with no bloated retainers.</p>
-          </article>
-          <article class="group rounded-3xl bg-mist p-7 ring-1 ring-line transition duration-200 hover:bg-white hover:-translate-y-1 hover:shadow-card">
-            <span class="inline-flex text-azure transition group-hover:text-azure-deep"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V4M4 20h16M8 16v-4M13 16V8M18 16v-6"/></svg></span>
-            <h3 class="mt-5 font-display text-lg font-bold text-ink">Reporting &amp; optimisation</h3>
-            <p class="mt-2.5 text-sm leading-7 text-ink-soft">Continuous testing and clear reporting, so the system keeps improving over time.</p>
-          </article>
+        <div class="overflow-hidden rounded-[1.75rem] border border-line shadow-soft">
+          <div class="h-1.5 w-full bg-gradient-to-r from-azure via-indigo-600 to-violet-600"></div>
+          <div class="grid grid-cols-1 gap-px bg-line sm:grid-cols-2 lg:grid-cols-3">
+          <!-- 01 -->
+          <div class="service-card group relative bg-white p-8" data-reveal style="--reveal-delay: 0ms">
+            <div class="flex items-start justify-between gap-4">
+              <span class="inline-flex h-11 w-11 items-center justify-center rounded-xl text-azure-deep ring-1 ring-line transition group-hover:bg-gradient-to-br group-hover:from-azure group-hover:to-violet-600 group-hover:text-white group-hover:ring-transparent">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+              </span>
+              <span class="font-display text-4xl font-bold leading-none text-grad opacity-20 transition duration-200 group-hover:opacity-100">01</span>
+            </div>
+            <h3 class="mt-6 font-display text-lg font-bold text-ink">ICP &amp; prospect research</h3>
+            <p class="mt-2 text-sm leading-7 text-ink-soft">We pinpoint the companies in your market that need what you sell, with validated contacts.</p>
+          </div>
+          <!-- 02 -->
+          <div class="service-card group relative bg-white p-8" data-reveal style="--reveal-delay: 70ms">
+            <div class="flex items-start justify-between gap-4">
+              <span class="inline-flex h-11 w-11 items-center justify-center rounded-xl text-azure-deep ring-1 ring-line transition group-hover:bg-gradient-to-br group-hover:from-azure group-hover:to-violet-600 group-hover:text-white group-hover:ring-transparent">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5l8.5 6 8.5-6"/></svg>
+              </span>
+              <span class="font-display text-4xl font-bold leading-none text-grad opacity-20 transition duration-200 group-hover:opacity-100">02</span>
+            </div>
+            <h3 class="mt-6 font-display text-lg font-bold text-ink">Cold email campaigns</h3>
+            <p class="mt-2 text-sm leading-7 text-ink-soft">Split-tested, personalised cold emails that earn interested replies from decision makers.</p>
+          </div>
+          <!-- 03 -->
+          <div class="service-card group relative bg-white p-8" data-reveal style="--reveal-delay: 140ms">
+            <div class="flex items-start justify-between gap-4">
+              <span class="inline-flex h-11 w-11 items-center justify-center rounded-xl text-azure-deep ring-1 ring-line transition group-hover:bg-gradient-to-br group-hover:from-azure group-hover:to-violet-600 group-hover:text-white group-hover:ring-transparent">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 7.6-7 9-4-1.4-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg>
+              </span>
+              <span class="font-display text-4xl font-bold leading-none text-grad opacity-20 transition duration-200 group-hover:opacity-100">03</span>
+            </div>
+            <h3 class="mt-6 font-display text-lg font-bold text-ink">Inbox warm-up &amp; deliverability</h3>
+            <p class="mt-2 text-sm leading-7 text-ink-soft">Warmed inboxes and a protected sender reputation, so your emails actually land.</p>
+          </div>
+          <!-- 04 -->
+          <div class="service-card group relative bg-white p-8" data-reveal style="--reveal-delay: 0ms">
+            <div class="flex items-start justify-between gap-4">
+              <span class="inline-flex h-11 w-11 items-center justify-center rounded-xl text-azure-deep ring-1 ring-line transition group-hover:bg-gradient-to-br group-hover:from-azure group-hover:to-violet-600 group-hover:text-white group-hover:ring-transparent">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16.5" rx="2"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4M8.5 15l2.2 2.2L15.5 12.5"/></svg>
+              </span>
+              <span class="font-display text-4xl font-bold leading-none text-grad opacity-20 transition duration-200 group-hover:opacity-100">04</span>
+            </div>
+            <h3 class="mt-6 font-display text-lg font-bold text-ink">Appointment setting</h3>
+            <p class="mt-2 text-sm leading-7 text-ink-soft">We handle every reply and follow-up, then book qualified meetings onto your calendar.</p>
+          </div>
+          <!-- 05 -->
+          <div class="service-card group relative bg-white p-8" data-reveal style="--reveal-delay: 70ms">
+            <div class="flex items-start justify-between gap-4">
+              <span class="inline-flex h-11 w-11 items-center justify-center rounded-xl text-azure-deep ring-1 ring-line transition group-hover:bg-gradient-to-br group-hover:from-azure group-hover:to-violet-600 group-hover:text-white group-hover:ring-transparent">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 13.4l-7.2 7.2a2 2 0 01-2.8 0l-7-7A2 2 0 013 12.2V5a2 2 0 012-2h7.2a2 2 0 011.4.6l7 7a2 2 0 010 2.8z"/><circle cx="7.5" cy="7.5" r="1.2"/></svg>
+              </span>
+              <span class="font-display text-4xl font-bold leading-none text-grad opacity-20 transition duration-200 group-hover:opacity-100">05</span>
+            </div>
+            <h3 class="mt-6 font-display text-lg font-bold text-ink">Performance-based pricing</h3>
+            <p class="mt-2 text-sm leading-7 text-ink-soft">Pay per qualified lead or booked meeting, billed monthly, with no bloated retainers.</p>
+          </div>
+          <!-- 06 -->
+          <div class="service-card group relative bg-white p-8" data-reveal style="--reveal-delay: 140ms">
+            <div class="flex items-start justify-between gap-4">
+              <span class="inline-flex h-11 w-11 items-center justify-center rounded-xl text-azure-deep ring-1 ring-line transition group-hover:bg-gradient-to-br group-hover:from-azure group-hover:to-violet-600 group-hover:text-white group-hover:ring-transparent">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V4M4 20h16M8 16v-4M13 16V8M18 16v-6"/></svg>
+              </span>
+              <span class="font-display text-4xl font-bold leading-none text-grad opacity-20 transition duration-200 group-hover:opacity-100">06</span>
+            </div>
+            <h3 class="mt-6 font-display text-lg font-bold text-ink">Reporting &amp; optimisation</h3>
+            <p class="mt-2 text-sm leading-7 text-ink-soft">Continuous testing and clear reporting, so the system keeps improving over time.</p>
+          </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- What sets us apart -->
-    <section class="relative overflow-hidden bg-white px-6 py-16 md:py-24">
-      <div class="pointer-events-none absolute inset-0 bg-dot-grid opacity-50 [mask-image:radial-gradient(ellipse_at_center,black,transparent_72%)]" aria-hidden="true"></div>
+    <section id="difference" class="relative bg-white px-6 py-16 md:py-24">
+      <div class="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
+        <div class="absolute inset-0 bg-dot-grid opacity-50 [mask-image:radial-gradient(ellipse_at_center,black,transparent_72%)]"></div>
+        <div class="absolute -right-24 top-32 h-72 w-72 rounded-full bg-azure/10 blur-3xl"></div>
+      </div>
       <div class="relative mx-auto max-w-shell">
-        <div class="mx-auto mb-12 max-w-2xl text-center">
-          <span class="pill inline-flex rounded-full px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-ink-soft">What sets us apart</span>
-          <h2 class="mt-6 font-display text-3xl font-bold text-ink md:text-4xl">What makes us <span class="mark">different</span></h2>
-          <p class="mt-5 text-base leading-7 text-ink-soft">A few things that make working with B2B Drive different from agencies, freelancers, or building it in-house.</p>
-        </div>
-        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          <article class="rounded-[1.5rem] border border-line bg-white p-7 shadow-soft transition hover:-translate-y-1 hover:shadow-card">
-            <div class="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-azure to-violet-600 text-white shadow-[0_6px_14px_rgba(47,107,255,.28)]">
-              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 13.4l-7.2 7.2a2 2 0 01-2.8 0l-7-7A2 2 0 013 12.2V5a2 2 0 012-2h7.2a2 2 0 011.4.6l7 7a2 2 0 010 2.8z"/><circle cx="7.5" cy="7.5" r="1.2"/></svg>
-            </div>
-            <h3 class="mt-5 font-display text-lg font-bold text-ink">Performance-based pricing</h3>
-            <p class="mt-2 text-sm leading-7 text-ink-soft">Pay per qualified lead or booked meeting — never for activity or a bloated retainer.</p>
-          </article>
-          <article class="rounded-[1.5rem] border border-line bg-white p-7 shadow-soft transition hover:-translate-y-1 hover:shadow-card">
-            <div class="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-azure to-violet-600 text-white shadow-[0_6px_14px_rgba(47,107,255,.28)]">
-              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 13l9 5 9-5"/></svg>
-            </div>
-            <h3 class="mt-5 font-display text-lg font-bold text-ink">Done-for-you, end to end</h3>
-            <p class="mt-2 text-sm leading-7 text-ink-soft">Strategy, copy, sending, replies, and booking — the whole motion handled, not just a list.</p>
-          </article>
-          <article class="rounded-[1.5rem] border border-line bg-white p-7 shadow-soft transition hover:-translate-y-1 hover:shadow-card">
-            <div class="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-azure to-violet-600 text-white shadow-[0_6px_14px_rgba(47,107,255,.28)]">
-              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 7.6-7 9-4-1.4-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg>
-            </div>
-            <h3 class="mt-5 font-display text-lg font-bold text-ink">Deliverability obsessed</h3>
-            <p class="mt-2 text-sm leading-7 text-ink-soft">Warmed inboxes and a protected sender reputation, so your emails actually reach the inbox.</p>
-          </article>
-          <article class="rounded-[1.5rem] border border-line bg-white p-7 shadow-soft transition hover:-translate-y-1 hover:shadow-card">
-            <div class="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-azure to-violet-600 text-white shadow-[0_6px_14px_rgba(47,107,255,.28)]">
-              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16.5" rx="2"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4M8.5 15l2.2 2.2L15.5 12.5"/></svg>
-            </div>
-            <h3 class="mt-5 font-display text-lg font-bold text-ink">Qualified meetings only</h3>
-            <p class="mt-2 text-sm leading-7 text-ink-soft">Only sales-ready conversations reach your calendar — and you're never charged for no-shows.</p>
-          </article>
+        <div class="grid gap-12 lg:grid-cols-[.72fr_1.28fr] lg:gap-20">
+          <div class="lg:sticky lg:top-28 lg:self-start" data-reveal>
+            <span class="pill inline-flex rounded-full px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-ink-soft">What sets us apart</span>
+            <h2 class="mt-6 font-display text-3xl font-bold text-ink md:text-4xl">What makes us <span class="mark">different</span></h2>
+            <p class="mt-5 max-w-md text-base leading-7 text-ink-soft">A few things that make working with B2B Drive different from agencies, freelancers, or building it in-house.</p>
+            <a href="#contact" class="btn btn-azure mt-8 inline-flex items-center justify-center rounded-full px-7 py-3.5 text-sm font-semibold">Book a discovery call <span class="btn-arrow" aria-hidden="true">&rarr;</span></a>
+          </div>
+
+          <div class="apart-stack" data-stack>
+            <article class="apart-card" style="--stack-index: 0" data-stack-card data-reveal>
+              <div class="apart-card-inner">
+                <div class="flex items-start justify-between gap-6">
+                  <span class="apart-icon">
+                    <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 13.4l-7.2 7.2a2 2 0 01-2.8 0l-7-7A2 2 0 013 12.2V5a2 2 0 012-2h7.2a2 2 0 011.4.6l7 7a2 2 0 010 2.8z"/><circle cx="7.5" cy="7.5" r="1.2"/></svg>
+                  </span>
+                  <span class="apart-number">01</span>
+                </div>
+                <div class="mt-auto pt-16">
+                  <h3 class="font-display text-2xl font-bold text-ink md:text-3xl">Performance-based pricing</h3>
+                  <p class="mt-4 max-w-xl text-base leading-7 text-ink-soft">Pay per qualified lead or booked meeting—never for activity or a bloated retainer.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="apart-card" style="--stack-index: 1" data-stack-card data-reveal>
+              <div class="apart-card-inner">
+                <div class="flex items-start justify-between gap-6">
+                  <span class="apart-icon">
+                    <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 13l9 5 9-5"/></svg>
+                  </span>
+                  <span class="apart-number">02</span>
+                </div>
+                <div class="mt-auto pt-16">
+                  <h3 class="font-display text-2xl font-bold text-ink md:text-3xl">Done-for-you, end to end</h3>
+                  <p class="mt-4 max-w-xl text-base leading-7 text-ink-soft">Strategy, copy, sending, replies, and booking—the whole operation handled, not merely a prospect list.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="apart-card" style="--stack-index: 2" data-stack-card data-reveal>
+              <div class="apart-card-inner">
+                <div class="flex items-start justify-between gap-6">
+                  <span class="apart-icon">
+                    <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 7.6-7 9-4-1.4-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg>
+                  </span>
+                  <span class="apart-number">03</span>
+                </div>
+                <div class="mt-auto pt-16">
+                  <h3 class="font-display text-2xl font-bold text-ink md:text-3xl">Deliverability obsessed</h3>
+                  <p class="mt-4 max-w-xl text-base leading-7 text-ink-soft">Warmed inboxes and protected sending infrastructure help your emails consistently reach the inbox.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="apart-card" style="--stack-index: 3" data-stack-card data-reveal>
+              <div class="apart-card-inner apart-card-dark">
+                <div class="flex items-start justify-between gap-6">
+                  <span class="apart-icon apart-icon-dark">
+                    <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16.5" rx="2"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4M8.5 15l2.2 2.2L15.5 12.5"/></svg>
+                  </span>
+                  <span class="apart-number apart-number-dark">04</span>
+                </div>
+                <div class="mt-auto pt-16">
+                  <h3 class="font-display text-2xl font-bold text-white md:text-3xl">Qualified meetings only</h3>
+                  <p class="mt-4 max-w-xl text-base leading-7 text-white/70">Only sales-ready conversations reach your calendar—and you are never charged for no-shows.</p>
+                </div>
+              </div>
+            </article>
+          </div>
         </div>
       </div>
     </section>
@@ -361,17 +450,17 @@
       <div class="pointer-events-none absolute left-0 top-20 h-72 w-72 -translate-x-1/3 rounded-full bg-azure/10 blur-3xl" aria-hidden="true"></div>
       <div class="relative mx-auto max-w-shell">
         <div class="grid gap-12 lg:grid-cols-[.85fr_1.15fr]">
-          <div class="lg:sticky lg:top-28 lg:self-start">
+          <div class="lg:sticky lg:top-28 lg:self-start" data-reveal>
             <span class="pill inline-flex rounded-full px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-ink-soft">Your roadmap</span>
             <h2 class="mt-6 font-display text-3xl font-bold text-ink md:text-4xl">From first message to <span class="mark">booked call</span>.</h2>
             <p class="mt-5 text-base leading-7 text-ink-soft">Every engagement follows the same roadmap, built so each phase sets up the next, and the only thing that lands on your calendar is a meeting worth having.</p>
-            <a href="#contact" class="btn btn-ink mt-8 inline-flex items-center justify-center rounded-full px-7 py-3.5 text-sm font-semibold">Book a discovery call</a>
+            <a href="#contact" class="btn btn-ink mt-8 inline-flex items-center justify-center rounded-full px-7 py-3.5 text-sm font-semibold">Book a discovery call <span class="btn-arrow" aria-hidden="true">&rarr;</span></a>
           </div>
           <div class="relative">
             <!-- connecting spine -->
-            <div class="pointer-events-none absolute left-[1.4rem] top-4 bottom-12 w-0.5 bg-gradient-to-b from-azure via-violet-500/70 to-transparent" aria-hidden="true"></div>
+            <div class="roadmap-spine pointer-events-none absolute bottom-12 left-[1.4rem] top-4 w-0.5 overflow-hidden bg-line" aria-hidden="true"><span class="roadmap-progress absolute left-0 top-0 block h-full w-full origin-top scale-y-0 bg-gradient-to-b from-azure via-violet-500 to-violet-700" data-roadmap-progress></span></div>
             <ol class="space-y-12">
-              <li class="relative pl-16 md:pl-20">
+              <li class="roadmap-step relative pl-16 md:pl-20" data-roadmap-step>
                 <span class="absolute left-0 top-0 flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-azure to-violet-600 font-display text-lg font-bold text-white shadow-[0_8px_20px_rgba(79,70,229,.45)] ring-4 ring-mist">01</span>
                 <span class="inline-flex rounded-full bg-azure-soft px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-azure-deep">Strategy &amp; setup</span>
                 <h3 class="mt-4 font-display text-2xl font-bold text-ink">Define your audience and prepare the infrastructure.</h3>
@@ -382,7 +471,7 @@
                   <li class="rounded-full border border-line bg-white/70 px-3 py-1.5">Domain Set Up</li>
                 </ul>
               </li>
-              <li class="relative pl-16 md:pl-20">
+              <li class="roadmap-step relative pl-16 md:pl-20" data-roadmap-step>
                 <span class="absolute left-0 top-0 flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-azure to-violet-600 font-display text-lg font-bold text-white shadow-[0_8px_20px_rgba(79,70,229,.45)] ring-4 ring-mist">02</span>
                 <span class="inline-flex rounded-full bg-azure-soft px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-azure-deep">Build the outreach</span>
                 <h3 class="mt-4 font-display text-2xl font-bold text-ink">Build the list, the message, and the personal touch.</h3>
@@ -394,7 +483,7 @@
                   <li class="rounded-full border border-line bg-white/70 px-3 py-1.5">Personalisation</li>
                 </ul>
               </li>
-              <li class="relative pl-16 md:pl-20">
+              <li class="roadmap-step relative pl-16 md:pl-20" data-roadmap-step>
                 <span class="absolute left-0 top-0 flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-azure to-violet-600 font-display text-lg font-bold text-white shadow-[0_8px_20px_rgba(79,70,229,.45)] ring-4 ring-mist">03</span>
                 <span class="inline-flex rounded-full bg-azure-soft px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-azure-deep">Launch &amp; book</span>
                 <h3 class="mt-4 font-display text-2xl font-bold text-ink">Run the campaigns and fill your calendar.</h3>
@@ -414,7 +503,7 @@
     <section id="results" class="relative overflow-hidden bg-gradient-to-b from-white to-azure-soft px-6 py-16 md:py-24">
       <div class="pointer-events-none absolute right-0 top-10 h-72 w-72 translate-x-1/3 rounded-full bg-azure/10 blur-3xl" aria-hidden="true"></div>
       <div class="relative mx-auto max-w-shell">
-        <div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+        <div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between" data-reveal>
           <div class="max-w-2xl">
             <span class="pill inline-flex rounded-full px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-ink-soft">Results</span>
             <h2 class="mt-6 font-display text-3xl font-bold text-ink md:text-4xl">Outcomes our clients <span class="mark">actually feel</span>.</h2>
@@ -422,7 +511,7 @@
           <p class="max-w-md text-base leading-7 text-ink-soft">Short stories from the teams who handed their pipeline to B2B Drive and got booked calls back.</p>
         </div>
         <div class="mt-14 grid gap-5 lg:grid-cols-3">
-          <article class="flex flex-col rounded-[1.75rem] border border-line bg-white p-8 shadow-card">
+          <article class="interactive-card flex flex-col rounded-[1.75rem] border border-line bg-white p-8 shadow-card" data-reveal style="--reveal-delay: 0ms">
             <div class="font-display text-4xl font-bold text-grad">8&ndash;10<span class="text-azure-deep">.</span></div>
             <p class="mt-2 text-sm font-semibold uppercase tracking-[0.12em] text-ink-mute">Qualified calls booked / month</p>
             <p class="mt-5 flex-1 text-sm leading-7 text-ink-soft">"We've been scheduling 8&ndash;10 sales calls a month, the prospects show up, and they're actually qualified. We cannot be happier."</p>
@@ -434,7 +523,7 @@
               </div>
             </div>
           </article>
-          <article class="flex flex-col rounded-[1.75rem] border border-line bg-white p-8 shadow-card">
+          <article class="interactive-card flex flex-col rounded-[1.75rem] border border-line bg-white p-8 shadow-card" data-reveal style="--reveal-delay: 90ms">
             <div class="font-display text-4xl font-bold text-grad">US · EU<span class="text-azure-deep">.</span></div>
             <p class="mt-2 text-sm font-semibold uppercase tracking-[0.12em] text-ink-mute">New markets entered profitably</p>
             <p class="mt-5 flex-1 text-sm leading-7 text-ink-soft">"B2B Drive helped us scale profitably into the US and European markets, something that would have been very difficult and expensive without them."</p>
@@ -446,7 +535,7 @@
               </div>
             </div>
           </article>
-          <article class="flex flex-col rounded-[1.75rem] border border-line bg-ink p-8 text-white shadow-card">
+          <article class="interactive-card flex flex-col rounded-[1.75rem] border border-line bg-ink p-8 text-white shadow-card" data-reveal style="--reveal-delay: 180ms">
             <div class="font-display text-4xl font-bold text-grad-light">0 &rarr; 1<span class="azure-word">.</span></div>
             <p class="mt-2 text-sm font-semibold uppercase tracking-[0.12em] text-white/55">From no pipeline to a reliable one</p>
             <p class="mt-5 flex-1 text-sm leading-7 text-white/75">"I tried several methods to bring in leads for my ecommerce email agency, but none worked until B2B Drive came in. I've recommended them to several B2B businesses myself."</p>
@@ -465,7 +554,7 @@
     <!-- Testimonials marquee -->
     <section id="testimonials" class="overflow-hidden bg-azure-soft px-0 py-16 md:py-24">
       <div class="mx-auto mb-12 max-w-shell px-6">
-        <div class="mx-auto max-w-2xl text-center">
+        <div class="mx-auto max-w-2xl text-center" data-reveal>
           <span class="pill inline-flex rounded-full px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-ink-soft">What clients say</span>
           <h2 class="mt-6 font-display text-3xl font-bold text-ink md:text-4xl">Don't take it from <span class="mark">us</span>.</h2>
           <p class="mt-5 text-base leading-7 text-ink-soft">Real feedback from agencies, consultancies, and B2B service teams who've used B2B Drive to fill their calendars with qualified calls.</p>
@@ -474,7 +563,7 @@
       <div class="relative">
         <div class="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-azure-soft to-transparent"></div>
         <div class="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-azure-soft to-transparent"></div>
-        <div class="flex w-max marquee-track gap-5 px-6">
+        <div class="testimonial-marquee marquee-track flex w-max gap-5 px-6">
           <!-- set 1 -->
           <figure class="w-[340px] flex-none rounded-[1.5rem] border border-line bg-white p-6 shadow-soft">
             <blockquote class="text-sm leading-7 text-ink">"We've worked with B2B Drive for about a year on marketing specialized medical devices globally. They've been prudent in identifying targeted contacts across countries and booking meetings that convert into real business opportunities."</blockquote>
@@ -531,7 +620,7 @@
           <p class="mt-5 text-base leading-7 text-ink-soft">B2B Drive runs prospecting, outreach, and appointment setting as one connected system, so the meetings that reach your calendar are ones your team can actually turn into proposals.</p>
         </div>
         <div class="grid gap-5 md:grid-cols-2">
-          <article class="rounded-[1.75rem] border border-line bg-mist p-8">
+          <article class="interactive-card rounded-[1.75rem] border border-line bg-mist p-8" data-reveal>
             <div class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.16em] text-ink-mute"><span class="text-ink-mute">✕</span> Going it alone</div>
             <ul class="mt-6 space-y-4 text-sm leading-7 text-ink-soft">
               <li class="flex gap-3"><span class="mt-1.5 h-1.5 w-1.5 flex-none rounded-full bg-ink-mute"></span>Long, unpredictable sales cycles</li>
@@ -541,7 +630,7 @@
               <li class="flex gap-3"><span class="mt-1.5 h-1.5 w-1.5 flex-none rounded-full bg-ink-mute"></span>Time spent chasing leads instead of serving clients</li>
             </ul>
           </article>
-          <article class="relative overflow-hidden rounded-[1.75rem] bg-gradient-to-br from-azure-deep via-indigo-600 to-violet-700 p-8 text-white shadow-lift">
+          <article class="interactive-card relative overflow-hidden rounded-[1.75rem] bg-gradient-to-br from-azure-deep via-indigo-600 to-violet-700 p-8 text-white shadow-lift" data-reveal style="--reveal-delay: 100ms">
             <div class="pointer-events-none absolute -right-10 -top-10 h-40 w-40 rounded-full bg-white/15 blur-2xl"></div>
             <div class="relative inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.16em] text-white"><span>✓</span> With B2B Drive</div>
             <ul class="relative mt-6 space-y-4 text-sm leading-7 text-white/90">
@@ -625,13 +714,13 @@
     <section id="fit" class="relative overflow-hidden px-6 py-16 md:py-24">
       <div class="pointer-events-none absolute inset-0 bg-dot-grid opacity-50 [mask-image:radial-gradient(ellipse_at_center,black,transparent_72%)]" aria-hidden="true"></div>
       <div class="relative mx-auto max-w-shell">
-        <div class="mx-auto mb-12 max-w-2xl text-center">
+        <div class="mx-auto mb-12 max-w-2xl text-center" data-reveal>
           <span class="pill inline-flex rounded-full px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-ink-soft">Are we a good fit?</span>
           <h2 class="mt-6 font-display text-3xl font-bold text-ink md:text-4xl">Let's be honest about <span class="mark">fit</span></h2>
           <p class="mt-5 text-base leading-7 text-ink-soft">We only take on clients we're confident we can deliver results for. Here's who we work best with.</p>
         </div>
         <div class="grid gap-5 md:grid-cols-2">
-          <article class="rounded-[1.75rem] border border-line bg-white p-8 shadow-soft">
+          <article class="interactive-card rounded-[1.75rem] border border-line bg-white p-8 shadow-soft" data-reveal>
             <div class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.16em] text-azure-deep"><span>✓</span> You're a great fit if</div>
             <ul class="mt-6 space-y-4 text-sm leading-7 text-ink-soft">
               <li class="flex gap-3"><svg class="mt-0.5 h-5 w-5 flex-none text-azure" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg>You sell a B2B product or service with a clear ideal customer</li>
@@ -641,7 +730,7 @@
               <li class="flex gap-3"><svg class="mt-0.5 h-5 w-5 flex-none text-azure" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg>You're ready to start within the next few weeks</li>
             </ul>
           </article>
-          <article class="rounded-[1.75rem] border border-line bg-mist p-8">
+          <article class="interactive-card rounded-[1.75rem] border border-line bg-mist p-8" data-reveal style="--reveal-delay: 100ms">
             <div class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.16em] text-ink-mute"><span>✕</span> Probably not a fit if</div>
             <ul class="mt-6 space-y-4 text-sm leading-7 text-ink-soft">
               <li class="flex gap-3"><svg class="mt-0.5 h-5 w-5 flex-none text-ink-mute" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M15 9l-6 6M9 9l6 6"/></svg>You're B2C or selling low-ticket, impulse products</li>
@@ -659,7 +748,7 @@
 
   <!-- CTA / Contact -->
   <section id="contact" class="px-6 py-20">
-    <div class="relative mx-auto max-w-shell overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-azure-deep via-indigo-600 to-violet-700 text-white">
+    <div class="relative mx-auto max-w-shell overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-azure-deep via-indigo-600 to-violet-700 text-white" data-reveal>
       <div class="pointer-events-none absolute -right-16 -top-20 h-72 w-72 rounded-full bg-white/15 blur-3xl" aria-hidden="true"></div>
       <div class="pointer-events-none absolute -left-10 bottom-0 h-56 w-56 rounded-full bg-[#0e1f4d]/40 blur-3xl" aria-hidden="true"></div>
       <div class="relative grid gap-10 p-8 md:p-12 lg:grid-cols-[1.05fr_.95fr] lg:items-start">
@@ -754,5 +843,6 @@
     </div>
   </footer>
 
+  <script src="assets/js/main.js" defer></script>
 </body>
 </html>
