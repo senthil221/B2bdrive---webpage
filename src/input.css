@@ -384,3 +384,163 @@ textarea:focus-visible {
     transition: none;
   }
 }
+```css
+/* =========================================================
+   WHAT SETS US APART — COMPACT STACKED CARDS
+   Paste this at the bottom of src/input.css
+   ========================================================= */
+
+.apart-stack {
+  position: relative;
+  width: 100%;
+}
+
+.apart-card {
+  position: relative;
+  margin-bottom: 1.25rem;
+}
+
+.apart-card-inner {
+  position: relative;
+  display: flex;
+  min-height: 17rem;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid #e4e7df;
+  border-radius: 1.75rem;
+  background:
+    radial-gradient(
+      circle at 90% 0%,
+      rgba(47, 107, 255, 0.09),
+      transparent 38%
+    ),
+    #ffffff;
+  padding: 1.5rem;
+  box-shadow:
+    0 18px 48px rgba(13, 15, 14, 0.08),
+    0 4px 14px rgba(13, 15, 14, 0.04);
+  transform-origin: top center;
+  transition:
+    transform 480ms cubic-bezier(0.22, 1, 0.36, 1),
+    filter 480ms ease,
+    box-shadow 480ms ease;
+}
+
+/* Reduce the large empty gap inside every card */
+.apart-card-inner > .mt-auto {
+  padding-top: 2rem !important;
+}
+
+/* Dark final card */
+.apart-card-dark {
+  border-color: rgba(255, 255, 255, 0.1);
+  background:
+    radial-gradient(
+      circle at 90% 0%,
+      rgba(47, 107, 255, 0.3),
+      transparent 42%
+    ),
+    #0d0f0e;
+}
+
+/* Large background number */
+.apart-number {
+  position: absolute;
+  top: 1rem;
+  right: 1.25rem;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(3.5rem, 7vw, 6rem);
+  font-weight: 700;
+  line-height: 0.85;
+  color: rgba(47, 107, 255, 0.12);
+  pointer-events: none;
+  user-select: none;
+}
+
+.apart-card-dark .apart-number {
+  color: rgba(125, 167, 255, 0.22);
+}
+
+/* Keep icon above the background number */
+.apart-card-inner > div:first-child,
+.apart-card-inner > svg:first-child {
+  position: relative;
+  z-index: 2;
+}
+
+/* Card content */
+.apart-card-inner h3 {
+  position: relative;
+  z-index: 2;
+  margin-top: 1.5rem;
+}
+
+.apart-card-inner p {
+  position: relative;
+  z-index: 2;
+}
+
+/* Desktop stacked scroll effect */
+@media (min-width: 1024px) {
+  .apart-card {
+    position: sticky;
+    top: calc(7.25rem + (var(--stack-index) * 0.8rem));
+    z-index: calc(10 + var(--stack-index));
+    margin-bottom: 10vh;
+  }
+
+  .apart-card:last-child {
+    margin-bottom: 0;
+  }
+
+  .apart-card-inner {
+    min-height: 17rem;
+    padding: 1.75rem;
+  }
+}
+
+/* Tablet */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .apart-card-inner {
+    min-height: 16rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 639px) {
+  .apart-card {
+    position: relative;
+    top: auto;
+    margin-bottom: 1rem;
+  }
+
+  .apart-card-inner {
+    min-height: 15rem;
+    border-radius: 1.5rem;
+    padding: 1.25rem;
+  }
+
+  .apart-number {
+    top: 1rem;
+    right: 1rem;
+    font-size: 4rem;
+  }
+
+  .apart-card-inner > .mt-auto {
+    padding-top: 1.5rem !important;
+  }
+
+  .apart-card-inner h3 {
+    margin-top: 1.25rem;
+    font-size: 1.35rem;
+  }
+}
+
+/* Reduced-motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .apart-card-inner {
+    transition: none;
+    transform: none;
+  }
+}
+```
