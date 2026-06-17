@@ -58,6 +58,59 @@
     calendarAnimations.forEach((item) => calendarObserver.observe(item));
   }
 
+  const autoMarquees = [...document.querySelectorAll("[data-auto-marquee]")];
+  const initialiseAutoMarquee = (marquee) => {
+    const track = marquee.querySelector("[data-auto-marquee-track]");
+    const sourceGroup = marquee.querySelector("[data-auto-marquee-group]");
+    if (!track || !sourceGroup) return;
+
+    marquee.classList.remove("is-marquee-ready");
+    track.querySelectorAll("[data-marquee-clone]").forEach((clone) => clone.remove());
+
+    const sourceWidth = sourceGroup.getBoundingClientRect().width;
+    if (!sourceWidth) return;
+
+    const targetWidth = marquee.clientWidth + sourceWidth;
+    let safety = 0;
+    while (track.scrollWidth < targetWidth && safety < 20) {
+      const clone = sourceGroup.cloneNode(true);
+      clone.removeAttribute("data-auto-marquee-group");
+      clone.setAttribute("data-marquee-clone", "");
+      clone.setAttribute("aria-hidden", "true");
+      track.appendChild(clone);
+      safety += 1;
+    }
+
+    if (!track.querySelector("[data-marquee-clone]")) {
+      const clone = sourceGroup.cloneNode(true);
+      clone.removeAttribute("data-auto-marquee-group");
+      clone.setAttribute("data-marquee-clone", "");
+      clone.setAttribute("aria-hidden", "true");
+      track.appendChild(clone);
+    }
+
+    const duration = Number.parseFloat(marquee.dataset.marqueeSpeed || "36");
+    track.style.setProperty("--marquee-shift", `-${sourceWidth}px`);
+    track.style.setProperty("--marquee-duration", `${Math.max(12, duration)}s`);
+    marquee.classList.add("is-marquee-ready");
+  };
+
+  if (autoMarquees.length) {
+    const initialiseAllMarquees = () => autoMarquees.forEach(initialiseAutoMarquee);
+    initialiseAllMarquees();
+    window.addEventListener("load", initialiseAllMarquees, { once: true });
+
+    let marqueeResizeTimer;
+    window.addEventListener(
+      "resize",
+      () => {
+        window.clearTimeout(marqueeResizeTimer);
+        marqueeResizeTimer = window.setTimeout(initialiseAllMarquees, 150);
+      },
+      { passive: true }
+    );
+  }
+
   document.querySelectorAll("[data-carousel]").forEach((carousel) => {
     const track = carousel.querySelector("[data-carousel-track]");
     const previousButton = carousel.querySelector("[data-carousel-prev]");
