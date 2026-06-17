@@ -88,6 +88,20 @@ body {
 }
 @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-16px); } }
 
+/* Soft animated aurora glow (hero ambient, light-bg friendly, no line-art) */
+.aurora { position: absolute; border-radius: 9999px; pointer-events: none; filter: blur(70px); opacity: .6; }
+.aurora-1 { background: radial-gradient(closest-side, rgba(47,107,255,.30), transparent 70%); transform: translate(-50%, 0); }
+.aurora-2 { background: radial-gradient(closest-side, rgba(124,58,237,.30), transparent 70%); }
+.aurora-3 { background: radial-gradient(closest-side, rgba(47,107,255,.24), transparent 70%); }
+@media (prefers-reduced-motion: no-preference) {
+  .aurora-1 { animation: aurora-a 18s ease-in-out infinite; }
+  .aurora-2 { animation: aurora-b 14s ease-in-out infinite; }
+  .aurora-3 { animation: aurora-c 16s ease-in-out infinite; }
+}
+@keyframes aurora-a { 0%,100% { transform: translate(-50%,0) scale(1); } 50% { transform: translate(-50%,20px) scale(1.08); } }
+@keyframes aurora-b { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(26px,-16px) scale(1.1); } }
+@keyframes aurora-c { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(-22px,16px) scale(.94); } }
+
 summary { list-style: none; cursor: pointer; }
 summary::-webkit-details-marker { display: none; }
 .faq-item[open] .faq-plus { transform: rotate(45deg); }
