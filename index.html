@@ -64,80 +64,27 @@
   <main id="top">
 
     <!-- Hero -->
-    <section id="hero" class="relative overflow-hidden bg-gradient-to-b from-white to-[#f5f7fb] px-6 pb-20 pt-14 text-center md:pb-28 md:pt-20">
-      <!-- subtle floating orbs -->
-      <div class="pointer-events-none absolute inset-0 z-0 overflow-hidden" aria-hidden="true">
-        <div class="absolute left-1/2 top-8 h-80 w-[720px] max-w-full -translate-x-1/2 rounded-full" style="background: radial-gradient(closest-side, rgba(47,107,255,.26), transparent 72%);"></div>
-        <div class="glow-violet absolute right-[16%] top-12 h-64 w-64 opacity-70"></div>
-        <div class="glow-violet absolute left-[14%] bottom-12 h-52 w-52 opacity-50"></div>
-
-        <!-- soft orbs (behind) -->
-        <div class="sphere absolute -left-28 -top-24 h-72 w-72 opacity-55"></div>
-        <div class="glow-azure absolute left-10 top-20 h-44 w-44 opacity-60"></div>
-        <div class="sphere absolute -right-24 top-10 h-80 w-80 opacity-40"></div>
-        <div class="glow-azure absolute right-24 top-28 h-40 w-40 opacity-50"></div>
-        <div class="sphere absolute right-32 -bottom-28 h-72 w-72 opacity-40"></div>
-
-        <!-- background line-art (on top of orbs) -->
-        <svg class="absolute -left-10 top-4 hidden h-64 w-64 text-azure/70 sm:block md:h-72 md:w-72" viewBox="0 0 200 200" fill="none" stroke="currentColor">
-          <circle cx="100" cy="100" r="42" stroke-width="2.2" stroke-dasharray="3 8"/>
-          <circle cx="100" cy="100" r="72" stroke-width="2.2" stroke-dasharray="3 8"/>
-          <circle cx="100" cy="100" r="98" stroke-width="2.2" stroke-dasharray="3 8"/>
-          <circle cx="100" cy="28" r="5" fill="currentColor" stroke="none"/>
-          <circle cx="172" cy="100" r="4" fill="currentColor" stroke="none"/>
-        </svg>
-        <svg class="absolute right-0 top-6 hidden h-52 w-72 text-azure/80 sm:block" viewBox="0 0 260 200" fill="none" stroke="currentColor">
-          <line x1="42" y1="44" x2="140" y2="82" stroke-width="2"/>
-          <line x1="140" y1="82" x2="222" y2="40" stroke-width="2"/>
-          <line x1="140" y1="82" x2="182" y2="160" stroke-width="2"/>
-          <line x1="42" y1="44" x2="72" y2="142" stroke-width="2"/>
-          <circle cx="42" cy="44" r="6" fill="currentColor" stroke="none"/>
-          <circle cx="140" cy="82" r="8" fill="currentColor" stroke="none"/>
-          <circle cx="222" cy="40" r="6" fill="currentColor" stroke="none"/>
-          <circle cx="182" cy="160" r="5" fill="currentColor" stroke="none"/>
-          <circle cx="72" cy="142" r="5" fill="currentColor" stroke="none"/>
-        </svg>
-        <!-- animated flowing ribbons: self-drawing on load, recolored to brand -->
-        <svg class="absolute inset-x-0 bottom-0 hidden w-full sm:block" viewBox="0 0 1440 200" fill="none" aria-hidden="true">
-          <defs>
-            <filter id="heroGlow" x="-5%" y="-60%" width="110%" height="220%">
-              <feGaussianBlur stdDeviation="7" />
-            </filter>
-          </defs>
-          <!-- soft glow layer -->
-          <g filter="url(#heroGlow)" opacity="0.4">
-            <path class="draw-line" pathLength="1" d="M0 64C320 64 520 104 720 104S1120 60 1440 60" stroke="#2f6bff" stroke-width="4" style="animation-delay:.05s"/>
-            <path class="draw-line" pathLength="1" d="M0 92C320 92 540 110 720 110S1120 92 1440 96" stroke="#4f46e5" stroke-width="4" style="animation-delay:.2s"/>
-            <path class="draw-line" pathLength="1" d="M0 132C300 132 540 108 720 108S1140 138 1440 120" stroke="#7c3aed" stroke-width="4" style="animation-delay:.35s"/>
-            <path class="draw-line" pathLength="1" d="M0 156C340 156 540 118 720 118S1120 162 1440 140" stroke="#7da7ff" stroke-width="4" style="animation-delay:.5s"/>
-          </g>
-          <!-- crisp lines -->
-          <path class="draw-line" pathLength="1" d="M0 64C320 64 520 104 720 104S1120 60 1440 60" stroke="#2f6bff" stroke-width="2.25" stroke-linecap="round" style="animation-delay:.05s"/>
-          <path class="draw-line" pathLength="1" d="M0 92C320 92 540 110 720 110S1120 92 1440 96" stroke="#4f46e5" stroke-width="2.25" stroke-linecap="round" style="animation-delay:.2s"/>
-          <path class="draw-line" pathLength="1" d="M0 132C300 132 540 108 720 108S1140 138 1440 120" stroke="#7c3aed" stroke-width="2.25" stroke-linecap="round" style="animation-delay:.35s"/>
-          <path class="draw-line" pathLength="1" d="M0 156C340 156 540 118 720 118S1120 162 1440 140" stroke="#7da7ff" stroke-width="2.25" stroke-linecap="round" style="animation-delay:.5s"/>
-        </svg>
-        <svg class="absolute left-12 bottom-14 hidden h-6 w-6 text-azure/80 sm:block" viewBox="0 0 20 20" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M10 3v14M3 10h14"/></svg>
-        <svg class="absolute right-16 bottom-24 hidden h-6 w-6 text-azure/80 sm:block" viewBox="0 0 20 20" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M10 3v14M3 10h14"/></svg>
-        <svg class="absolute left-[22%] top-10 hidden h-5 w-5 text-azure/70 lg:block" viewBox="0 0 20 20" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M10 3v14M3 10h14"/></svg>
-      </div>
+    <section id="hero" class="relative overflow-hidden bg-[#070a16] px-6 pb-20 pt-14 text-center md:pb-28 md:pt-20">
+      <!-- animated beams background (canvas, ported to vanilla JS) -->
+      <canvas id="hero-beams" class="pointer-events-none absolute inset-0 h-full w-full" style="filter: blur(15px)" aria-hidden="true"></canvas>
+      <div class="pointer-events-none absolute inset-0 bg-[#070a16]/20" aria-hidden="true"></div>
 
       <div class="relative z-10 mx-auto max-w-2xl">
-        <p class="text-xs font-bold uppercase tracking-[0.18em] text-azure-deep">B2B Lead Generation Agency</p>
-        <h1 class="mt-6 font-display text-4xl font-bold leading-[1.08] text-ink sm:text-5xl lg:text-[3.4rem]">
-          Unlock your ideal <span class="text-grad">B2B partnerships</span>
+        <p class="text-xs font-bold uppercase tracking-[0.18em] text-[#8aa6ff]">B2B Lead Generation Agency</p>
+        <h1 class="mt-6 font-display text-4xl font-bold leading-[1.08] text-white sm:text-5xl lg:text-[3.4rem]">
+          Unlock your ideal <span class="text-grad-light">B2B partnerships</span>
         </h1>
-        <p class="mx-auto mt-6 max-w-xl text-base leading-7 text-ink-soft">
+        <p class="mx-auto mt-6 max-w-xl text-base leading-7 text-white/70">
           We run targeted cold email campaigns that book qualified sales calls onto your calendar,
           and you only pay per lead or meeting, billed monthly.
         </p>
         <div class="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <a href="#contact" class="btn btn-azure inline-flex items-center justify-center rounded-full px-7 py-3.5 text-sm font-semibold">Book a discovery call</a>
-          <a href="#process" class="text-sm font-semibold text-ink underline decoration-azure decoration-2 underline-offset-4 transition hover:text-azure-deep">See how it works &rarr;</a>
+          <a href="#process" class="text-sm font-semibold text-white underline decoration-azure decoration-2 underline-offset-4 transition hover:text-azure">See how it works &rarr;</a>
         </div>
         <div class="mt-8 flex items-center justify-center gap-2.5 text-sm">
-          <span class="text-base text-azure-deep">★★★★★</span>
-          <span class="text-ink-soft">Trusted by B2B teams across the US</span>
+          <span class="text-base text-azure">★★★★★</span>
+          <span class="text-white/60">Trusted by B2B teams across the US</span>
         </div>
       </div>
     </section>
@@ -756,5 +703,93 @@
     </div>
   </footer>
 
+  <!-- Hero beams animation: vanilla-canvas port of BeamsBackground, recolored to brand -->
+  <script>
+  (function () {
+    var canvas = document.getElementById('hero-beams');
+    if (!canvas || !canvas.getContext) return;
+    var ctx = canvas.getContext('2d');
+    if (!ctx) return;
+
+    var beams = [], raf = 0, W = 0, H = 0;
+    var TOTAL = 30;
+    var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    function makeBeam() {
+      return {
+        x: Math.random() * W * 1.5 - W * 0.25,
+        y: Math.random() * H * 1.5 - H * 0.25,
+        width: 30 + Math.random() * 60,
+        length: H * 2.5,
+        angle: -35 + Math.random() * 10,
+        speed: 0.6 + Math.random() * 1.2,
+        opacity: 0.12 + Math.random() * 0.16,
+        hue: 212 + Math.random() * 60,
+        pulse: Math.random() * Math.PI * 2,
+        pulseSpeed: 0.02 + Math.random() * 0.03
+      };
+    }
+    function resetBeam(b, i) {
+      var col = i % 3, spacing = W / 3;
+      b.y = H + 100;
+      b.x = col * spacing + spacing / 2 + (Math.random() - 0.5) * spacing * 0.5;
+      b.width = 100 + Math.random() * 100;
+      b.speed = 0.5 + Math.random() * 0.4;
+      b.hue = 212 + (i * 60) / TOTAL;
+      b.opacity = 0.2 + Math.random() * 0.1;
+    }
+    function size() {
+      var dpr = window.devicePixelRatio || 1;
+      var r = canvas.getBoundingClientRect();
+      W = r.width; H = r.height;
+      canvas.width = Math.max(1, Math.round(W * dpr));
+      canvas.height = Math.max(1, Math.round(H * dpr));
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      beams = [];
+      for (var i = 0; i < TOTAL; i++) beams.push(makeBeam());
+    }
+    function draw(b) {
+      ctx.save();
+      ctx.translate(b.x, b.y);
+      ctx.rotate(b.angle * Math.PI / 180);
+      var o = b.opacity * (0.8 + Math.sin(b.pulse) * 0.2);
+      var g = ctx.createLinearGradient(0, 0, 0, b.length);
+      g.addColorStop(0, 'hsla(' + b.hue + ',85%,65%,0)');
+      g.addColorStop(0.1, 'hsla(' + b.hue + ',85%,65%,' + (o * 0.5) + ')');
+      g.addColorStop(0.4, 'hsla(' + b.hue + ',85%,65%,' + o + ')');
+      g.addColorStop(0.6, 'hsla(' + b.hue + ',85%,65%,' + o + ')');
+      g.addColorStop(0.9, 'hsla(' + b.hue + ',85%,65%,' + (o * 0.5) + ')');
+      g.addColorStop(1, 'hsla(' + b.hue + ',85%,65%,0)');
+      ctx.fillStyle = g;
+      ctx.fillRect(-b.width / 2, 0, b.width, b.length);
+      ctx.restore();
+    }
+    function render(animate) {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.filter = 'blur(35px)';
+      for (var i = 0; i < beams.length; i++) {
+        var b = beams[i];
+        if (animate) {
+          b.y -= b.speed;
+          b.pulse += b.pulseSpeed;
+          if (b.y + b.length < -100) resetBeam(b, i);
+        }
+        draw(b);
+      }
+      if (animate) raf = requestAnimationFrame(function () { render(true); });
+    }
+    function start() { if (!raf) render(true); }
+    function stop() { if (raf) { cancelAnimationFrame(raf); raf = 0; } }
+
+    size();
+    window.addEventListener('resize', function () { size(); if (prefersReduced) render(false); });
+    if (prefersReduced) {
+      render(false);
+    } else {
+      render(true);
+      document.addEventListener('visibilitychange', function () { document.hidden ? stop() : start(); });
+    }
+  })();
+  </script>
 </body>
 </html>
