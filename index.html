@@ -92,17 +92,30 @@
       </div>
     </section>
 
-    <!-- Logo Cloud -->
-    <section class="border-y border-line bg-mist px-6 py-10">
-      <div class="mx-auto max-w-shell">
-        <p class="text-center text-xs font-semibold uppercase tracking-[0.2em] text-ink-mute">Trusted by agencies, consultancies, and B2B service teams</p>
-        <div class="mt-7 grid grid-cols-2 items-center gap-5 sm:grid-cols-3 lg:grid-cols-6">
-          <img src="assets/images/Green-mo-color.jpg" alt="Green Mo Marketing" class="mx-auto h-12 w-auto rounded-xl bg-white object-contain p-2 shadow-soft">
-          <img src="assets/images/Cephas-color.jpg" alt="Cephas Medical" class="mx-auto h-12 w-auto rounded-xl bg-white object-contain p-2 shadow-soft">
-          <img src="assets/images/Cls-color.jpg" alt="CLS Private Limited" class="mx-auto h-12 w-auto rounded-xl bg-white object-contain p-2 shadow-soft">
-          <img src="assets/images/Win-color.jpg" alt="Win at Ecommerce" class="mx-auto h-12 w-auto rounded-xl bg-white object-contain p-2 shadow-soft">
-          <img src="assets/images/Revive-Color.jpg" alt="Revive Ratings" class="mx-auto h-12 w-auto rounded-xl bg-white object-contain p-2 shadow-soft">
-          <img src="assets/images/Inspire-color.jpg" alt="Inspire" class="mx-auto h-12 w-auto rounded-xl bg-white object-contain p-2 shadow-soft">
+    <!-- Logo Cloud (rolling marquee) -->
+    <section class="relative overflow-hidden border-y border-line bg-mist px-6 py-7">
+      <div class="pointer-events-none absolute inset-0 bg-dot-grid opacity-60 [mask-image:radial-gradient(ellipse_at_center,black,transparent_75%)]" aria-hidden="true"></div>
+      <div class="relative mx-auto max-w-shell">
+        <p class="text-center text-[11px] font-semibold uppercase tracking-[0.2em] text-ink-mute">Trusted by agencies, consultancies, and B2B service teams</p>
+        <div class="relative mt-6 overflow-hidden">
+          <div class="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-mist to-transparent"></div>
+          <div class="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-mist to-transparent"></div>
+          <div class="flex w-max marquee-track items-center gap-5 sm:gap-8">
+            <!-- set 1 -->
+            <img src="assets/images/Green-mo-color.jpg" alt="Green Mo Marketing" class="h-10 w-auto flex-none rounded-xl bg-white object-contain p-2 shadow-soft">
+            <img src="assets/images/Cephas-color.jpg" alt="Cephas Medical" class="h-10 w-auto flex-none rounded-xl bg-white object-contain p-2 shadow-soft">
+            <img src="assets/images/Cls-color.jpg" alt="CLS Private Limited" class="h-10 w-auto flex-none rounded-xl bg-white object-contain p-2 shadow-soft">
+            <img src="assets/images/Win-color.jpg" alt="Win at Ecommerce" class="h-10 w-auto flex-none rounded-xl bg-white object-contain p-2 shadow-soft">
+            <img src="assets/images/Revive-Color.jpg" alt="Revive Ratings" class="h-10 w-auto flex-none rounded-xl bg-white object-contain p-2 shadow-soft">
+            <img src="assets/images/Inspire-color.jpg" alt="Inspire" class="h-10 w-auto flex-none rounded-xl bg-white object-contain p-2 shadow-soft">
+            <!-- set 2 (duplicate for seamless loop) -->
+            <img src="assets/images/Green-mo-color.jpg" alt="" aria-hidden="true" class="h-10 w-auto flex-none rounded-xl bg-white object-contain p-2 shadow-soft">
+            <img src="assets/images/Cephas-color.jpg" alt="" aria-hidden="true" class="h-10 w-auto flex-none rounded-xl bg-white object-contain p-2 shadow-soft">
+            <img src="assets/images/Cls-color.jpg" alt="" aria-hidden="true" class="h-10 w-auto flex-none rounded-xl bg-white object-contain p-2 shadow-soft">
+            <img src="assets/images/Win-color.jpg" alt="" aria-hidden="true" class="h-10 w-auto flex-none rounded-xl bg-white object-contain p-2 shadow-soft">
+            <img src="assets/images/Revive-Color.jpg" alt="" aria-hidden="true" class="h-10 w-auto flex-none rounded-xl bg-white object-contain p-2 shadow-soft">
+            <img src="assets/images/Inspire-color.jpg" alt="" aria-hidden="true" class="h-10 w-auto flex-none rounded-xl bg-white object-contain p-2 shadow-soft">
+          </div>
         </div>
       </div>
     </section>
@@ -179,8 +192,9 @@
     </section>
 
     <!-- Problem → Shift gears (driving metaphor) -->
-    <section class="px-6 py-20 md:py-28">
-      <div class="mx-auto max-w-shell">
+    <section class="relative overflow-hidden px-6 py-16 md:py-24">
+      <div class="pointer-events-none absolute inset-0 bg-dot-grid opacity-50 [mask-image:radial-gradient(ellipse_at_center,black,transparent_70%)]" aria-hidden="true"></div>
+      <div class="relative mx-auto max-w-shell">
         <div class="grid items-stretch gap-5 lg:grid-cols-2">
           <article class="rounded-[2rem] border border-line bg-mist p-8 md:p-10">
             <span class="inline-flex rounded-full bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-ink-soft shadow-soft">Putting the brakes on?</span>
@@ -258,7 +272,7 @@
     </section>
 
     <!-- Services -->
-    <section id="services" class="relative overflow-hidden bg-gradient-to-b from-azure-soft via-white to-white px-6 py-20 md:py-28">
+    <section id="services" class="relative overflow-hidden bg-gradient-to-b from-azure-soft via-white to-white px-6 py-16 md:py-24">
       <div class="pointer-events-none absolute inset-0 bg-dot-grid opacity-70 [mask-image:linear-gradient(to_bottom,black,transparent_72%)]" aria-hidden="true"></div>
       <div class="pointer-events-none absolute right-0 top-16 h-80 w-80 translate-x-1/3 rounded-full bg-azure/15 blur-3xl" aria-hidden="true"></div>
       <div class="pointer-events-none absolute left-0 bottom-10 h-64 w-64 -translate-x-1/3 rounded-full bg-azure/10 blur-3xl" aria-hidden="true"></div>
@@ -343,7 +357,7 @@
     </section>
 
     <!-- Process -->
-    <section id="process" class="relative overflow-hidden bg-gradient-to-b from-mist to-azure-soft px-6 py-20 md:py-28">
+    <section id="process" class="relative overflow-hidden bg-gradient-to-b from-mist to-azure-soft px-6 py-16 md:py-24">
       <div class="pointer-events-none absolute left-0 top-20 h-72 w-72 -translate-x-1/3 rounded-full bg-azure/10 blur-3xl" aria-hidden="true"></div>
       <div class="relative mx-auto max-w-shell">
         <div class="grid gap-12 lg:grid-cols-[.85fr_1.15fr]">
@@ -397,7 +411,7 @@
     </section>
 
     <!-- Results -->
-    <section id="results" class="relative overflow-hidden bg-gradient-to-b from-white to-azure-soft px-6 py-20 md:py-28">
+    <section id="results" class="relative overflow-hidden bg-gradient-to-b from-white to-azure-soft px-6 py-16 md:py-24">
       <div class="pointer-events-none absolute right-0 top-10 h-72 w-72 translate-x-1/3 rounded-full bg-azure/10 blur-3xl" aria-hidden="true"></div>
       <div class="relative mx-auto max-w-shell">
         <div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
@@ -449,7 +463,7 @@
     </section>
 
     <!-- Testimonials marquee -->
-    <section id="testimonials" class="overflow-hidden bg-azure-soft px-0 py-20 md:py-28">
+    <section id="testimonials" class="overflow-hidden bg-azure-soft px-0 py-16 md:py-24">
       <div class="mx-auto mb-12 max-w-shell px-6">
         <div class="mx-auto max-w-2xl text-center">
           <span class="pill inline-flex rounded-full px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-ink-soft">What clients say</span>
@@ -508,7 +522,7 @@
     </section>
 
     <!-- Comparison -->
-    <section id="comparison" class="relative overflow-hidden px-6 py-20 md:py-28">
+    <section id="comparison" class="relative overflow-hidden px-6 py-16 md:py-24">
       <div class="pointer-events-none absolute left-1/2 top-0 h-72 w-[640px] max-w-full -translate-x-1/2 rounded-full bg-azure/10 blur-3xl" aria-hidden="true"></div>
       <div class="relative mx-auto max-w-shell">
         <div class="mx-auto mb-12 max-w-2xl text-center">
@@ -543,7 +557,7 @@
     </section>
 
     <!-- FAQ -->
-    <section id="faq" class="relative overflow-hidden bg-mist px-6 py-20 md:py-28">
+    <section id="faq" class="relative overflow-hidden bg-mist px-6 py-16 md:py-24">
       <div class="pointer-events-none absolute right-0 top-10 h-72 w-72 translate-x-1/3 rounded-full bg-azure/10 blur-3xl" aria-hidden="true"></div>
       <div class="relative mx-auto max-w-shell">
         <div class="grid gap-12 lg:grid-cols-[.8fr_1.2fr]">
