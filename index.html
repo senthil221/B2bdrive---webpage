@@ -64,27 +64,30 @@
   <main id="top">
 
     <!-- Hero -->
-    <section id="hero" class="relative overflow-hidden bg-[#070a16] px-6 pb-20 pt-14 text-center md:pb-28 md:pt-20">
-      <!-- animated beams background (canvas, ported to vanilla JS) -->
-      <canvas id="hero-beams" class="pointer-events-none absolute inset-0 h-full w-full" style="filter: blur(15px)" aria-hidden="true"></canvas>
-      <div class="pointer-events-none absolute inset-0 bg-[#070a16]/20" aria-hidden="true"></div>
+    <section id="hero" class="relative overflow-hidden bg-gradient-to-b from-white to-[#f5f7fb] px-6 pb-20 pt-14 text-center md:pb-28 md:pt-20">
+      <!-- soft ambient glow only (clean: no line-art, no beams) -->
+      <div class="pointer-events-none absolute inset-0 z-0 overflow-hidden" aria-hidden="true">
+        <div class="absolute left-1/2 top-4 h-72 w-[640px] max-w-full -translate-x-1/2 rounded-full" style="background: radial-gradient(closest-side, rgba(47,107,255,.16), transparent 72%);"></div>
+        <div class="glow-violet absolute right-[18%] top-10 h-56 w-56 opacity-45"></div>
+        <div class="glow-azure absolute left-[16%] bottom-8 h-48 w-48 opacity-40"></div>
+      </div>
 
       <div class="relative z-10 mx-auto max-w-2xl">
-        <p class="text-xs font-bold uppercase tracking-[0.18em] text-[#8aa6ff]">B2B Lead Generation Agency</p>
-        <h1 class="mt-6 font-display text-4xl font-bold leading-[1.08] text-white sm:text-5xl lg:text-[3.4rem]">
-          Unlock your ideal <span class="text-grad-light">B2B partnerships</span>
+        <p class="text-xs font-bold uppercase tracking-[0.18em] text-azure-deep">B2B Lead Generation Agency</p>
+        <h1 class="mt-6 font-display text-4xl font-bold leading-[1.08] text-ink sm:text-5xl lg:text-[3.4rem]">
+          Unlock your ideal <span class="text-grad">B2B partnerships</span>
         </h1>
-        <p class="mx-auto mt-6 max-w-xl text-base leading-7 text-white/70">
+        <p class="mx-auto mt-6 max-w-xl text-base leading-7 text-ink-soft">
           We run targeted cold email campaigns that book qualified sales calls onto your calendar,
           and you only pay per lead or meeting, billed monthly.
         </p>
         <div class="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <a href="#contact" class="btn btn-azure inline-flex items-center justify-center rounded-full px-7 py-3.5 text-sm font-semibold">Book a discovery call</a>
-          <a href="#process" class="text-sm font-semibold text-white underline decoration-azure decoration-2 underline-offset-4 transition hover:text-azure">See how it works &rarr;</a>
+          <a href="#process" class="text-sm font-semibold text-ink underline decoration-azure decoration-2 underline-offset-4 transition hover:text-azure-deep">See how it works &rarr;</a>
         </div>
         <div class="mt-8 flex items-center justify-center gap-2.5 text-sm">
-          <span class="text-base text-azure">★★★★★</span>
-          <span class="text-white/60">Trusted by B2B teams across the US</span>
+          <span class="text-base text-azure-deep">★★★★★</span>
+          <span class="text-ink-soft">Trusted by B2B teams across the US</span>
         </div>
       </div>
     </section>
@@ -703,93 +706,5 @@
     </div>
   </footer>
 
-  <!-- Hero beams animation: vanilla-canvas port of BeamsBackground, recolored to brand -->
-  <script>
-  (function () {
-    var canvas = document.getElementById('hero-beams');
-    if (!canvas || !canvas.getContext) return;
-    var ctx = canvas.getContext('2d');
-    if (!ctx) return;
-
-    var beams = [], raf = 0, W = 0, H = 0;
-    var TOTAL = 30;
-    var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-    function makeBeam() {
-      return {
-        x: Math.random() * W * 1.5 - W * 0.25,
-        y: Math.random() * H * 1.5 - H * 0.25,
-        width: 30 + Math.random() * 60,
-        length: H * 2.5,
-        angle: -35 + Math.random() * 10,
-        speed: 0.6 + Math.random() * 1.2,
-        opacity: 0.12 + Math.random() * 0.16,
-        hue: 212 + Math.random() * 60,
-        pulse: Math.random() * Math.PI * 2,
-        pulseSpeed: 0.02 + Math.random() * 0.03
-      };
-    }
-    function resetBeam(b, i) {
-      var col = i % 3, spacing = W / 3;
-      b.y = H + 100;
-      b.x = col * spacing + spacing / 2 + (Math.random() - 0.5) * spacing * 0.5;
-      b.width = 100 + Math.random() * 100;
-      b.speed = 0.5 + Math.random() * 0.4;
-      b.hue = 212 + (i * 60) / TOTAL;
-      b.opacity = 0.2 + Math.random() * 0.1;
-    }
-    function size() {
-      var dpr = window.devicePixelRatio || 1;
-      var r = canvas.getBoundingClientRect();
-      W = r.width; H = r.height;
-      canvas.width = Math.max(1, Math.round(W * dpr));
-      canvas.height = Math.max(1, Math.round(H * dpr));
-      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      beams = [];
-      for (var i = 0; i < TOTAL; i++) beams.push(makeBeam());
-    }
-    function draw(b) {
-      ctx.save();
-      ctx.translate(b.x, b.y);
-      ctx.rotate(b.angle * Math.PI / 180);
-      var o = b.opacity * (0.8 + Math.sin(b.pulse) * 0.2);
-      var g = ctx.createLinearGradient(0, 0, 0, b.length);
-      g.addColorStop(0, 'hsla(' + b.hue + ',85%,65%,0)');
-      g.addColorStop(0.1, 'hsla(' + b.hue + ',85%,65%,' + (o * 0.5) + ')');
-      g.addColorStop(0.4, 'hsla(' + b.hue + ',85%,65%,' + o + ')');
-      g.addColorStop(0.6, 'hsla(' + b.hue + ',85%,65%,' + o + ')');
-      g.addColorStop(0.9, 'hsla(' + b.hue + ',85%,65%,' + (o * 0.5) + ')');
-      g.addColorStop(1, 'hsla(' + b.hue + ',85%,65%,0)');
-      ctx.fillStyle = g;
-      ctx.fillRect(-b.width / 2, 0, b.width, b.length);
-      ctx.restore();
-    }
-    function render(animate) {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      ctx.filter = 'blur(35px)';
-      for (var i = 0; i < beams.length; i++) {
-        var b = beams[i];
-        if (animate) {
-          b.y -= b.speed;
-          b.pulse += b.pulseSpeed;
-          if (b.y + b.length < -100) resetBeam(b, i);
-        }
-        draw(b);
-      }
-      if (animate) raf = requestAnimationFrame(function () { render(true); });
-    }
-    function start() { if (!raf) render(true); }
-    function stop() { if (raf) { cancelAnimationFrame(raf); raf = 0; } }
-
-    size();
-    window.addEventListener('resize', function () { size(); if (prefersReduced) render(false); });
-    if (prefersReduced) {
-      render(false);
-    } else {
-      render(true);
-      document.addEventListener('visibilitychange', function () { document.hidden ? stop() : start(); });
-    }
-  })();
-  </script>
 </body>
 </html>
