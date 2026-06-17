@@ -38,6 +38,39 @@ body {
   color: transparent;
 }
 
+
+/* Hero trust indicators */
+.hero-live-label {
+  line-height: 1;
+}
+.hero-live-dot {
+  position: relative;
+  display: inline-block;
+  width: .55rem;
+  height: .55rem;
+  flex: 0 0 auto;
+  border-radius: 9999px;
+  background: #22c55e;
+  box-shadow: 0 0 0 4px rgba(34, 197, 94, .12);
+}
+.hero-live-dot::after {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border: 1px solid rgba(34, 197, 94, .65);
+  border-radius: inherit;
+  animation: live-pulse 1.8s ease-out infinite;
+}
+.hero-stars {
+  color: #f5b700;
+  letter-spacing: .08em;
+  text-shadow: 0 1px 10px rgba(245, 183, 0, .18);
+}
+@keyframes live-pulse {
+  0% { transform: scale(.7); opacity: .9; }
+  70%, 100% { transform: scale(1.45); opacity: 0; }
+}
+
 /* Buttons */
 .btn { transition: transform .15s ease, box-shadow .15s ease, background-color .15s ease; }
 .btn-azure {
@@ -202,64 +235,116 @@ summary::-webkit-details-marker { display: none; }
   50% { box-shadow: 0 0 0 8px rgba(47, 107, 255, .13); }
 }
 
-/* Client outcome carousel */
-.outcome-track {
+/* Seamless auto-marquees */
+.auto-marquee-track {
   display: flex;
-  gap: 1rem;
-  overflow-x: auto;
-  overscroll-behavior-inline: contain;
-  scroll-padding-inline: .1rem;
-  scroll-snap-type: inline mandatory;
-  scrollbar-width: none;
-  padding: .25rem 0 1.25rem;
+  width: max-content;
+  transform: translate3d(0, 0, 0);
+  animation: none;
+  will-change: transform;
 }
-.outcome-track::-webkit-scrollbar { display: none; }
-.outcome-card {
-  width: min(82vw, 22rem);
-  min-height: 12rem;
+.is-marquee-ready .auto-marquee-track {
+  animation: auto-marquee-scroll var(--marquee-duration, 36s) linear infinite;
+}
+.auto-marquee-group {
+  display: flex;
   flex: 0 0 auto;
-  scroll-snap-align: start;
-  border: 1px solid rgba(255, 255, 255, .12);
-  border-radius: 1.5rem;
-  background: rgba(255, 255, 255, .07);
-  padding: 1.75rem;
+  width: max-content;
+}
+[data-auto-marquee]:hover .auto-marquee-track {
+  animation-play-state: paused;
+}
+@keyframes auto-marquee-scroll {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(var(--marquee-shift, -50%), 0, 0); }
+}
+
+/* Client outcomes — compact, continuously moving cards */
+.outcome-marquee-shell {
+  position: relative;
+  overflow: hidden;
+  padding: .25rem 0 .5rem;
+}
+.outcome-marquee-group {
+  gap: .85rem;
+  padding-right: .85rem;
+}
+.outcome-edge {
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  bottom: 0;
+  width: 4rem;
+  pointer-events: none;
+}
+.outcome-edge-left {
+  left: 0;
+  background: linear-gradient(to right, #15317a 0%, rgba(21, 49, 122, .78) 35%, transparent 100%);
+}
+.outcome-edge-right {
+  right: 0;
+  background: linear-gradient(to left, #1c3a89 0%, rgba(28, 58, 137, .78) 35%, transparent 100%);
+}
+.outcome-card {
+  width: 15rem;
+  min-height: 9.25rem;
+  flex: 0 0 auto;
+  border: 1px solid rgba(255, 255, 255, .15);
+  border-radius: 1.25rem;
+  background: rgba(255, 255, 255, .075);
+  padding: 1.25rem 1.35rem;
   backdrop-filter: blur(8px);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .04);
   transition: transform 220ms ease, background-color 220ms ease, border-color 220ms ease;
 }
 .outcome-card:hover {
   transform: translateY(-3px);
-  border-color: rgba(125, 167, 255, .42);
-  background: rgba(255, 255, 255, .10);
+  border-color: rgba(125, 167, 255, .5);
+  background: rgba(255, 255, 255, .11);
 }
-.carousel-button {
-  display: inline-flex;
-  width: 2.75rem;
-  height: 2.75rem;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid #d4d8cf;
-  border-radius: 9999px;
-  background: #fff;
-  color: #0d0f0e;
+.outcome-metric {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 2.55rem;
   font-weight: 700;
-  transition: transform 180ms ease, border-color 180ms ease, background-color 180ms ease, opacity 180ms ease;
+  line-height: .95;
+  letter-spacing: -.045em;
+  background-image: linear-gradient(120deg, #8fb2ff 0%, #b29aff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
-.carousel-button:hover:not(:disabled) { transform: translateY(-2px); border-color: #2f6bff; }
-.carousel-button:disabled { cursor: not-allowed; opacity: .35; }
-.carousel-button-dark {
-  border-color: rgba(255, 255, 255, .18);
-  background: rgba(255, 255, 255, .08);
-  color: #fff;
+.outcome-metric span {
+  font-size: 1.15rem;
+  letter-spacing: -.02em;
 }
-.carousel-button-dark:hover:not(:disabled) {
-  border-color: rgba(125, 167, 255, .75);
-  background: rgba(255, 255, 255, .14);
+.outcome-label {
+  margin-top: 1rem;
+  color: rgba(255, 255, 255, .88);
+  font-size: .875rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+}
+.outcome-client {
+  margin-top: .2rem;
+  color: rgba(255, 255, 255, .48);
+  font-size: .72rem;
+  line-height: 1.1rem;
 }
 @media (min-width: 768px) {
-  .outcome-card { width: calc((100% - 1rem) / 2); }
+  .outcome-card {
+    width: 16.5rem;
+    min-height: 9.5rem;
+  }
 }
-@media (min-width: 1024px) {
-  .outcome-card { width: calc((100% - 2rem) / 3); }
+@media (max-width: 639px) {
+  .outcome-edge { width: 2rem; }
+  .outcome-card {
+    width: 14rem;
+    min-height: 8.75rem;
+    padding: 1.1rem 1.2rem;
+  }
+  .outcome-metric { font-size: 2.2rem; }
 }
 
 /* Sticky stacked differentiator cards — compact version */
@@ -425,14 +510,35 @@ summary::-webkit-details-marker { display: none; }
 }
 .roadmap-progress { transition: transform 520ms cubic-bezier(.22, 1, .36, 1); }
 
-/* Marquees */
-.logo-marquee { animation-duration: 30s; }
+/* Logo and testimonial marquees */
+.logo-marquee-shell { min-width: 0; }
+.logo-marquee-group {
+  align-items: center;
+  gap: 1.25rem;
+  padding-right: 1.25rem;
+}
+.logo-marquee-item {
+  display: block;
+  width: auto;
+  height: 2.65rem;
+  flex: 0 0 auto;
+  border-radius: .8rem;
+  background: #fff;
+  object-fit: contain;
+  padding: .5rem .7rem;
+  box-shadow: 0 8px 22px rgba(13, 15, 14, .07);
+}
+@media (min-width: 640px) {
+  .logo-marquee-group {
+    gap: 1.75rem;
+    padding-right: 1.75rem;
+  }
+  .logo-marquee-item { height: 2.8rem; }
+}
 .testimonial-marquee { animation-duration: 54s; }
 .marquee-track:hover { animation-play-state: paused; }
 
 /* Strong, consistent keyboard focus */
-.carousel-button:focus-visible,
-.outcome-track:focus-visible,
 a:focus-visible,
 button:focus-visible,
 summary:focus-visible,
@@ -456,6 +562,14 @@ textarea:focus-visible {
     transform: none;
     transition: none;
     animation: none;
+  }
+  .auto-marquee-track {
+    animation: none;
+    transform: none;
+  }
+  .hero-live-dot::after {
+    animation: none;
+    display: none;
   }
   .apart-card-inner,
   .interactive-card,
