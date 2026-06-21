@@ -205,4 +205,118 @@
     stackCards.forEach((card) => stackObserver.observe(card));
     setStackCard(0);
   }
+
+  // Antigravity-style particle field: colored dashes that orient toward / follow the cursor.
+  const particleCanvas = document.querySelector("[data-particle-field]");
+  if (particleCanvas && particleCanvas.getContext) {
+    const ctx = particleCanvas.getContext("2d");
+    const host = particleCanvas.closest("section") || particleCanvas.parentElement;
+    const palette = ["#2f6bff", "#4f46e5", "#7c3aed", "#ec4899", "#ef4444", "#f59e0b"];
+    const DENSITY = 0.00048; // dashes per px² of hero area (dense, like the reference)
+    const DASH = 8;          // base dash length (px)
+    const REACH = 280;       // radius (px) of strong cursor influence
+    const rand = (a, b) => a + Math.random() * (b - a);
+
+    let w = 0, h = 0, dpr = 1, particles = [];
+    let pointerX = 0, pointerY = 0, hasPointer = false, raf = 0;
+    let rect = particleCanvas.getBoundingClientRect();
+
+    const build = () => {
+      rect = particleCanvas.getBoundingClientRect();
+      w = rect.width; h = rect.height;
+      dpr = Math.min(window.devicePixelRatio || 1, 2);
+      particleCanvas.width = Math.round(w * dpr);
+      particleCanvas.height = Math.round(h * dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      const count = Math.round(w * h * DENSITY);
+      particles = [];
+      for (let i = 0; i < count; i++) {
+        const base = rand(0, Math.PI * 2);
+        particles.push({
+          x: rand(0, w), y: rand(0, h),
+          base, angle: base,
+          len: rand(0.7, 1.35),
+          drift: rand(0.0004, 0.0018) * (Math.random() < 0.5 ? -1 : 1),
+          color: palette[(Math.random() * palette.length) | 0],
+        });
+      }
+    };
+
+    const drawDash = (p, alpha, scale) => {
+      const len = DASH * p.len * scale;
+      const cx = Math.cos(p.angle) * len * 0.5;
+      const cy = Math.sin(p.angle) * len * 0.5;
+      ctx.strokeStyle = p.color;
+      ctx.globalAlpha = alpha;
+      ctx.beginPath();
+      ctx.moveTo(p.x - cx, p.y - cy);
+      ctx.lineTo(p.x + cx, p.y + cy);
+      ctx.stroke();
+    };
+
+    const frame = () => {
+      ctx.clearRect(0, 0, w, h);
+      ctx.lineWidth = 1.6;
+      ctx.lineCap = "round";
+      for (const p of particles) {
+        p.base += p.drift; // gentle idle rotation
+        let target = p.base, alpha = 0.26, scale = 1;
+        if (hasPointer) {
+          const dx = pointerX - p.x, dy = pointerY - p.y;
+          const infl = Math.max(0, 1 - Math.hypot(dx, dy) / REACH);
+          if (infl > 0) {
+            let diff = Math.atan2(dy, dx) - p.angle;
+            diff = Math.atan2(Math.sin(diff), Math.cos(diff)); // shortest path
+            target = p.angle + diff * infl;
+            alpha = 0.26 + infl * 0.5;
+            scale = 1 + infl * 0.85;
+          }
+        }
+        let d = target - p.angle;
+        d = Math.atan2(Math.sin(d), Math.cos(d));
+        p.angle += d * 0.12; // ease toward target so the field "follows"
+        drawDash(p, alpha, scale);
+      }
+      ctx.globalAlpha = 1;
+      raf = window.requestAnimationFrame(frame);
+    };
+
+    const drawStatic = () => {
+      ctx.clearRect(0, 0, w, h);
+      ctx.lineWidth = 1.6;
+      ctx.lineCap = "round";
+      for (const p of particles) drawDash(p, 0.28, 1);
+      ctx.globalAlpha = 1;
+    };
+
+    const start = () => { if (!raf) raf = window.requestAnimationFrame(frame); };
+    const stop = () => { if (raf) { window.cancelAnimationFrame(raf); raf = 0; } };
+
+    host.addEventListener("pointermove", (event) => {
+      pointerX = event.clientX - rect.left;
+      pointerY = event.clientY - rect.top;
+      hasPointer = true;
+    }, { passive: true });
+    host.addEventListener("pointerleave", () => { hasPointer = false; });
+
+    window.addEventListener("resize", () => {
+      build();
+      if (reduceMotion) drawStatic();
+    }, { passive: true });
+    window.addEventListener("scroll", () => { rect = particleCanvas.getBoundingClientRect(); }, { passive: true });
+
+    build();
+    drawStatic(); // immediate first paint so the field is never blank before rAF starts
+    if (reduceMotion) {
+      // static field only — no cursor follow
+    } else {
+      start();
+      if ("IntersectionObserver" in window) {
+        new IntersectionObserver(
+          (entries) => entries.forEach((e) => (e.isIntersecting ? start() : stop())),
+          { threshold: 0 }
+        ).observe(particleCanvas);
+      }
+    }
+  }
 })();

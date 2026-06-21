@@ -66,12 +66,8 @@
 
     <!-- Hero -->
     <section id="hero" class="relative overflow-hidden bg-gradient-to-b from-white to-[#f5f7fb] px-6 pb-20 pt-14 text-center md:pb-28 md:pt-20">
-      <!-- soft animated aurora glow (clean: no line-art, no beams) -->
-      <div class="pointer-events-none absolute inset-0 z-0 overflow-hidden" aria-hidden="true">
-        <div class="aurora aurora-1 absolute left-1/2 top-0 h-[420px] w-[760px] max-w-full"></div>
-        <div class="aurora aurora-2 absolute left-[16%] top-12 h-72 w-72"></div>
-        <div class="aurora aurora-3 absolute right-[16%] top-20 h-80 w-80"></div>
-      </div>
+      <!-- Antigravity-style particle field: colored dashes that orient toward / follow the cursor -->
+      <canvas class="hero-particles pointer-events-none absolute inset-0 z-0 h-full w-full" data-particle-field aria-hidden="true"></canvas>
 
       <div class="relative z-10 mx-auto max-w-2xl" data-reveal>
         <p class="hero-live-label inline-flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-azure-deep"><span class="hero-live-dot" aria-hidden="true"></span>B2B Lead Generation Agency</p>
