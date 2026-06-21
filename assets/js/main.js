@@ -213,12 +213,18 @@
     const host = particleCanvas.closest("section") || particleCanvas.parentElement;
     const palette = ["#2f6bff", "#4f46e5", "#7c3aed", "#ec4899", "#ef4444", "#f59e0b"];
     const DENSITY = 0.00048; // dashes per px² of hero area (dense, like the reference)
-    const DASH = 8;          // base dash length (px)
-    const REACH = 280;       // radius (px) of strong cursor influence
+    const DASH = 5;          // base dash length (px) — small ticks
+    const REACH = 460;       // radius (px) over which cursor brightness falls off
+    const PULL_RADIUS = 220; // radius (px) inside which the focal point attracts particles
+    const PULL = 0.9;        // magnetic attraction strength (≈ max draw × SPRING)
+    const SPRING = 0.06;     // pull back toward home position
+    const FRICTION = 0.86;   // velocity damping
+    const DRAG = 0.085;      // how heavily the focal point trails the cursor (lower = more lag)
     const rand = (a, b) => a + Math.random() * (b - a);
 
     let w = 0, h = 0, dpr = 1, particles = [];
     let pointerX = 0, pointerY = 0, hasPointer = false, raf = 0;
+    let fx = 0, fy = 0; // focal point that lags behind the cursor (the "magnet")
     let rect = particleCanvas.getBoundingClientRect();
 
     const build = () => {
@@ -228,12 +234,14 @@
       particleCanvas.width = Math.round(w * dpr);
       particleCanvas.height = Math.round(h * dpr);
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      fx = w * 0.5; fy = h * 0.5;
       const count = Math.round(w * h * DENSITY);
       particles = [];
       for (let i = 0; i < count; i++) {
         const base = rand(0, Math.PI * 2);
+        const x = rand(0, w), y = rand(0, h);
         particles.push({
-          x: rand(0, w), y: rand(0, h),
+          x, y, hx: x, hy: y, vx: 0, vy: 0, // current pos, home pos, velocity
           base, angle: base,
           len: rand(0.7, 1.35),
           drift: rand(0.0004, 0.0018) * (Math.random() < 0.5 ? -1 : 1),
@@ -256,25 +264,48 @@
 
     const frame = () => {
       ctx.clearRect(0, 0, w, h);
-      ctx.lineWidth = 1.6;
+      ctx.lineWidth = 1.4;
       ctx.lineCap = "round";
+
+      // The focal point chases the cursor with "weight" (lag) — this is what reads
+      // as a magnet the field follows, rather than every dash snapping in place.
+      if (hasPointer) {
+        fx += (pointerX - fx) * DRAG;
+        fy += (pointerY - fy) * DRAG;
+      }
+
       for (const p of particles) {
-        p.base += p.drift; // gentle idle rotation
+        // Spring back toward home position.
+        let ax = (p.hx - p.x) * SPRING;
+        let ay = (p.hy - p.y) * SPRING;
         let target = p.base, alpha = 0.26, scale = 1;
+
         if (hasPointer) {
-          const dx = pointerX - p.x, dy = pointerY - p.y;
-          const infl = Math.max(0, 1 - Math.hypot(dx, dy) / REACH);
-          if (infl > 0) {
-            let diff = Math.atan2(dy, dx) - p.angle;
-            diff = Math.atan2(Math.sin(diff), Math.cos(diff)); // shortest path
-            target = p.angle + diff * infl;
-            alpha = 0.26 + infl * 0.5;
-            scale = 1 + infl * 0.85;
+          const dx = fx - p.x, dy = fy - p.y;            // from particle toward focal point
+          const dist = Math.max(Math.hypot(dx, dy), 8);
+          if (dist < PULL_RADIUS) {
+            const f = 1 - dist / PULL_RADIUS;            // 1 at focal → 0 at radius
+            ax += (dx / dist) * f * PULL;                // draw particle toward the magnet
+            ay += (dy / dist) * f * PULL;
           }
+          const prox = Math.max(0, 1 - dist / REACH);    // brightness/orient emphasis
+          target = Math.atan2(dy, dx);                   // dash points toward the magnet
+          alpha = 0.22 + prox * 0.55;
+          scale = 1 + prox * 1.0;
+        } else {
+          p.base += p.drift; // gentle idle rotation only when the cursor is away
+          target = p.base;
         }
+
+        // Integrate velocity (damped spring) → smooth draw-in and ease-back.
+        p.vx = (p.vx + ax) * FRICTION;
+        p.vy = (p.vy + ay) * FRICTION;
+        p.x += p.vx;
+        p.y += p.vy;
+
         let d = target - p.angle;
-        d = Math.atan2(Math.sin(d), Math.cos(d));
-        p.angle += d * 0.12; // ease toward target so the field "follows"
+        d = Math.atan2(Math.sin(d), Math.cos(d)); // shortest rotation path
+        p.angle += d * 0.1;
         drawDash(p, alpha, scale);
       }
       ctx.globalAlpha = 1;
@@ -283,7 +314,7 @@
 
     const drawStatic = () => {
       ctx.clearRect(0, 0, w, h);
-      ctx.lineWidth = 1.6;
+      ctx.lineWidth = 1.4;
       ctx.lineCap = "round";
       for (const p of particles) drawDash(p, 0.28, 1);
       ctx.globalAlpha = 1;
