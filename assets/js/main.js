@@ -144,6 +144,19 @@
     updateControls();
   });
 
+  // Cursor-tracking spotlight glow on bento / interactive tiles
+  document.querySelectorAll("[data-spotlight]").forEach((card) => {
+    card.addEventListener(
+      "pointermove",
+      (event) => {
+        const rect = card.getBoundingClientRect();
+        card.style.setProperty("--mx", `${event.clientX - rect.left}px`);
+        card.style.setProperty("--my", `${event.clientY - rect.top}px`);
+      },
+      { passive: true }
+    );
+  });
+
   const roadmapSteps = [...document.querySelectorAll("[data-roadmap-step]")];
   const roadmapProgress = document.querySelector("[data-roadmap-progress]");
   if (roadmapSteps.length) {

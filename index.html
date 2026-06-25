@@ -66,6 +66,10 @@
 
     <!-- Hero -->
     <section id="hero" class="relative overflow-hidden bg-gradient-to-b from-white to-[#f5f7fb] px-6 pb-20 pt-14 text-center md:pb-28 md:pt-20">
+      <!-- Soft gradient-mesh depth behind the particle field -->
+      <div class="pointer-events-none absolute left-1/2 top-[34%] z-0 h-[440px] w-[760px] max-w-[94%] -translate-x-1/2 rounded-full bg-azure/10 blur-[110px]" aria-hidden="true"></div>
+      <div class="pointer-events-none absolute -left-24 top-0 z-0 h-72 w-72 rounded-full bg-violet-500/10 blur-[100px]" aria-hidden="true"></div>
+      <div class="pointer-events-none absolute -right-24 bottom-4 z-0 h-72 w-72 rounded-full bg-azure/10 blur-[100px]" aria-hidden="true"></div>
       <!-- Antigravity-style particle field: colored dashes that orient toward / follow the cursor -->
       <canvas class="hero-particles pointer-events-none absolute inset-0 z-0 h-full w-full" data-particle-field aria-hidden="true"></canvas>
 
@@ -264,45 +268,76 @@
       </div>
     </section>
 
-    <!-- Services -->
-    <section id="services" class="relative overflow-hidden bg-mist-alt px-6 py-20 md:py-28">
+    <!-- Services — deep-navy glowing bento -->
+    <section id="services" class="services-dark relative overflow-hidden px-6 py-24 md:py-32">
+      <div class="pointer-events-none absolute inset-0 bg-dots opacity-[0.35]" aria-hidden="true"></div>
+      <div class="pointer-events-none absolute -left-32 top-10 h-96 w-96 rounded-full bg-azure/25 blur-[120px]" aria-hidden="true"></div>
+      <div class="pointer-events-none absolute -right-32 bottom-0 h-96 w-96 rounded-full bg-violet-600/20 blur-[120px]" aria-hidden="true"></div>
       <div class="relative mx-auto max-w-shell">
-        <div class="mx-auto mb-16 max-w-2xl text-center" data-reveal>
-          <span class="pill inline-flex rounded-full px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-ink-soft">Challenges you can entrust to us</span>
-          <h2 class="mt-6 font-display text-3xl font-bold text-ink md:text-4xl">The hard parts of pipeline, <span class="mark">handled for you</span></h2>
-          <p class="mt-5 text-base leading-7 text-ink-soft">From finding the right prospects to booking the call, here's the heavy lifting you hand off — built, run, and optimised by us.</p>
+        <div class="mx-auto mb-14 max-w-2xl text-center" data-reveal>
+          <span class="inline-flex rounded-full border border-white/15 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-white/70">Challenges you can entrust to us</span>
+          <h2 class="mt-6 font-display text-3xl font-bold text-white md:text-4xl">The hard parts of pipeline, <span class="azure-word">handled for you</span></h2>
+          <p class="mt-5 text-base leading-7 text-white/60">From finding the right prospects to booking the call, here's the heavy lifting you hand off — built, run, and optimised by us.</p>
         </div>
-        <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          <div class="group rounded-3xl bg-mist p-7 ring-1 ring-line transition duration-200 hover:bg-white hover:-translate-y-1 hover:shadow-card" data-reveal style="--reveal-delay: 0ms">
-            <span class="inline-flex text-azure transition group-hover:text-azure-deep"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span>
-            <h3 class="mt-5 font-display text-lg font-bold text-ink">ICP &amp; prospect research</h3>
-            <p class="mt-2.5 text-sm leading-7 text-ink-soft">We pinpoint the companies in your market that need what you sell, with validated contacts.</p>
-          </div>
-          <div class="group rounded-3xl bg-mist p-7 ring-1 ring-line transition duration-200 hover:bg-white hover:-translate-y-1 hover:shadow-card" data-reveal style="--reveal-delay: 70ms">
-            <span class="inline-flex text-azure transition group-hover:text-azure-deep"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5l8.5 6 8.5-6"/></svg></span>
-            <h3 class="mt-5 font-display text-lg font-bold text-ink">Cold email campaigns</h3>
-            <p class="mt-2.5 text-sm leading-7 text-ink-soft">Split-tested, personalised cold emails that earn interested replies from decision makers.</p>
-          </div>
-          <div class="group rounded-3xl bg-mist p-7 ring-1 ring-line transition duration-200 hover:bg-white hover:-translate-y-1 hover:shadow-card" data-reveal style="--reveal-delay: 140ms">
-            <span class="inline-flex text-azure transition group-hover:text-azure-deep"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 7.6-7 9-4-1.4-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span>
-            <h3 class="mt-5 font-display text-lg font-bold text-ink">Inbox warm-up &amp; deliverability</h3>
-            <p class="mt-2.5 text-sm leading-7 text-ink-soft">Warmed inboxes and a protected sender reputation, so your emails actually land.</p>
-          </div>
-          <div class="group rounded-3xl bg-mist p-7 ring-1 ring-line transition duration-200 hover:bg-white hover:-translate-y-1 hover:shadow-card" data-reveal style="--reveal-delay: 0ms">
-            <span class="inline-flex text-azure transition group-hover:text-azure-deep"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16.5" rx="2"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4M8.5 15l2.2 2.2L15.5 12.5"/></svg></span>
-            <h3 class="mt-5 font-display text-lg font-bold text-ink">Appointment setting</h3>
-            <p class="mt-2.5 text-sm leading-7 text-ink-soft">We handle every reply and follow-up, then book qualified meetings onto your calendar.</p>
-          </div>
-          <div class="group rounded-3xl bg-mist p-7 ring-1 ring-line transition duration-200 hover:bg-white hover:-translate-y-1 hover:shadow-card" data-reveal style="--reveal-delay: 70ms">
-            <span class="inline-flex text-azure transition group-hover:text-azure-deep"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 13.4l-7.2 7.2a2 2 0 01-2.8 0l-7-7A2 2 0 013 12.2V5a2 2 0 012-2h7.2a2 2 0 011.4.6l7 7a2 2 0 010 2.8z"/><circle cx="7.5" cy="7.5" r="1.2"/></svg></span>
-            <h3 class="mt-5 font-display text-lg font-bold text-ink">Performance-based pricing</h3>
-            <p class="mt-2.5 text-sm leading-7 text-ink-soft">Billing tracks results on your calendar, invoiced monthly — so what you spend stays tied to what you get.</p>
-          </div>
-          <div class="group rounded-3xl bg-mist p-7 ring-1 ring-line transition duration-200 hover:bg-white hover:-translate-y-1 hover:shadow-card" data-reveal style="--reveal-delay: 140ms">
-            <span class="inline-flex text-azure transition group-hover:text-azure-deep"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V4M4 20h16M8 16v-4M13 16V8M18 16v-6"/></svg></span>
-            <h3 class="mt-5 font-display text-lg font-bold text-ink">Reporting &amp; optimisation</h3>
-            <p class="mt-2.5 text-sm leading-7 text-ink-soft">Continuous testing and clear reporting, so the system keeps improving over time.</p>
-          </div>
+        <div class="grid gap-4 md:grid-cols-6">
+          <!-- Featured wide tile -->
+          <article class="spotlight-card bento-tile bento-tile--feature group md:col-span-3" data-spotlight data-reveal>
+            <div class="pointer-events-none absolute -right-12 -top-12 h-44 w-44 rounded-full bg-azure/30 blur-3xl" aria-hidden="true"></div>
+            <div class="relative z-10 flex h-full flex-col">
+              <div class="flex items-center gap-3">
+                <span class="bento-icon"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span>
+                <span class="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-[#9db8ff]">Where it starts</span>
+              </div>
+              <h3 class="mt-6 font-display text-2xl font-bold text-white">ICP &amp; prospect research</h3>
+              <p class="mt-3 max-w-md text-sm leading-7 text-white/65">We pinpoint the companies in your market that genuinely need what you sell, then verify every contact — so outreach lands on real decision makers, not bounced inboxes.</p>
+            </div>
+          </article>
+
+          <article class="spotlight-card bento-tile group md:col-span-3" data-spotlight data-reveal style="--reveal-delay: 70ms">
+            <div class="relative z-10">
+              <span class="bento-icon"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5l8.5 6 8.5-6"/></svg></span>
+              <h3 class="mt-5 font-display text-lg font-bold text-white">Cold email campaigns</h3>
+              <p class="mt-2.5 text-sm leading-7 text-white/60">Split-tested, personalised cold emails that earn interested replies from decision makers.</p>
+            </div>
+          </article>
+
+          <article class="spotlight-card bento-tile group md:col-span-2" data-spotlight data-reveal style="--reveal-delay: 0ms">
+            <div class="relative z-10">
+              <span class="bento-icon"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 7.6-7 9-4-1.4-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span>
+              <h3 class="mt-5 font-display text-lg font-bold text-white">Inbox warm-up &amp; deliverability</h3>
+              <p class="mt-2.5 text-sm leading-7 text-white/60">Warmed inboxes and a protected sender reputation, so your emails actually land.</p>
+            </div>
+          </article>
+
+          <article class="spotlight-card bento-tile group md:col-span-2" data-spotlight data-reveal style="--reveal-delay: 70ms">
+            <div class="relative z-10">
+              <span class="bento-icon"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16.5" rx="2"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4M8.5 15l2.2 2.2L15.5 12.5"/></svg></span>
+              <h3 class="mt-5 font-display text-lg font-bold text-white">Appointment setting</h3>
+              <p class="mt-2.5 text-sm leading-7 text-white/60">We handle every reply and follow-up, then book qualified meetings onto your calendar.</p>
+            </div>
+          </article>
+
+          <article class="spotlight-card bento-tile group md:col-span-2" data-spotlight data-reveal style="--reveal-delay: 140ms">
+            <div class="relative z-10">
+              <span class="bento-icon"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 13.4l-7.2 7.2a2 2 0 01-2.8 0l-7-7A2 2 0 013 12.2V5a2 2 0 012-2h7.2a2 2 0 011.4.6l7 7a2 2 0 010 2.8z"/><circle cx="7.5" cy="7.5" r="1.2"/></svg></span>
+              <h3 class="mt-5 font-display text-lg font-bold text-white">Performance-based pricing</h3>
+              <p class="mt-2.5 text-sm leading-7 text-white/60">Billing tracks results on your calendar, invoiced monthly — so spend stays tied to what you get.</p>
+            </div>
+          </article>
+
+          <!-- Wide closing tile -->
+          <article class="spotlight-card bento-tile group md:col-span-6" data-spotlight data-reveal>
+            <div class="relative z-10 flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
+              <div class="flex items-start gap-4">
+                <span class="bento-icon flex-none"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V4M4 20h16M8 16v-4M13 16V8M18 16v-6"/></svg></span>
+                <div>
+                  <h3 class="font-display text-lg font-bold text-white">Reporting &amp; optimisation</h3>
+                  <p class="mt-2 max-w-xl text-sm leading-7 text-white/60">Continuous testing and clear reporting, so the system compounds — every week of data makes the next week of meetings better.</p>
+                </div>
+              </div>
+              <a href="#contact" class="btn btn-azure inline-flex flex-none items-center justify-center rounded-full px-6 py-3 text-sm font-semibold">Book a discovery call <span class="btn-arrow" aria-hidden="true">&rarr;</span></a>
+            </div>
+          </article>
         </div>
       </div>
     </section>
@@ -440,54 +475,55 @@
       </div>
     </section>
 
-    <!-- Results -->
-    <section id="results" class="relative overflow-hidden bg-gradient-to-b from-white to-azure-soft px-6 py-20 md:py-28">
-      <div class="pointer-events-none absolute right-0 top-10 h-72 w-72 translate-x-1/3 rounded-full bg-azure/10 blur-3xl" aria-hidden="true"></div>
+    <!-- Results — navy stats band -->
+    <section id="results" class="services-dark relative overflow-hidden px-6 py-24 md:py-32">
+      <div class="pointer-events-none absolute inset-0 bg-dots opacity-[0.3]" aria-hidden="true"></div>
+      <div class="pointer-events-none absolute left-1/2 top-0 h-72 w-[680px] max-w-full -translate-x-1/2 rounded-full bg-azure/20 blur-[120px]" aria-hidden="true"></div>
       <div class="relative mx-auto max-w-shell">
         <div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between" data-reveal>
           <div class="max-w-2xl">
-            <span class="pill inline-flex rounded-full px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-ink-soft">Results</span>
-            <h2 class="mt-6 font-display text-3xl font-bold text-ink md:text-4xl">Outcomes our clients <span class="mark">actually feel</span>.</h2>
+            <span class="inline-flex rounded-full border border-white/15 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-white/70">Results</span>
+            <h2 class="mt-6 font-display text-3xl font-bold text-white md:text-4xl">Outcomes our clients <span class="azure-word">actually feel</span>.</h2>
           </div>
-          <p class="max-w-md text-base leading-7 text-ink-soft">Short stories from the teams who handed their pipeline to B2B Drive and got booked calls back.</p>
+          <p class="max-w-md text-base leading-7 text-white/55">Short stories from the teams who handed their pipeline to B2B Drive and got booked calls back.</p>
         </div>
-        <div class="mt-14 grid gap-5 lg:grid-cols-3">
-          <article class="interactive-card flex flex-col rounded-[1.75rem] border border-line bg-white p-8 shadow-card" data-reveal style="--reveal-delay: 0ms">
-            <div class="tnum font-display text-4xl font-bold text-grad">8&ndash;10<span class="text-azure-deep">.</span></div>
-            <p class="mt-2 text-sm font-semibold uppercase tracking-[0.12em] text-ink-mute">Qualified calls booked / month</p>
-            <p class="mt-5 flex-1 text-sm leading-7 text-ink-soft">"We've been scheduling 8&ndash;10 sales calls a month, the prospects show up, and they're actually qualified. We cannot be happier."</p>
-            <div class="mt-6 flex items-center gap-3 border-t border-line pt-5">
-              <img src="assets/images/1-test.png" alt="Andres Bohorquez" class="h-10 w-10 rounded-full object-cover">
+        <div class="mt-16 grid gap-y-12 md:grid-cols-3 md:gap-y-0 md:divide-x md:divide-white/10">
+          <div class="md:px-9 md:first:pl-0 md:last:pr-0" data-reveal style="--reveal-delay: 0ms">
+            <div class="tnum font-display text-5xl font-bold leading-none text-grad-light md:text-6xl">8&ndash;10</div>
+            <p class="mt-4 text-xs font-semibold uppercase tracking-[0.14em] text-[#9db8ff]">Qualified calls booked / month</p>
+            <p class="mt-5 text-sm leading-7 text-white/65">"We've been scheduling 8&ndash;10 sales calls a month, the prospects show up, and they're actually qualified. We cannot be happier."</p>
+            <div class="mt-7 flex items-center gap-3 border-t border-white/10 pt-5">
+              <img src="assets/images/1-test.png" alt="Andres Bohorquez" class="h-10 w-10 rounded-full object-cover ring-2 ring-white/15">
               <div>
-                <div class="text-sm font-semibold text-ink">Andres Bohorquez</div>
-                <div class="text-xs text-ink-soft">Co-Founder, Green Mo Marketing</div>
+                <div class="text-sm font-semibold text-white">Andres Bohorquez</div>
+                <div class="text-xs text-white/55">Co-Founder, Green Mo Marketing</div>
               </div>
             </div>
-          </article>
-          <article class="interactive-card flex flex-col rounded-[1.75rem] border border-line bg-white p-8 shadow-card" data-reveal style="--reveal-delay: 90ms">
-            <div class="font-display text-4xl font-bold text-grad">US · EU<span class="text-azure-deep">.</span></div>
-            <p class="mt-2 text-sm font-semibold uppercase tracking-[0.12em] text-ink-mute">New markets entered profitably</p>
-            <p class="mt-5 flex-1 text-sm leading-7 text-ink-soft">"B2B Drive helped us scale profitably into the US and European markets, something that would have been very difficult and expensive without them."</p>
-            <div class="mt-6 flex items-center gap-3 border-t border-line pt-5">
-              <img src="assets/images/Ellipse-17.png" alt="Dr. Titus Samuel" class="h-10 w-10 rounded-full object-cover">
+          </div>
+          <div class="md:px-9 md:first:pl-0 md:last:pr-0" data-reveal style="--reveal-delay: 90ms">
+            <div class="font-display text-5xl font-bold leading-none text-grad-light md:text-6xl">US&nbsp;·&nbsp;EU</div>
+            <p class="mt-4 text-xs font-semibold uppercase tracking-[0.14em] text-[#9db8ff]">New markets entered profitably</p>
+            <p class="mt-5 text-sm leading-7 text-white/65">"B2B Drive helped us scale profitably into the US and European markets, something that would have been very difficult and expensive without them."</p>
+            <div class="mt-7 flex items-center gap-3 border-t border-white/10 pt-5">
+              <img src="assets/images/Ellipse-17.png" alt="Dr. Titus Samuel" class="h-10 w-10 rounded-full object-cover ring-2 ring-white/15">
               <div>
-                <div class="text-sm font-semibold text-ink">Dr. Titus Samuel</div>
-                <div class="text-xs text-ink-soft">DGM Growth, Cephas Medical</div>
+                <div class="text-sm font-semibold text-white">Dr. Titus Samuel</div>
+                <div class="text-xs text-white/55">DGM Growth, Cephas Medical</div>
               </div>
             </div>
-          </article>
-          <article class="interactive-card flex flex-col rounded-[1.75rem] border border-line bg-ink p-8 text-white shadow-card" data-reveal style="--reveal-delay: 180ms">
-            <div class="font-display text-4xl font-bold text-grad-light">0 &rarr; 1<span class="azure-word">.</span></div>
-            <p class="mt-2 text-sm font-semibold uppercase tracking-[0.12em] text-white/55">From no pipeline to a reliable one</p>
-            <p class="mt-5 flex-1 text-sm leading-7 text-white/75">"I tried several methods to bring in leads for my ecommerce email agency, but none worked until B2B Drive came in. I've recommended them to several B2B businesses myself."</p>
-            <div class="mt-6 flex items-center gap-3 border-t border-line-dark pt-5">
-              <img src="assets/images/Ellipse-16.png" alt="Damon Didier" class="h-10 w-10 rounded-full object-cover">
+          </div>
+          <div class="md:px-9 md:first:pl-0 md:last:pr-0" data-reveal style="--reveal-delay: 180ms">
+            <div class="tnum font-display text-5xl font-bold leading-none text-grad-light md:text-6xl">0 &rarr; 1</div>
+            <p class="mt-4 text-xs font-semibold uppercase tracking-[0.14em] text-[#9db8ff]">From no pipeline to a reliable one</p>
+            <p class="mt-5 text-sm leading-7 text-white/65">"I tried several methods to bring in leads for my ecommerce email agency, but none worked until B2B Drive came in. I've recommended them to several B2B businesses myself."</p>
+            <div class="mt-7 flex items-center gap-3 border-t border-white/10 pt-5">
+              <img src="assets/images/Ellipse-16.png" alt="Damon Didier" class="h-10 w-10 rounded-full object-cover ring-2 ring-white/15">
               <div>
                 <div class="text-sm font-semibold text-white">Damon Didier</div>
-                <div class="text-xs text-white/60">Founder, Win At Ecommerce</div>
+                <div class="text-xs text-white/55">Founder, Win At Ecommerce</div>
               </div>
             </div>
-          </article>
+          </div>
         </div>
       </div>
     </section>

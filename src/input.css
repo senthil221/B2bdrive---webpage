@@ -232,6 +232,69 @@ summary::-webkit-details-marker { display: none; }
   50% { box-shadow: 0 0 0 8px rgba(47, 107, 255, .13); }
 }
 
+/* --------------------------------------------------------------------------
+   Deep-navy services bento + cursor spotlight
+   -------------------------------------------------------------------------- */
+.services-dark {
+  background-color: #0a0e20;
+  background-image:
+    radial-gradient(120% 80% at 50% -10%, #16204a 0%, transparent 55%),
+    linear-gradient(180deg, #0b1024 0%, #090c1c 100%);
+}
+
+.bento-tile {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, .09);
+  background: rgba(255, 255, 255, .035);
+  padding: 1.6rem;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .05);
+  transition: transform .35s cubic-bezier(.22,1,.36,1), border-color .35s ease, background-color .35s ease, box-shadow .35s ease;
+}
+.bento-tile:hover {
+  transform: translateY(-4px);
+  border-color: rgba(125, 167, 255, .35);
+  background: rgba(255, 255, 255, .06);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .08), 0 24px 60px rgba(5, 8, 22, .55);
+}
+.bento-tile--feature {
+  background:
+    radial-gradient(90% 120% at 100% 0%, rgba(47, 107, 255, .18), transparent 55%),
+    rgba(255, 255, 255, .04);
+  border-color: rgba(125, 167, 255, .22);
+}
+@media (min-width: 768px) {
+  .bento-tile { padding: 1.85rem; }
+  .bento-tile--feature { min-height: 15.5rem; }
+}
+.bento-icon {
+  display: inline-flex;
+  height: 3rem;
+  width: 3rem;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  border-radius: .9rem;
+  color: #fff;
+  background: linear-gradient(135deg, #2f6bff, #6d28d9);
+  box-shadow: 0 10px 24px rgba(47, 107, 255, .3), inset 0 1px 0 rgba(255, 255, 255, .25);
+}
+
+/* Cursor-tracking spotlight glow (set on dark tiles) */
+.spotlight-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  border-radius: inherit;
+  background: radial-gradient(360px circle at var(--mx, 50%) var(--my, 50%), rgba(125, 167, 255, .18), transparent 62%);
+  opacity: 0;
+  transition: opacity .3s ease;
+  pointer-events: none;
+}
+.spotlight-card:hover::after { opacity: 1; }
+
 /* Seamless auto-marquees */
 .auto-marquee-track {
   display: flex;
