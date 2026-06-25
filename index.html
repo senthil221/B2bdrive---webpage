@@ -268,74 +268,57 @@
       </div>
     </section>
 
-    <!-- Services — deep-navy glowing bento -->
-    <section id="services" class="services-dark relative overflow-hidden px-6 py-24 md:py-32">
-      <div class="pointer-events-none absolute inset-0 bg-dots opacity-[0.35]" aria-hidden="true"></div>
-      <div class="pointer-events-none absolute -left-32 top-10 h-96 w-96 rounded-full bg-azure/25 blur-[120px]" aria-hidden="true"></div>
-      <div class="pointer-events-none absolute -right-32 bottom-0 h-96 w-96 rounded-full bg-violet-600/20 blur-[120px]" aria-hidden="true"></div>
+    <!-- Services — premium light 3-column grid -->
+    <section id="services" class="relative overflow-hidden bg-gradient-to-b from-[#f3f7ff] to-white px-6 py-20 md:py-28">
+      <div class="pointer-events-none absolute -left-24 top-16 h-80 w-80 rounded-full bg-azure/[0.07] blur-3xl" aria-hidden="true"></div>
+      <div class="pointer-events-none absolute right-0 bottom-0 h-72 w-72 translate-x-1/4 rounded-full bg-violet-500/[0.06] blur-3xl" aria-hidden="true"></div>
       <div class="relative mx-auto max-w-shell">
         <div class="mx-auto mb-14 max-w-2xl text-center" data-reveal>
-          <span class="inline-flex rounded-full border border-white/15 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-white/70">What we run for you</span>
-          <h2 class="mt-6 font-display text-3xl font-bold text-white md:text-4xl">The hard parts of pipeline, <span class="azure-word">handled for you</span></h2>
-          <p class="mt-5 text-base leading-7 text-white/60">From finding the right prospects to booking the call, here's the heavy lifting you hand off — built, run, and optimised by us.</p>
+          <span class="pill inline-flex rounded-full px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-ink-soft">What we run for you</span>
+          <h2 class="mt-6 font-display text-3xl font-bold text-ink md:text-4xl">The hard parts of pipeline, <span class="mark">handled for you</span></h2>
+          <p class="mt-5 text-base leading-7 text-ink-soft">From finding the right prospects to booking the call, here's the heavy lifting you hand off — built, run, and optimised by us.</p>
         </div>
-        <div class="grid gap-4 md:grid-cols-6">
-          <!-- Featured wide tile -->
-          <article class="spotlight-card bento-tile bento-tile--feature group md:col-span-3" data-spotlight data-reveal>
-            <div class="pointer-events-none absolute -right-12 -top-12 h-44 w-44 rounded-full bg-azure/30 blur-3xl" aria-hidden="true"></div>
-            <div class="relative z-10 flex h-full flex-col">
-              <div class="flex items-center gap-3">
-                <span class="bento-icon"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span>
-                <span class="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-[#9db8ff]">Where it starts</span>
-              </div>
-              <h3 class="mt-6 font-display text-2xl font-bold text-white">ICP &amp; prospect research</h3>
-              <p class="mt-3 max-w-md text-sm leading-7 text-white/65">We pinpoint the companies in your market that genuinely need what you sell, then verify every contact — so outreach lands on real decision makers, not bounced inboxes.</p>
+        <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <article class="spotlight-card spotlight-card--light group relative overflow-hidden rounded-2xl border border-line bg-white p-7 shadow-soft transition duration-300 hover:-translate-y-1.5 hover:border-azure/30 hover:shadow-card" data-spotlight data-reveal style="--reveal-delay: 0ms">
+            <div class="relative z-10">
+              <span class="bento-icon"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span>
+              <h3 class="mt-5 font-display text-lg font-bold text-ink">ICP &amp; prospect research</h3>
+              <p class="mt-2.5 text-sm leading-7 text-ink-soft">We pinpoint the companies in your market that need what you sell, with validated contacts.</p>
             </div>
           </article>
-
-          <article class="spotlight-card bento-tile group md:col-span-3" data-spotlight data-reveal style="--reveal-delay: 70ms">
+          <article class="spotlight-card spotlight-card--light group relative overflow-hidden rounded-2xl border border-line bg-white p-7 shadow-soft transition duration-300 hover:-translate-y-1.5 hover:border-azure/30 hover:shadow-card" data-spotlight data-reveal style="--reveal-delay: 70ms">
             <div class="relative z-10">
               <span class="bento-icon"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5l8.5 6 8.5-6"/></svg></span>
-              <h3 class="mt-5 font-display text-lg font-bold text-white">Cold email campaigns</h3>
-              <p class="mt-2.5 text-sm leading-7 text-white/60">Split-tested, personalised cold emails that earn interested replies from decision makers.</p>
+              <h3 class="mt-5 font-display text-lg font-bold text-ink">Cold email campaigns</h3>
+              <p class="mt-2.5 text-sm leading-7 text-ink-soft">Split-tested, personalised cold emails that earn interested replies from decision makers.</p>
             </div>
           </article>
-
-          <article class="spotlight-card bento-tile group md:col-span-2" data-spotlight data-reveal style="--reveal-delay: 0ms">
+          <article class="spotlight-card spotlight-card--light group relative overflow-hidden rounded-2xl border border-line bg-white p-7 shadow-soft transition duration-300 hover:-translate-y-1.5 hover:border-azure/30 hover:shadow-card" data-spotlight data-reveal style="--reveal-delay: 140ms">
             <div class="relative z-10">
               <span class="bento-icon"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 7.6-7 9-4-1.4-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span>
-              <h3 class="mt-5 font-display text-lg font-bold text-white">Inbox warm-up &amp; deliverability</h3>
-              <p class="mt-2.5 text-sm leading-7 text-white/60">Warmed inboxes and a protected sender reputation, so your emails actually land.</p>
+              <h3 class="mt-5 font-display text-lg font-bold text-ink">Inbox warm-up &amp; deliverability</h3>
+              <p class="mt-2.5 text-sm leading-7 text-ink-soft">Warmed inboxes and a protected sender reputation, so your emails actually land.</p>
             </div>
           </article>
-
-          <article class="spotlight-card bento-tile group md:col-span-2" data-spotlight data-reveal style="--reveal-delay: 70ms">
+          <article class="spotlight-card spotlight-card--light group relative overflow-hidden rounded-2xl border border-line bg-white p-7 shadow-soft transition duration-300 hover:-translate-y-1.5 hover:border-azure/30 hover:shadow-card" data-spotlight data-reveal style="--reveal-delay: 0ms">
             <div class="relative z-10">
               <span class="bento-icon"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16.5" rx="2"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4M8.5 15l2.2 2.2L15.5 12.5"/></svg></span>
-              <h3 class="mt-5 font-display text-lg font-bold text-white">Appointment setting</h3>
-              <p class="mt-2.5 text-sm leading-7 text-white/60">We handle every reply and follow-up, then book qualified meetings onto your calendar.</p>
+              <h3 class="mt-5 font-display text-lg font-bold text-ink">Appointment setting</h3>
+              <p class="mt-2.5 text-sm leading-7 text-ink-soft">We handle every reply and follow-up, then book qualified meetings onto your calendar.</p>
             </div>
           </article>
-
-          <article class="spotlight-card bento-tile group md:col-span-2" data-spotlight data-reveal style="--reveal-delay: 140ms">
+          <article class="spotlight-card spotlight-card--light group relative overflow-hidden rounded-2xl border border-line bg-white p-7 shadow-soft transition duration-300 hover:-translate-y-1.5 hover:border-azure/30 hover:shadow-card" data-spotlight data-reveal style="--reveal-delay: 70ms">
             <div class="relative z-10">
               <span class="bento-icon"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 13.4l-7.2 7.2a2 2 0 01-2.8 0l-7-7A2 2 0 013 12.2V5a2 2 0 012-2h7.2a2 2 0 011.4.6l7 7a2 2 0 010 2.8z"/><circle cx="7.5" cy="7.5" r="1.2"/></svg></span>
-              <h3 class="mt-5 font-display text-lg font-bold text-white">Performance-based pricing</h3>
-              <p class="mt-2.5 text-sm leading-7 text-white/60">Billing tracks results on your calendar, invoiced monthly — so spend stays tied to what you get.</p>
+              <h3 class="mt-5 font-display text-lg font-bold text-ink">Performance-based pricing</h3>
+              <p class="mt-2.5 text-sm leading-7 text-ink-soft">Billing tracks results on your calendar, invoiced monthly — so what you spend stays tied to what you get.</p>
             </div>
           </article>
-
-          <!-- Wide closing tile -->
-          <article class="spotlight-card bento-tile group md:col-span-6" data-spotlight data-reveal>
-            <div class="relative z-10 flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
-              <div class="flex items-start gap-4">
-                <span class="bento-icon flex-none"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V4M4 20h16M8 16v-4M13 16V8M18 16v-6"/></svg></span>
-                <div>
-                  <h3 class="font-display text-lg font-bold text-white">Reporting &amp; optimisation</h3>
-                  <p class="mt-2 max-w-xl text-sm leading-7 text-white/60">Continuous testing and clear reporting, so the system compounds — every week of data makes the next week of meetings better.</p>
-                </div>
-              </div>
-              <a href="#contact" class="btn btn-azure inline-flex flex-none items-center justify-center rounded-full px-6 py-3 text-sm font-semibold">Book a discovery call <span class="btn-arrow" aria-hidden="true">&rarr;</span></a>
+          <article class="spotlight-card spotlight-card--light group relative overflow-hidden rounded-2xl border border-line bg-white p-7 shadow-soft transition duration-300 hover:-translate-y-1.5 hover:border-azure/30 hover:shadow-card" data-spotlight data-reveal style="--reveal-delay: 140ms">
+            <div class="relative z-10">
+              <span class="bento-icon"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V4M4 20h16M8 16v-4M13 16V8M18 16v-6"/></svg></span>
+              <h3 class="mt-5 font-display text-lg font-bold text-ink">Reporting &amp; optimisation</h3>
+              <p class="mt-2.5 text-sm leading-7 text-ink-soft">Continuous testing and clear reporting, so the system keeps improving over time.</p>
             </div>
           </article>
         </div>

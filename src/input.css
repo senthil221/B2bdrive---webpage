@@ -295,6 +295,11 @@ summary::-webkit-details-marker { display: none; }
 }
 .spotlight-card:hover::after { opacity: 1; }
 
+/* Light-card variant — soft azure glow that reads on white surfaces */
+.spotlight-card--light::after {
+  background: radial-gradient(320px circle at var(--mx, 50%) var(--my, 50%), rgba(47, 107, 255, .09), transparent 60%);
+}
+
 /* Seamless auto-marquees */
 .auto-marquee-track {
   display: flex;
