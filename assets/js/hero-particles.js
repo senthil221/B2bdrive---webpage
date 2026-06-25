@@ -169,23 +169,24 @@ function init() {
 
         if (alpha < 0.01) discard;
 
-        // Google Brand Colors
-        vec3 black = vec3(0.08, 0.08, 0.1);
-        vec3 cBlue = vec3(0.26, 0.52, 0.96);
-        vec3 cRed = vec3(0.92, 0.26, 0.21);
-        vec3 cYellow = vec3(0.98, 0.73, 0.01);
+        // B2B Drive brand palette — azure → indigo → violet (no off-brand red/yellow)
+        vec3 base   = vec3(0.05, 0.07, 0.12);   // deep ink-blue at rest
+        vec3 cAzure = vec3(0.18, 0.42, 1.00);   // #2f6bff
+        vec3 cIndigo= vec3(0.31, 0.27, 0.90);   // #4f46e5
+        vec3 cViolet= vec3(0.49, 0.36, 0.96);   // #7c3aed (lifted for glow)
 
         // --- Dynamic Color Shifting ---
-        float t = uTime * 1.2; // FASTER color transition
+        float t = uTime * 1.0; // calmer, more premium color drift
 
         float p1 = sin(vPos.x * 0.8 + t);
         float p2 = sin(vPos.y * 0.8 + t * 0.8 + p1);
 
-        vec3 activeColor = mix(cBlue, cRed, p1 * 0.5 + 0.5);
-        activeColor = mix(activeColor, cYellow, p2 * 0.5 + 0.5);
+        vec3 activeColor = mix(cAzure, cIndigo, p1 * 0.5 + 0.5);
+        activeColor = mix(activeColor, cViolet, p2 * 0.5 + 0.5);
 
-        vec3 finalColor = mix(black, activeColor, smoothstep(0.1, 0.8, vSize));
-        float finalAlpha = alpha * mix(0.4, 0.95, vSize);
+        vec3 finalColor = mix(base, activeColor, smoothstep(0.1, 0.8, vSize));
+        // Resting dashes stay quiet; only cursor-active ones bloom to full brand color
+        float finalAlpha = alpha * mix(0.28, 0.95, vSize);
 
         gl_FragColor = vec4(finalColor, finalAlpha);
       }
