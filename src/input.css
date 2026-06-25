@@ -236,20 +236,20 @@ summary::-webkit-details-marker { display: none; }
    Deep-navy services bento + cursor spotlight
    -------------------------------------------------------------------------- */
 .services-dark {
-  background-color: #0a0e20;
+  background-color: #102254;
   background-image:
-    radial-gradient(120% 80% at 50% -10%, #16204a 0%, transparent 55%),
-    linear-gradient(180deg, #0b1024 0%, #090c1c 100%);
+    radial-gradient(120% 90% at 50% -14%, #2a4a98 0%, transparent 60%),
+    linear-gradient(180deg, #15296a 0%, #0e1f4a 100%);
 }
 
 .bento-tile {
   position: relative;
   overflow: hidden;
   border-radius: 1.5rem;
-  border: 1px solid rgba(255, 255, 255, .09);
-  background: rgba(255, 255, 255, .035);
+  border: 1px solid rgba(255, 255, 255, .11);
+  background: rgba(255, 255, 255, .055);
   padding: 1.6rem;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .05);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .07);
   transition: transform .35s cubic-bezier(.22,1,.36,1), border-color .35s ease, background-color .35s ease, box-shadow .35s ease;
 }
 .bento-tile:hover {
@@ -606,6 +606,33 @@ summary::-webkit-details-marker { display: none; }
 }
 .testimonial-marquee { animation-duration: 54s; }
 .marquee-track:hover { animation-play-state: paused; }
+
+/* Premium testimonial cards */
+#testimonials figure {
+  position: relative;
+  background: linear-gradient(180deg, #ffffff 0%, #fbfcff 100%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .9), 0 10px 30px rgba(13, 15, 14, .06);
+  transition: transform .3s cubic-bezier(.22, 1, .36, 1), box-shadow .3s ease, border-color .3s ease;
+}
+#testimonials figure::before {
+  content: "\201C";
+  position: absolute;
+  top: .35rem;
+  right: 1.15rem;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 3.5rem;
+  line-height: 1;
+  color: rgba(47, 107, 255, .14);
+  pointer-events: none;
+}
+#testimonials figure:hover {
+  transform: translateY(-5px);
+  border-color: rgba(47, 107, 255, .28);
+  box-shadow: 0 20px 46px rgba(13, 15, 14, .11);
+}
+#testimonials figure img {
+  box-shadow: 0 0 0 2px rgba(47, 107, 255, .12);
+}
 
 /* Strong, consistent keyboard focus */
 a:focus-visible,

@@ -144,6 +144,28 @@
     updateControls();
   });
 
+  // Magnetic primary CTAs — the button pulls gently toward the cursor
+  if (!reduceMotion && window.matchMedia("(pointer: fine)").matches) {
+    const MAGNET_STRENGTH = 0.28;
+    const MAGNET_MAX = 7;
+    document.querySelectorAll(".btn-azure, .btn-ink").forEach((btn) => {
+      btn.addEventListener(
+        "pointermove",
+        (event) => {
+          const rect = btn.getBoundingClientRect();
+          const dx = (event.clientX - (rect.left + rect.width / 2)) * MAGNET_STRENGTH;
+          const dy = (event.clientY - (rect.top + rect.height / 2)) * MAGNET_STRENGTH;
+          const clamp = (value) => Math.max(-MAGNET_MAX, Math.min(MAGNET_MAX, value));
+          btn.style.transform = `translate(${clamp(dx)}px, ${clamp(dy) - 2}px)`;
+        },
+        { passive: true }
+      );
+      btn.addEventListener("pointerleave", () => {
+        btn.style.transform = "";
+      });
+    });
+  }
+
   // Cursor-tracking spotlight glow on bento / interactive tiles
   document.querySelectorAll("[data-spotlight]").forEach((card) => {
     card.addEventListener(
